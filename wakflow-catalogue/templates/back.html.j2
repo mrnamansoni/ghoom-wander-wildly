@@ -1,45 +1,44 @@
 <section class="page back" data-page="back">
-  <div class="bg-grid"></div>
-  <div class="bg-glow"></div>
+  <div class="band band-cover"></div>
   <div class="page-inner">
-    {{ m.rail("// Get started", 22) }}
-    <h2 class="back-title">{{ site.back.title }}</h2>
-    <p class="back-sub">{{ site.back.sub }}</p>
+    {{ m.head("Get started", 22) }}
+    <h2 class="page-title back-title">{{ site.back.title }}</h2>
+    <p class="lead">{{ site.back.sub }}</p>
 
-    <div class="flex-gap flex-gap-lg"></div>
-    <ol class="back-steps">
+    <div class="gap"></div>
+    <ol class="steps">
       {% for s in site.back.steps %}
       <li><i>{{ loop.index }}</i><b>{{ s.t }}</b><span>{{ s.d }}</span></li>
       {% endfor %}
     </ol>
 
-    <div class="flex-gap flex-gap-lg"></div>
-    <div class="back-contact">
-      <div class="bc-main">
-        <p class="lbl">// Talk to us</p>
-        <p class="bc-phone"><a href="tel:+919625330270">+91 96253 30270</a></p>
-        <p class="bc-web grad"><a href="{{ site.contact.web_url }}">wakflow.com</a></p>
-        <a class="btn btn-lg" href="{{ site.contact.wa_url }}">{{ site.back.button }}{{ m.arrow() }}</a>
+    <div class="gap"></div>
+    <div class="contact-panel">
+      <div class="cp-main">
+        <p class="cp-label">Talk to us</p>
+        <p class="cp-phone"><a href="tel:+919625330270">+91 96253 30270</a></p>
+        <p class="cp-web"><a href="{{ site.contact.web_url }}">wakflow.com</a></p>
+        <a class="btn btn-lg" href="{{ site.contact.wa_url }}">Book a free demo on WhatsApp{{ m.arrow() }}</a>
       </div>
-      <div class="bc-qrs">
-        <figure style="--qr: #34D399"><a href="{{ site.contact.wa_url }}">{{ qr(site.contact.wa_url) }}</a><figcaption>Scan to chat<br>on WhatsApp</figcaption></figure>
-        <figure style="--qr: #00C8FF"><a href="{{ site.contact.web_url }}">{{ qr(site.contact.web_url) }}</a><figcaption>Scan to visit<br>wakflow.com</figcaption></figure>
+      <div class="cp-qrs">
+        <figure><a href="{{ site.contact.wa_url }}">{{ qr(site.contact.wa_url) }}</a><figcaption>Chat on WhatsApp</figcaption></figure>
+        <figure><a href="{{ site.contact.web_url }}">{{ qr(site.contact.web_url) }}</a><figcaption>Visit wakflow.com</figcaption></figure>
       </div>
     </div>
 
-    <div class="flex-gap flex-gap-lg"></div>
-    <h3 class="lbl back-pk-lbl">// Start with a package <em>best for</em></h3>
+    <div class="gap"></div>
+    <h3 class="sec">Start with a package <em>best for</em></h3>
     <div class="packages">
       {% for k in site.packages %}
       <div class="pk{% if k.get("star") %} is-flagship{% endif %}"><b>{{ k.t }}{% if k.get("star") %} {{ m.star() }}{% endif %}</b><span>{{ k.d }}</span></div>
       {% endfor %}
     </div>
-    <div class="flex-gap flex-gap-lg"></div>
-    <p class="back-pricing"><span class="lbl">// How pricing works</span>{{ site.back.pricing }} Add-ons for any package: official WhatsApp API, AI Voice Calling Agent, Instagram Automation, Dashboard Website, growth content and outbound sales.</p>
+
+    <div class="gap"></div>
+    <p class="pricing"><b>How pricing works.</b> {{ site.back.pricing }}</p>
 
     <footer class="back-foot">
-      <div class="back-logo">{{ asset("logo.svg") }}</div>
-      <p>All figures are measured, as of 27 Sep 2026, on our own brands Ghoomo Saste Me and Tripwaley and on anonymised client work — clients are never named. Example screens are illustrations.</p>
+      <p>All figures are measured, as of 27 Sep 2026, on our own brands Ghoomo Saste Me and Tripwaley and on anonymised client work — clients are never named. Screens in this catalogue are example illustrations.</p>
     </footer>
   </div>
 </section>

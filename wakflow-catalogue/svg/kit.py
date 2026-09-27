@@ -3,15 +3,35 @@ All shapes are plain SVG strings so the output stays vector in the PDF."""
 from html import escape
 
 C = {
+    # brand colours (strokes and fills)
     "cyan": "#00C8FF", "blue": "#4A90E2", "purple": "#7B35C1",
     "orange": "#FF8A00", "orange2": "#FFB347", "green": "#10B981", "green2": "#34D399",
-    "red": "#F87171", "grey": "#8892A4", "ink": "#EEF3FA", "white": "#FFFFFF",
-    "bg": "#000000", "bg1": "#0A0A0A", "bg2": "#111111", "bg3": "#161B22", "bg4": "#1C222B",
-    "line": "#262D38", "line2": "#3A4250",
-    # deep tints of brand colours, used as fills behind brand-coloured strokes
-    "cyanDeep": "#06303D", "purpleDeep": "#1E0F33", "greenDeep": "#062A20",
-    "orangeDeep": "#2E1A05", "redDeep": "#2E1414", "blueDeep": "#0C1E33",
+    "red": "#F87171",
+    # light theme neutrals: white paper with a lavender cast
+    "ink": "#1C1836", "grey": "#6E6A8A", "white": "#FFFFFF",
+    "bg": "#FFFFFF", "bg1": "#FFFFFF", "bg2": "#F7F5FC", "bg3": "#F4F1FB", "bg4": "#ECE7F7",
+    "line": "#E6E0F3", "line2": "#CEC5E4",
+    # light tints of brand colours, used as fills behind brand-coloured strokes
+    "cyanDeep": "#E4F8FF", "purpleDeep": "#F1E9FB", "greenDeep": "#E3F8EF",
+    "orangeDeep": "#FFF2E0", "redDeep": "#FDECEC", "blueDeep": "#E7F0FC",
 }
+# Brand colours are too light for text on white; text drawn in a brand colour uses its darker partner.
+TEXT = {
+    C["cyan"]: "#0784AD", C["blue"]: "#2A6CC2", C["purple"]: "#7B35C1", C["orange"]: "#B85E00",
+    C["orange2"]: "#B85E00", C["green"]: "#0B8A5E", C["green2"]: "#0B8A5E", C["red"]: "#C93A3A",
+}
+SIZE = 1.08  # all drawing text is scaled up slightly for phone reading
+
+
+def mix(color, opacity):
+    """Solid colour equal to `color` at `opacity` over white. PDFs render true transparency badly."""
+    if opacity is None or color in (None, "none") or not color.startswith("#"):
+        return color
+    r, g, b = (int(color[i:i + 2], 16) for i in (1, 3, 5))
+    m = lambda c: round(255 - (255 - c) * opacity)  # noqa: E731
+    return f"#{m(r):02X}{m(g):02X}{m(b):02X}"
+
+
 DISPLAY, BODY, MONO = "Oxanium, DM Sans", "DM Sans", "JetBrains Mono"  # DM Sans supplies ₹, which Oxanium lacks
 
 
@@ -42,10 +62,9 @@ class Doc:
         self.defs.append(f'<linearGradient id="{gid}" x1="0" y1="0" x2="{x2}" y2="{y2}">{s}</linearGradient>')
         return f"url(#{gid})"
 
-    def halo(self, cx, cy, rx, ry, color, opacity=0.32, name=None):
-        self._n += 1
-        fill = self.radial(name or f"halo{self._n}", color, opacity)
-        return self.add(f'<ellipse cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}" fill="{fill}"/>')
+    def halo(self, *args, **kwargs):
+        """Soft glows were a dark-theme device and need PDF transparency; the light theme has none."""
+        return self
 
     def render(self):
         return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {self.w} {self.h}" '
@@ -57,8 +76,8 @@ class Doc:
 
 def t(x, y, s, size=11, fill=C["ink"], family=BODY, weight=400, anchor="start", ls=None, opacity=None):
     extra = f' letter-spacing="{ls}"' if ls is not None else ""
-    extra += f' opacity="{opacity}"' if opacity is not None else ""
-    return (f'<text x="{x}" y="{y}" font-family="{family}" font-size="{size}" font-weight="{weight}" '
+    fill = mix(TEXT.get(fill, fill), opacity)
+    return (f'<text x="{x}" y="{y}" font-family="{family}" font-size="{size * SIZE:.2f}" font-weight="{weight}" '
             f'fill="{fill}" text-anchor="{anchor}"{extra}>{escape(s)}</text>')
 
 
@@ -67,7 +86,7 @@ def mono(x, y, s, size=9, fill=C["grey"], anchor="start", weight=500):
 
 
 def rect(x, y, w, h, r=6, fill=C["bg1"], stroke=C["line"], sw=1, opacity=None, dash=None):
-    o = f' opacity="{opacity}"' if opacity is not None else ""
+    fill, stroke, o = mix(fill, opacity), mix(stroke, opacity), ""
     d = f' stroke-dasharray="{dash}"' if dash else ""
     st = f'stroke="{stroke}" stroke-width="{sw}"' if stroke else ""
     return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{fill}" {st}{o}{d}/>'
@@ -75,20 +94,20 @@ def rect(x, y, w, h, r=6, fill=C["bg1"], stroke=C["line"], sw=1, opacity=None, d
 
 def line(x1, y1, x2, y2, stroke=C["line2"], sw=1, dash=None, opacity=None, cap="round"):
     d = f' stroke-dasharray="{dash}"' if dash else ""
-    o = f' opacity="{opacity}"' if opacity is not None else ""
+    stroke, o = mix(stroke, opacity), ""
     return f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{stroke}" stroke-width="{sw}" stroke-linecap="{cap}"{d}{o}/>'
 
 
 def path(d, stroke=C["cyan"], sw=1.2, fill="none", opacity=None, dash=None, join="round"):
-    o = f' opacity="{opacity}"' if opacity is not None else ""
+    stroke, fill, o = mix(stroke, opacity), mix(fill, opacity), ""
     ds = f' stroke-dasharray="{dash}"' if dash else ""
     return (f'<path d="{d}" stroke="{stroke}" stroke-width="{sw}" fill="{fill}" '
             f'stroke-linecap="round" stroke-linejoin="{join}"{o}{ds}/>')
 
 
 def circle(cx, cy, r, fill=C["cyan"], stroke=None, sw=1, opacity=None):
+    fill, stroke, o = mix(fill, opacity), mix(stroke, opacity), ""
     st = f' stroke="{stroke}" stroke-width="{sw}"' if stroke else ""
-    o = f' opacity="{opacity}"' if opacity is not None else ""
     return f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{fill}"{st}{o}/>'
 
 
@@ -102,16 +121,16 @@ def tick(x, y, s=10, color=C["green2"], sw=1.6):
 
 
 def chip(x, y, label, color=C["cyan"], size=9, pad=7, h=17, fill_opacity=0.14, text_fill=None):
-    w = len(label) * (size * 0.6 + 1.2) + pad * 2
-    return (f'<rect x="{x}" y="{y}" width="{w:.1f}" height="{h}" rx="{h / 2}" fill="{color}" fill-opacity="{fill_opacity}" '
-            f'stroke="{color}" stroke-opacity=".55" stroke-width=".8"/>'
+    w = len(label) * (size * SIZE * 0.6 + 1.2) + pad * 2
+    return (f'<rect x="{x}" y="{y}" width="{w:.1f}" height="{h}" rx="{h / 2}" fill="{mix(color, fill_opacity)}" '
+            f'stroke="{mix(color, .55)}" stroke-width=".8"/>'
             + mono(x + pad, y + h / 2 + size * .36, label, size, text_fill or color)), w
 
 
 def button(x, y, w, h, label, kind="orange", uid="b", size=10):
     fill = {"orange": C["orange"], "green": C["green"], "ghost": C["bg3"]}[kind]
     stroke = {"orange": C["orange2"], "green": C["green2"], "ghost": C["line2"]}[kind]
-    col = C["bg"] if kind in ("orange", "green") else C["ink"]
+    col = C["ink"] if kind == "orange" else (C["white"] if kind == "green" else C["ink"])
     return (rect(x, y, w, h, h / 2, fill, stroke, .8)
             + t(x + w / 2, y + h / 2 + size * .36, label, size, col, DISPLAY, 700, "middle"))
 
@@ -139,7 +158,7 @@ def window(x, y, w, h, title="", dots=True):
 
 
 def bubble(x, y, w, h, side="in", fill=None, stroke=None, r=10):
-    """Chat bubble box; `side` in = customer (left, dark), out = business (right, tinted)."""
+    """Chat bubble box; `side` in = customer (left, neutral), out = business (right, tinted)."""
     if side == "in":
         fill, stroke = fill or C["bg4"], stroke or C["line2"]
     else:

@@ -3,8 +3,8 @@
   "overflows": [],
   "fonts_ok": true,
   "fonts_missing": [],
-  "min_body_pt": 7.5,
-  "min_body_where": "p2: \"WhatsApp, Instagram DM or comm\"",
-  "min_label_pt": 6.68,
-  "min_label_where": "p2: \"WAKFLOW\""
+  "min_body_pt": 8.25,
+  "min_body_where": "p1: \"Flagship\"",
+  "min_label_pt": 7.42,
+  "min_label_where": "p1: \"01\""
 }

@@ -1,90 +1,39 @@
 {% set fam = families[p.family] %}
 {% set page_no = 4 + p.code|int %}
 <section id="p{{ p.code }}" class="page product fam-{{ p.family }}{% if p.get("flagship") %} is-flagship{% endif %}" data-code="{{ p.code }}">
-  <div class="bg-grid"></div>
-  <div class="bg-glow"></div>
   <div class="page-inner">
-    {{ m.rail("// " ~ p.code ~ " · " ~ fam.name, page_no) }}
+    <div class="showcase">
+    {{ m.head(fam.name, page_no) }}
 
     <div class="p-title">
-      <div class="p-icon">{{ svg("icons/" ~ p.slug) }}</div>
-      <div class="p-name">
-        <h2><span class="p-brand">Wakflow{% if p.get("flagship") %} <span class="flag">{{ m.star() }} Flagship</span>{% endif %}</span><span class="grad">{{ p.name[8:] }}</span></h2>
-      </div>
-      <div class="p-count">
-        <b>{{ p.feature_total }}</b>
-        <span>{{ p.get("feature_label", "features") }}</span>
+      <span class="p-icon">{{ svg("icons/" ~ p.slug) }}</span>
+      <div>
+        {% if p.get("flagship") %}<p class="flag">{{ m.star() }} Our flagship product</p>{% endif %}
+        <h2><span class="brand-word">Wakflow</span> {{ p.name[8:] }}</h2>
       </div>
     </div>
-
     <p class="p-headline">{{ p.headline }}</p>
     <p class="p-sub">{{ p.sub }}</p>
-    {% if p.get("replaces") %}<p class="p-replaces"><span>Replaces</span><em>{{ p.replaces }}</em></p>{% endif %}
 
     <figure class="p-hero">{{ svg("hero/" ~ p.slug) }}</figure>
-
-    <div class="flex-gap"></div>
-    <div class="p-split">
-      <div class="p-pains">
-        <h3 class="lbl lbl-red">// The problem</h3>
-        {% for q in p.pains %}
-        <blockquote>{{ q }}</blockquote>
-        {% endfor %}
-      </div>
-      <div class="p-benefits">
-        <h3 class="lbl">// What changes</h3>
-        <ul>
-          {% for b in p.benefits %}
-          <li>{{ m.tick() }}<div><b>{{ b.t }}</b><span>{{ b.d }}</span></div></li>
-          {% endfor %}
-        </ul>
-      </div>
     </div>
 
-    <div class="flex-gap"></div>
-    <div class="p-spec">
-      <h3 class="lbl">// Inside <em>{{ p.feature_total }} {{ p.get("feature_label", "features") }} in {{ p.feature_groups|length }} groups · highlights</em></h3>
-      {% set ng = p.feature_groups|length %}
-      <div class="spec-grid cols-{{ 3 if ng in (5, 6, 9) else (5 if ng == 10 else 4) }}">
-        {% for g in p.feature_groups %}
-        <div class="spec">
-          <h4>{{ g.name }}</h4>
-          <ul>{% for it in g["items"] %}<li>{{ it.show if it is mapping else it }}</li>{% endfor %}</ul>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
+    <div class="gap"></div>
+    <h3 class="sec">What you get</h3>
+    <ul class="benefits">
+      {% for b in p.benefits %}
+      <li>{{ m.tick() }}<div><b>{{ b.t }}</b><span>{{ b.d }}</span></div></li>
+      {% endfor %}
+    </ul>
 
-    <div class="flex-gap"></div>
-    <div class="p-proof kind-{{ p.proof.kind }}">
-      <h3 class="lbl lbl-green">// {{ p.proof.title }}</h3>
-      {% if p.proof.kind == "numbers" %}
-      <div class="stats n{{ p.proof["items"]|length }}">
-        {% for s in p.proof["items"] %}
-        <div class="stat"><b>{{ s.n }}</b><span>{{ s.l }}</span></div>
-        {% endfor %}
-      </div>
-      {% else %}
-      <ul class="dayone">
-        {% for s in p.proof["items"] %}<li>{{ m.tick() }}<span>{{ s }}</span></li>{% endfor %}
-      </ul>
-      {% endif %}
-    </div>
+    <div class="gap"></div>
+    <h3 class="sec">Key features <em>{{ p.feature_total }} {{ p.get("feature_label", "features") }} in total</em></h3>
+    <ul class="features">
+      {% for k in p.key_features %}
+      <li{% if k.get("owner") %} class="is-new"{% endif %}><b>{{ k.t }}</b><span>{{ k.d }}</span></li>
+      {% endfor %}
+    </ul>
 
-    <div class="p-foot">
-      <div class="works">
-        <h3 class="lbl">// Works with</h3>
-        <div class="chips">
-          {% for c in p.works_with %}{% set o = by_code[c] %}
-          <span class="wchip fam-{{ o.family }}">{{ svg("icons/" ~ o.slug) }}<i>{{ c }}</i>{{ o.short }}</span>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="cta">
-        <p>{{ p.cta }}</p>
-        <a class="btn" href="{{ site.contact.wa_url }}">{{ p.button }}{{ m.arrow() }}</a>
-        <span class="contact"><a href="{{ site.contact.web_url }}">wakflow.com</a> · <a href="tel:+919625330270">+91 96253 30270</a></span>
-      </div>
-    </div>
+    {{ m.foot() }}
   </div>
 </section>

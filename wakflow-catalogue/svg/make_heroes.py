@@ -125,13 +125,12 @@ def inbox(d):
     x0, y0, w, h = 150, 10, 420, 270
     d.add(window(x0, y0, w, h, "Team inbox"))
     # channels
-    chans = [("WhatsApp", C["green2"], "12"), ("Instagram", C["purple"], "5"), ("Facebook", C["blue"], "2"),
-             ("Website", C["cyan"], "3"), ("Email", C["grey"], "1")]
+    chans = [("WhatsApp 1", C["green2"], "12"), ("WhatsApp 2", C["green2"], "7"), ("WhatsApp 3", C["green2"], "4"),
+             ("Instagram", C["purple"], "5"), ("Website", C["cyan"], "3"), ("Email", C["grey"], "1")]
     d.add(line(x0 + 100, y0 + 22, x0 + 100, y0 + h, C["line"]))
     for i, (lab, col, n) in enumerate(chans):
-        y = y0 + 44 + i * 26
-        d.add(circle(x0 + 16, y - 3, 4, col), t(x0 + 26, y, lab, 9.5, C["ink"]),
-              t(x0 + 92, y, n, 9.5, C["grey"], DISPLAY, 600, "end"))
+        y = y0 + 42 + i * 24
+        d.add(circle(x0 + 16, y - 3, 4, col), t(x0 + 26, y, lab, 9.5, C["ink"]))
     # conversation list
     lx = x0 + 100
     d.add(line(lx + 150, y0 + 22, lx + 150, y0 + h, C["line"]))
@@ -156,8 +155,8 @@ def inbox(d):
     d.add(rect(tx + 8, y0 + 230, 154, 26, 13, C["bg2"], C["line2"], .8),
           bars(tx + 20, y0 + 241, [80], 4.5), circle(tx + 150, y0 + 243, 7, C["cyan"]))
     d.add(example_tag(x0 + 14, y0 + h - 26))
-    d.add(callout(x0 + 16, y0 + 69, 128, 44, "Every channel", "left", sub="in one list"),
-          callout(lx + 134, y0 + 40, 128, 132, "One owner per chat", "left", C["purple"], sub="auto-assigned"),
+    d.add(callout(x0 + 16, y0 + 63, 128, 44, "Unlimited WhatsApp", "left", C["green2"], sub="numbers, used at once"),
+          callout(lx + 134, y0 + 40, 128, 150, "One owner per chat", "left", C["purple"], sub="auto-assigned"),
           callout(lx + 60, y0 + 219, 128, 218, "Clear status", "left", C["green2"], sub="open to resolved"),
           callout(tx + 162, y0 + 39, 588, 44, "Collision alerts", "right"),
           callout(tx + 162, y0 + 165, 588, 160, "Private notes", "right", C["orange2"], sub="@mentions"))
@@ -180,10 +179,11 @@ def instagram_automation(d):
         y = 140 + i * 30
         d.add(circle(40, y + 9, 7, C["bg4"], C["line2"], .8), bars(52, y + 2, [40], 4),
               t(52, y + 17, txt, 10, C["ink"], BODY, 500))
-    d.add(rect(34, 202, 172, 44, 8, C["cyanDeep"], C["cyan"], .8),
-          mono(42, 216, "Auto reply", 9, C["cyan"]),
-          t(42, 234, "Sent you the details in DM", 9.5, C["ink"]))
-    d.add(example_tag(34, 256))
+    d.add(rect(34, 200, 172, 48, 8, C["cyanDeep"], C["cyan"], .8),
+          mono(42, 214, "Personalised AI reply", 9, C["cyan"]),
+          t(42, 230, "Hi Riya! Goa prices are", 9.5, C["ink"]),
+          t(42, 242, "in your DM now.", 9.5, C["ink"]))
+    d.add(example_tag(34, 258))
     d.add(arrow(226, 150, 256, 150, C["cyan"], 1.3))
     # DM flow
     d.add(rect(262, 24, 210, 258, 14, C["bg1"], C["line2"], 1.2),
@@ -330,14 +330,14 @@ def ai_voice_calling_agent(d):
     # timeline
     steps = [("Lead arrives", "form, DM, ad", C["grey"]), ("Called in ~1 min", "while still keen", C["cyan"]),
              ("First word 0.91 s", "after pickup", C["cyan"]), ("WhatsApp sent", "during the call", C["green2"]),
-             ("Callback booked", "customer's own time", C["orange2"]), ("Score 82/100", "summary + task", C["purple"])]
+             ("Callback booked", "at their chosen time", C["orange2"]), ("Score 82/100", "summary + task", C["purple"])]
     y = 206
     d.add(line(40, y, 660, y, C["line2"], 1.2))
     for i, (a, b, col) in enumerate(steps):
         x = 40 + i * 124
         d.add(circle(x, y, 8, C["bg"], col, 1.4), circle(x, y, 3, col),
-              t(x, y + 26, a, 10.5, C["ink"], BODY, 600, "middle" if 0 < i < 5 else ("start" if i == 0 else "end")),
-              t(x, y + 40, b, 9.5, C["grey"], BODY, 400, "middle" if 0 < i < 5 else ("start" if i == 0 else "end")))
+              t(x, y + 26, a, 9.6, C["ink"], BODY, 600, "middle" if 0 < i < 5 else ("start" if i == 0 else "end")),
+              t(x, y + 40, b, 9, C["grey"], BODY, 400, "middle" if 0 < i < 5 else ("start" if i == 0 else "end")))
         if i < 5:
             d.add(arrow(x + 14, y, x + 110, y, col, 1.2, opacity=.8))
     d.add(path("M350 162 L350 196", C["cyan"], 1, dash="2 3", opacity=.7))
@@ -626,7 +626,7 @@ def ai_video_factory(d):
                   wave(x + 10, y + 120, 80, 30, 20, C["purple"], 2, 1.8))
         elif i in (2, 3):
             d.add(rect(x + 6, y + 6, w - 12, h - 12, 6, C["blueDeep"], None),
-                  circle(x + 68, y + 40, 12, C["ink"], opacity=.85),
+                  circle(x + 68, y + 40, 12, C["orange2"]),
                   path(f"M{x + 6} {y + 128} L{x + 34} {y + 92} L{x + 56} {y + 116} L{x + 72} {y + 100} L{x + 94} {y + 128}",
                        C["purple"], 1.3, fill=C["purpleDeep"]))
             if i == 3:
@@ -772,11 +772,12 @@ def cover_map(products):
             cy_code, cy_name = y - 4, y + 11
         d.add(mono(lx, cy_code, p["code"], 9, col, anchor),
               t(lx, cy_name, MAP_NAME[p["code"]], 11.5, C["ink"], BODY, 600, anchor))
-    # core
+    # core: the Wakflow logo mark
     d.add(circle(cx, cy, 70, C["cyan"], opacity=.08), circle(cx, cy, 58, C["bg"], C["cyan"], 1.6),
           circle(cx, cy, 64, "none", C["purple"], 1, opacity=.6),
-          t(cx, cy + 4, "WAKFLOW", 15, C["ink"], DISPLAY, 800, "middle", ls=1.5),
-          mono(cx, cy + 22, "One system", 9, C["cyan"], "middle"))
+          f'<image href="../assets/logo-mark.png" x="{cx - 44}" y="{cy - 30}" width="88" height="38.3" '
+          f'preserveAspectRatio="xMidYMid meet"/>',
+          mono(cx, cy + 27, "One system", 9, C["purple"], "middle"))
     return d.render()
 
 

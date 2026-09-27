@@ -11,11 +11,13 @@ npm install            # once (Playwright + Chromium)
 pip install jinja2 pyyaml segno pymupdf pillow fonttools brotli   # once
 python3 svg/make_icons.py && python3 svg/make_heroes.py   # only if drawings changed
 python3 fonts/make_static.py                              # only if font files changed
-python3 build.py && node render.mjs --shots
-python3 tests/test_catalogue.py    # must end with 16/16 passed
+python3 build.py && node render.mjs
+python3 review.py                  # renders every page as a PDF reader shows it
+python3 tests/test_catalogue.py    # must end with 21/21 passed
 ```
 
-`--shots` also saves a PNG of every page into `../.impeccable/review/` for checking.
+`review.py` saves every page (rendered from the PDF itself, not the browser) into `../.impeccable/review/`.
+Always check those images: browsers show effects that PDF readers turn into boxes.
 
 ## Where things live
 
@@ -27,18 +29,21 @@ python3 tests/test_catalogue.py    # must end with 16/16 passed
 | Colours, fonts, spacing | `styles/catalogue.css` |
 | Product drawings (SVG) | `svg/make_heroes.py` → `svg/hero/` |
 | Product icons | `svg/make_icons.py` → `svg/icons/` |
-| Logo | `assets/logo.svg` |
+| Logo | `assets/logo-mark.png` (cropped from `assets/logo-original.webp`) |
 
-## Swapping in the real logo
+## Design rules (light edition)
 
-Replace `assets/logo.svg` with your logo (SVG, wide format, white or brand colours on transparent) and rebuild.
-If you only have a PNG, tell Claude — the templates switch from inline SVG to an image in two lines.
+White pages with a lavender band, brand colours as solid colours only. No transparency, shadows, blur,
+masks or gradient text — PDF readers draw those as boxes. The tests fail the build if any appear.
+Product pages carry only: name, promise, drawing, 4 benefits, 8 key features. The demo button and
+contact details are on the first and last pages only.
 
 ## Checks the build runs
 
-Exactly 22 A4 pages · no page overflows · all three fonts loaded · no text below 7.5 pt (labels 6.5 pt) ·
-all 17 official names present · every proof number exists in the Part A source · feature counts match source ·
-no internal software, server or client names · correct page numbers in the list · contact on every product page ·
-tappable WhatsApp, phone and website links (and list rows jump to their page) · fonts embedded as real fonts · file under 4 MB.
+Exactly 22 A4 pages · no page overflows · all three fonts loaded · no text below 8 pt (drawing labels 7 pt) ·
+all 17 official names present · every proof number exists in the Part A source · key features come from Part A
+or are marked as owner-provided · no internal software, server or client names · correct page numbers in the list ·
+demo button only on first and last page · tappable links · no transparency in the PDF · no PDF-unsafe CSS ·
+fonts embedded as real fonts · file under 4 MB.
 
 Fonts (Oxanium, DM Sans, JetBrains Mono) are open source under the SIL Open Font License — see `fonts/OFL-*.txt`.

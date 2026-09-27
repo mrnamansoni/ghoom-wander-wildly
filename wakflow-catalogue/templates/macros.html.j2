@@ -1,17 +1,19 @@
-{% macro rail(left, page_no) -%}
-<header class="rail">
-  <span class="rail-left">{{ left }}</span>
-  <span class="rail-mid">{{ asset("logo.svg") }}</span>
-  <span class="rail-right">Product catalogue 2026 <b>{{ "%02d" % page_no }}</b></span>
+{% macro logo(cls="") -%}
+<span class="logo {{ cls }}"><img src="../assets/logo-mark.png" alt=""><b>Wakflow</b></span>
+{%- endmacro %}
+
+{% macro head(label, page_no) -%}
+<header class="head">
+  {{ logo() }}
+  <span class="head-label">{{ label }}</span>
+  <span class="head-page">{{ "%02d" % page_no }}</span>
 </header>
 {%- endmacro %}
 
-{% macro foot(page_no) -%}
-<footer class="page-foot">
+{% macro foot() -%}
+<footer class="foot">
+  <span>Wakflow product catalogue 2026</span>
   <a href="https://wakflow.com">wakflow.com</a>
-  <span class="dot"></span>
-  <a href="tel:+919625330270">+91 96253 30270</a>
-  <a class="page-foot-right" href="https://wa.me/919625330270">Book a free demo on WhatsApp</a>
 </footer>
 {%- endmacro %}
 
@@ -24,5 +26,5 @@
 {%- endmacro %}
 
 {% macro tick() -%}
-<svg class="tick" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><path d="M5.8 10.4l2.8 2.8 5.6-6.2" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 {%- endmacro %}

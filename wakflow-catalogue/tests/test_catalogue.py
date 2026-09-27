@@ -40,8 +40,8 @@ def test_fonts_loaded():
 
 def test_min_font_size():
     r = _report()
-    assert r["min_body_pt"] >= 7.5, f"body text too small: {r['min_body_pt']}pt at {r['min_body_where']}"
-    assert r["min_label_pt"] >= 6.5, f"label text too small: {r['min_label_pt']}pt at {r['min_label_where']}"
+    assert r["min_body_pt"] >= 8.0, f"body text too small: {r['min_body_pt']}pt at {r['min_body_where']}"
+    assert r["min_label_pt"] >= 7, f"label text too small: {r['min_label_pt']}pt at {r['min_label_where']}"
 
 
 # ---------- Task 2: content ----------
@@ -139,8 +139,6 @@ def test_works_with_codes_valid():
 def test_svgs_valid():
     import xml.etree.ElementTree as ET
     sys.path.insert(0, str(ROOT / "svg"))
-    from kit import C
-    allowed = {v.upper() for v in C.values()}
     slugs = [p["slug"] for p in _products()]
     files = [ROOT / "svg" / "hero" / f"{s}.svg" for s in slugs] + [ROOT / "svg" / "icons" / f"{s}.svg" for s in slugs]
     files += [ROOT / "svg" / "cover-map.svg"]
@@ -153,9 +151,9 @@ def test_svgs_valid():
         root = ET.fromstring(txt)
         if not root.get("viewBox") or root.get("width"):
             bad.append((f.name, "needs viewBox and no fixed width"))
-        for hx in set(re.findall(r"#[0-9A-Fa-f]{6}\b", txt)):
-            if hx.upper() not in allowed:
-                bad.append((f.name, "off-brand colour", hx))
+        for unsafe in ("opacity", "radialGradient", "filter", "mask"):
+            if unsafe in txt:
+                bad.append((f.name, "PDF-unsafe", unsafe))
     assert not bad, bad
 
 
@@ -197,11 +195,9 @@ def test_index_page_numbers():
 
 def test_contact_printed():
     secs = _sections()
-    back = secs[-1][2]
+    cover, back = secs[0][2], secs[-1][2]
+    assert "wakflow.com" in cover and "+91 96253 30270" in cover
     assert "wakflow.com" in back and "+91 96253 30270" in back
-    for cls, attrs, body in secs:
-        if "product" in cls:
-            assert "wakflow.com" in body and "+91 96253 30270" in body, attrs
 
 
 # ---------- Final review fixes ----------
@@ -239,11 +235,17 @@ def test_pdf_has_tappable_links():
     back = [l.get("uri", "") for l in doc[-1].get_links()]
     for want in ("https://wa.me/919625330270", "tel:+919625330270", "https://wakflow.com"):
         assert any(u.startswith(want) for u in back), (want, back)
-    for i in range(4, 21):
-        uris = [l.get("uri", "") for l in doc[i].get_links()]
-        assert any(u.startswith("https://wa.me/919625330270") for u in uris), (i + 1, uris)
     idx = [l for pg in (doc[2], doc[3]) for l in pg.get_links() if l.get("kind") in (pymupdf.LINK_GOTO, pymupdf.LINK_NAMED)]
     assert len(idx) >= 17, len(idx)
+
+
+def test_demo_button_only_on_first_and_last_page():
+    import pymupdf
+    doc = pymupdf.open(PDF)
+    pages = [i + 1 for i, pg in enumerate(doc)
+             if any(l.get("uri", "").startswith("https://wa.me/") for l in pg.get_links())
+             or "free demo" in pg.get_text().lower()]
+    assert pages == [1, EXPECTED_PAGES], pages
 
 
 def test_fonts_embedded_as_real_fonts():
@@ -252,6 +254,56 @@ def test_fonts_embedded_as_real_fonts():
     kinds = {f[2] for pg in doc for f in pg.get_fonts()}
     assert "Type3" not in kinds, kinds
     assert PDF.stat().st_size < 4_000_000, PDF.stat().st_size
+
+
+# ---------- Redesign: PDF-safe rendering + owner content ----------
+
+def test_css_has_no_pdf_unsafe_effects():
+    css = (ROOT / "styles" / "catalogue.css").read_text()
+    for bad in ("background-clip", "box-shadow", "mask-image", "filter:", "backdrop-filter", "rgba(", "opacity:",
+                "color-mix", "text-shadow"):
+        assert bad not in css, bad
+
+
+def test_pdf_has_no_transparency():
+    """Transparency groups and alpha graphics states render as boxes in many PDF readers."""
+    import pymupdf
+    doc = pymupdf.open(PDF)
+    bad = []
+    for x in range(1, doc.xref_length()):
+        obj = doc.xref_object(x, compressed=True)
+        if "/ExtGState" in obj or "/Type/ExtGState" in obj or ("/ca " in obj or "/CA " in obj):
+            for m in re.finditer(r"/(ca|CA)\s*([0-9.]+)", obj):
+                if float(m.group(2)) < 0.999:
+                    bad.append((x, m.group(0)))
+            if re.search(r"/SMask\s*<<", obj):
+                bad.append((x, "SMask"))
+    assert not bad, bad[:10]
+
+
+def test_key_features_from_source_or_owner():
+    import partA
+    bad = []
+    for p in _products():
+        kf = p["key_features"]
+        if not 6 <= len(kf) <= 8:
+            bad.append((p["code"], "count", len(kf)))
+        names = {n for _, items in partA.feature_groups(p["file"]) for n in items}
+        for k in kf:
+            if isinstance(k, dict) and k.get("owner"):
+                continue
+            src = k["src"] if isinstance(k, dict) else k
+            if src not in names:
+                bad.append((p["code"], src))
+    assert not bad, bad
+
+
+def test_owner_requested_features_present():
+    by = {p["slug"]: p for p in _products()}
+    inbox = " ".join(str(k) for k in by["inbox"]["key_features"]).lower()
+    assert "unlimited whatsapp numbers" in inbox and "same time" in inbox
+    ig = " ".join(str(k) for k in by["instagram-automation"]["key_features"]).lower()
+    assert "personalised" in ig and "comment" in ig
 
 
 if __name__ == "__main__":

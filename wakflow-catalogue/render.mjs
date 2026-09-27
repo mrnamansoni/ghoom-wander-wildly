@@ -1,6 +1,6 @@
 // Prints dist/catalogue.html to dist/Wakflow-Catalogue-2026.pdf and writes dist/report.json
 // with page overflow, font loading and minimum text size checks.
-// Run: node render.mjs [--shots]   (--shots also saves a PNG of every page in .impeccable/review/)
+// Run: node render.mjs   then  python3 review.py  to see the pages as a PDF reader shows them
 import { chromium } from 'playwright';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -11,7 +11,6 @@ const argHtml = process.argv.indexOf('--html');
 const html = argHtml > 0 ? path.resolve(process.argv[argHtml + 1]) : path.join(here, 'dist', 'catalogue.html');
 const checkOnly = process.argv.includes('--check-only');
 const pdf = path.join(here, 'dist', 'Wakflow-Catalogue-2026.pdf');
-const shots = process.argv.includes('--shots');
 
 const FONTS = ['600 20px Oxanium', '700 20px Oxanium', '800 20px Oxanium',
   '400 12px "DM Sans"', '500 12px "DM Sans"', '600 12px "DM Sans"',
@@ -70,16 +69,6 @@ const report = await page.evaluate((fonts) => {
 }, FONTS);
 
 if (checkOnly) { await browser.close(); console.log(JSON.stringify(report)); process.exit(0); }
-
-if (shots) {
-  const dir = path.join(here, '..', '.impeccable', 'review');
-  mkdirSync(dir, { recursive: true });
-  const n = report.pages;
-  for (let i = 0; i < n; i++) {
-    const el = (await page.$$('.page'))[i];
-    await el.screenshot({ path: path.join(dir, `page-${String(i + 1).padStart(2, '0')}.png`) });
-  }
-}
 
 await page.pdf({ path: pdf, preferCSSPageSize: true, printBackground: true });
 await browser.close();

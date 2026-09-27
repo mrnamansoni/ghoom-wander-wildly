@@ -24,6 +24,15 @@ products:
     - {t: It remembers you and your business., d: "Your products, prices, people and the way you like things done. It gets better every week."}
     - {t: It does the work, not just the talking., d: "Searches the web, reads PDFs and sheets, writes documents, builds decks and updates your apps."}
     - {t: It asks before anything risky., d: "Checks only look. Anything that changes, sends or spends waits for your one-tap “yes”."}
+  key_features:
+    - {t: "Chat on WhatsApp or Telegram", src: "Chat on WhatsApp or Telegram", d: "Message it like a colleague, day or night."}
+    - {t: "Voice notes in, voice replies out", src: "Voice notes in, voice replies out", d: "Speak in Hindi, English or Hinglish."}
+    - {t: "Long-term memory", src: "Long-term memory", d: "Remembers your business, people and preferences."}
+    - {t: "Morning briefing", src: "Morning briefing", d: "Yesterday's numbers and today's tasks, in one message."}
+    - {t: "Reads long documents for you", src: "Reads long documents for you", d: "Tenders, contracts and PDFs — deadlines and risks pulled out."}
+    - {t: "Google Workspace", src: "Google Workspace", d: "Reads and drafts Gmail, Calendar, Sheets and Docs."}
+    - {t: "Asks before risky actions", src: "Asks before risky actions", d: "One tap on your phone to approve or deny."}
+    - {t: "Set up, hosted and maintained by us", src: "Set up, hosted and maintained by us", d: "Updates, new skills and a monthly review."}
   feature_total: 84
   feature_groups:
     - {name: Talk to it anywhere, items: [Chat on WhatsApp or Telegram, "Voice notes in, voice replies out"]}
@@ -67,6 +76,15 @@ products:
     - {t: "Every chat saved, searchable and yours.", d: "Messages, contacts and receipts stored securely — not only on a phone that can be lost."}
     - {t: Your whole team on one number., d: "Several people answer from laptops and mobiles; the customer sees one business."}
     - {t: "Many numbers, one control room.", d: "Sales, support, each branch and each brand get their own number and settings."}
+  key_features:
+    - {t: "Connect with a QR code", src: "Connect with a QR code", d: "Your existing number, live the same day."}
+    - {t: "Official WhatsApp Business API", src: "Official WhatsApp Business API", d: "Verified number and approved templates for volume."}
+    - {t: "Many numbers on one account", src: "Many numbers on one account", d: "A number per branch, team or brand."}
+    - {t: "Full chat history, safely stored", src: "Full chat history, safely stored", d: "Survives a lost, broken or replaced phone."}
+    - {t: "Real voice notes", src: "Real voice notes", d: "Genuine WhatsApp voice notes, on Android and iPhone."}
+    - {t: "Swipeable product cards", src: "Swipeable product cards", d: "A mini catalogue inside the chat."}
+    - {t: "Human takeover", src: "Human takeover", d: "The bot steps aside when your staff reply."}
+    - {t: "Automatic inbox and two-way sync", src: "Automatic inbox and two-way sync", d: "Every chat in your team inbox, replies go from your number."}
   feature_total: 78
   feature_groups:
     - {name: Connect your number, items: [Connect with a QR code, Official WhatsApp Business API]}
@@ -109,6 +127,15 @@ products:
     - {t: Clear ownership., d: "Each conversation belongs to one person or team, and the manager sees who has not replied."}
     - {t: "AI first, people next.", d: "The AI answers routine questions in seconds; a person takes over with the full history."}
     - {t: Know how your team is doing., d: "Live reports on volume, first reply time, resolution time and customer satisfaction."}
+  key_features:
+    - {t: "Unlimited WhatsApp numbers", d: "Connect all your WhatsApp numbers in one inbox and use them at the same time.", owner: true}  # owner-provided, not in Part A
+    - {t: "WhatsApp by QR code", src: "WhatsApp by QR code", d: "Keep the number your customers already know."}
+    - {t: "Instagram DMs", src: "Instagram DMs", d: "Plus Facebook, website chat and email in the same list."}
+    - {t: "Unlimited team members", src: "Unlimited team members", d: "Add as many staff as you need."}
+    - {t: "Automatic assignment", src: "Automatic assignment", d: "Each chat goes to the right person or team."}
+    - {t: "Private notes and @mentions", src: "Private notes and @mentions", d: "Talk to your team inside the chat — the customer never sees it."}
+    - {t: "Bring your AI agent", src: "Bring your AI agent", d: "AI answers first; your team takes over with full history."}
+    - {t: "Mobile apps for Android and iPhone", src: "Mobile apps for Android and iPhone", d: "Reply from anywhere."}
   feature_total: 96
   feature_groups:
     - {name: Every channel in one inbox, items: [WhatsApp by QR code, Instagram DMs]}
@@ -151,6 +178,15 @@ products:
     - {t: Every DM ends with a phone number., d: "Menus, quick-reply buttons and package carousels lead step by step to their number."}
     - {t: "A call back in minutes, not tomorrow.", d: "An AI voice agent calls, already knowing they came from Instagram."}
     - {t: Every Instagram lead reaches your team., d: "Tagged “Instagram”, marked hot, with a follow-up task in your CRM."}
+  key_features:
+    - {t: "Personalised AI comment replies", d: "Every comment gets its own reply, written by AI for that customer.", owner: true}  # owner-provided, not in Part A
+    - {t: "Private message to every commenter", src: "Private message to every commenter", d: "Continues the chat in DMs automatically."}
+    - {t: "Knows what the post is about", src: "Knows what the post is about", d: "Reads your caption, so replies fit the reel."}
+    - {t: "Welcome menu with buttons", src: "Welcome menu with buttons", d: "Guides people step by step — no long typing."}
+    - {t: "Package carousels", src: "Package carousels", d: "Swipeable cards of your offers inside the DM."}
+    - {t: "Number in the DM, call on the phone", src: "Number in the DM, call on the phone", d: "An AI voice agent calls back within minutes."}
+    - {t: "Lead captured automatically", src: "Lead captured automatically", d: "Name, number and interest saved to your CRM."}
+    - {t: "Several accounts, one system", src: "Several accounts, one system", d: "Run more than one brand's Instagram."}
   feature_total: 25
   feature_groups:
     - {name: Comment automation, items: [AI replies to every comment, Private message to every commenter]}
@@ -189,6 +225,15 @@ products:
     - {t: Every part of the page is editable., d: "Products, prices, dates, photos, reviews, FAQs, offers and whole page sections."}
     - {t: Enquiries and bookings that actually reach you., d: "Every form checks the phone number and sends the lead to your CRM and sheet at once."}
     - {t: "Take payment online, safely.", d: "Part-payment or advance by UPI or card, counted as paid only when the gateway confirms."}
+  key_features:
+    - {t: "Prices by location and option", src: "Prices by location and option", d: "City-wise and option-wise prices you edit yourself."}
+    - {t: "Dates, batches and slots", src: "Dates, batches and slots", d: "Add or close dates in seconds."}
+    - {t: "No rebuild, no waiting", src: "No rebuild, no waiting", d: "Press Save and it is live."}
+    - {t: "Hold-my-seat and enquiry forms", src: "Hold-my-seat and enquiry forms", d: "Every form sends the lead to your CRM."}
+    - {t: "Online part-payment", src: "Online part-payment", d: "Advance by UPI or card, confirmed by the gateway."}
+    - {t: "Structured data built in", src: "Structured data built in", d: "Built to rank on Google and AI search."}
+    - {t: "Images sized for each phone", src: "Images sized for each phone", d: "Fast on Indian mobile networks."}
+    - {t: "Hosting included", src: "Hosting included", d: "Nightly backups and daily checks too."}
   feature_total: 41
   feature_groups:
     - {name: Edit everything from your dashboard, items: [Prices by location and option, "Dates, batches and slots", Coupons and offers]}
@@ -228,6 +273,15 @@ products:
     - {t: "Answers from your real data, never from guesswork.", d: "Looks up your live price list, stock, dates and policies before it says anything."}
     - {t: "Sells, not just answers.", d: "Asks the right question, recommends two or three options and moves every chat to a next step."}
     - {t: Knows when to call a human., d: "Big orders, discounts, complaints and ready-to-pay customers are flagged to your team instantly."}
+  key_features:
+    - {t: "Hinglish first, any language next", src: "Hinglish first, any language next", d: "Talks the way your customers write."}
+    - {t: "Understands voice notes", src: "Understands voice notes", d: "Customers can speak instead of typing."}
+    - {t: "Live price list and catalogue", src: "Live price list and catalogue", d: "Change a price in your sheet — the next reply uses it."}
+    - {t: "Never invents a price", src: "Never invents a price", d: "Answers only from your real data."}
+    - {t: "Product photos on request", src: "Product photos on request", d: "Sends photos and PDF catalogues in the chat."}
+    - {t: "Instant alert to your team", src: "Instant alert to your team", d: "Big orders and ready-to-pay customers flagged at once."}
+    - {t: "Hot, normal or cold score", src: "Hot, normal or cold score", d: "Every lead saved and scored in your CRM."}
+    - {t: "Automatic follow-ups", src: "Automatic follow-ups", d: "Re-engages people who went quiet."}
   feature_total: 47
   feature_groups:
     - {name: Conversations that feel human, items: ["Hinglish first, any language next", Understands voice notes]}
@@ -269,6 +323,15 @@ products:
     - {t: "Sounds like a person, not a robot.", d: "First word in under a second. She can be interrupted, and hears tone as well as words."}
     - {t: Acts during the call., d: "Sends details on WhatsApp, books a callback and flags a hot lead — all while still talking."}
     - {t: Every call written down and scored., d: "Recording, transcript, AI summary, lead details and a quality score out of 100."}
+  key_features:
+    - {t: "Answers in under a second", src: "Answers in under a second", d: "No silence when the customer picks up."}
+    - {t: "You can interrupt her", src: "You can interrupt her", d: "Stops mid-word, like a person."}
+    - {t: "Instant call on every new lead", src: "Instant call on every new lead", d: "Any form, chat or ad lead can trigger a call."}
+    - {t: "Bulk campaigns from a spreadsheet", src: "Bulk campaigns from a spreadsheet", d: "Upload a list; calling hours and retries handled."}
+    - {t: "Sends WhatsApp while talking", src: "Sends WhatsApp while talking", d: "Details go out from your number during the call."}
+    - {t: "Flags hot leads without ending the call", src: "Flags hot leads without ending the call", d: "Your senior person is alerted at once."}
+    - {t: "A quality score on every call", src: "A quality score on every call", d: "Recording, transcript, summary and score out of 100."}
+    - {t: "Opt-out that nobody can switch off", src: "Opt-out that nobody can switch off", d: "“Don't call me again” is always honoured."}
   feature_total: 56
   feature_groups:
     - {name: Natural conversation, items: [Answers in under a second, You can interrupt her]}
@@ -309,6 +372,15 @@ products:
     - {t: Nobody forgets a follow-up., d: "Every new lead gets a task with a due date and an owner — “My follow-ups today”."}
     - {t: "Built around your business, not the other way round.", d: "Your own record types, fields and stages — Bookings, Site Visits, Students, Patients."}
     - {t: Each salesperson sees their own leads. You see everything., d: "Set who can see, edit or delete what — down to single fields and records."}
+  key_features:
+    - {t: "Automatic lead capture from every channel", src: "Automatic lead capture from every channel", d: "WhatsApp, Instagram, website and calls."}
+    - {t: "A follow-up task for every new lead", src: "A follow-up task for every new lead", d: "Each salesperson sees today's follow-ups."}
+    - {t: "Your own record types", src: "Your own record types", d: "Bookings, site visits, students, patients — your words."}
+    - {t: "Drag-and-drop pipeline boards", src: "Drag-and-drop pipeline boards", d: "See every deal by stage."}
+    - {t: "Full history timeline", src: "Full history timeline", d: "Every call, chat and change on one page."}
+    - {t: "Roles and permissions", src: "Roles and permissions", d: "Staff see their leads; you see everything."}
+    - {t: "Owner's dashboard", src: "Owner's dashboard", d: "Leads by source, deals by stage, revenue by person."}
+    - {t: "Excel and CSV import", src: "Excel and CSV import", d: "Move in from sheets or your old CRM."}
   feature_total: 62
   feature_groups:
     - {name: Shaped around your business, items: [Your own record types, Your own stages and statuses]}
@@ -354,6 +426,15 @@ products:
     - {t: You always know where each lead came from., d: "Which number, Instagram, website, partner or creator sent them."}
     - {t: "One customer, one record.", d: "“+91 98…”, “098…” and “98…” are the same person — updated, never duplicated."}
     - {t: Checked every single day., d: "A morning audit compares every new lead with your CRM: GREEN, AMBER or RED."}
+  key_features:
+    - {t: "Every WhatsApp number", src: "Every WhatsApp number", d: "Plus Instagram, website forms, bookings and AI calls."}
+    - {t: "Phone numbers cleaned to one format", src: "Phone numbers cleaned to one format", d: "“+91 98…” and “098…” become one person."}
+    - {t: "Update, never duplicate", src: "Update, never duplicate", d: "A returning customer updates their record."}
+    - {t: "Multi-brand routing", src: "Multi-brand routing", d: "Each lead goes to the right brand's list."}
+    - {t: "Automatic follow-up task", src: "Automatic follow-up task", d: "Every new lead is handed to your team."}
+    - {t: "Live Google Sheet register", src: "Live Google Sheet register", d: "A sheet your team already knows."}
+    - {t: "Daily lead audit", src: "Daily lead audit", d: "Every morning: GREEN, AMBER or RED."}
+    - {t: "Lost-lead recovery list", src: "Lost-lead recovery list", d: "The exact lead to recover if anything slipped."}
   feature_total: 26
   feature_groups:
     - {name: Capture from every channel, items: [Every WhatsApp number, Instagram DMs and comments, Website enquiry forms]}
@@ -392,6 +473,15 @@ products:
     - {t: Money tracked to the paisa., d: "Total, amount paid, advance due, balance, discount and coupon — exactly as charged."}
     - {t: Payment reminders that go out by themselves., d: "A polite WhatsApp reminder with the amount and a payment link. It stops once paid."}
     - {t: Fewer no-shows., d: "A confirmation on booking, and reminders a day and an hour before."}
+  key_features:
+    - {t: "Online seat holds and bookings", src: "Online seat holds and bookings", d: "Every booking lands in one register."}
+    - {t: "WhatsApp booking bot", src: "WhatsApp booking bot", d: "Customers book inside the chat."}
+    - {t: "Online payment with UPI and cards", src: "Online payment with UPI and cards", d: "Advance and balance tracked to the paisa."}
+    - {t: "Payment links on WhatsApp", src: "Payment links on WhatsApp", d: "One tap to pay."}
+    - {t: "Payment-due reminders", src: "Payment-due reminders", d: "Sent before the due date; stop once paid."}
+    - {t: "Renewal reminders", src: "Renewal reminders", d: "Memberships, policies and fee instalments."}
+    - {t: "Branded PDF invoice", src: "Branded PDF invoice", d: "Sent on WhatsApp after payment."}
+    - {t: "Daily bookings summary", src: "Daily bookings summary", d: "Yesterday's bookings and money, every morning."}
   feature_total: 23
   feature_groups:
     - {name: Booking capture, items: [Online seat holds and bookings, WhatsApp booking bot, Appointment and slot calendar]}
@@ -428,6 +518,15 @@ products:
     - {t: Sent at a human pace., d: "“Typing…” before every message, and natural, random gaps between them."}
     - {t: Every reply answered in seconds., d: "Replies go to your AI WhatsApp Agent or team inbox while interest is still warm."}
     - {t: Replies become leads., d: "Every responder saved to your sheet and CRM with the source “Bulk Message”."}
+  key_features:
+    - {t: "Send to a simple sheet", src: "Send to a simple sheet", d: "Or to audiences from your CRM and inbox."}
+    - {t: "Clean numbers before sending", src: "Clean numbers before sending", d: "Only real WhatsApp users are messaged."}
+    - {t: "A fresh message for every person", src: "A fresh message for every person", d: "Rewritten in your brand voice, never one blast."}
+    - {t: "\"Typing…\" before every message", src: "\"Typing…\" before every message", d: "Sent at a human pace with random gaps."}
+    - {t: "Every reply gets an instant answer", src: "Every reply gets an instant answer", d: "By your AI agent or your team inbox."}
+    - {t: "Opt-out detection", src: "Opt-out detection", d: "“Stop” is confirmed and respected at once."}
+    - {t: "Approved templates", src: "Approved templates", d: "Official API for large campaigns."}
+    - {t: "Campaign report", src: "Campaign report", d: "Who received, replied and became a lead."}
   feature_total: 26
   feature_groups:
     - {name: Lists and audiences, items: [Send to a simple sheet, Clean numbers before sending]}
@@ -466,6 +565,15 @@ products:
     - {t: "Decision makers, not generic inboxes.", d: "Founders, directors, HR heads, marketing and operations managers."}
     - {t: Work emails found and checked., d: "Several sources searched for each person, cleaned and checked before use."}
     - {t: Companies that need you right now., d: "New job posts in your field and city — and who posted them."}
+  key_features:
+    - {t: "Request leads on Telegram or WhatsApp", src: "Request leads on Telegram or WhatsApp", d: "Ask in a plain sentence."}
+    - {t: "Search by title, industry and location", src: "Search by title, industry and location", d: "Decision makers, not generic inboxes."}
+    - {t: "Top contacts per company", src: "Top contacts per company", d: "The people who actually buy."}
+    - {t: "New job posts in your market", src: "New job posts in your market", d: "Companies hiring now — a buying signal."}
+    - {t: "Several sources, one answer", src: "Several sources, one answer", d: "Work emails found from several sources."}
+    - {t: "Verification before use", src: "Verification before use", d: "Emails checked before they reach your list."}
+    - {t: "A first message for each lead", src: "A first message for each lead", d: "A personal opening line, drafted for you."}
+    - {t: "Google Sheet delivery", src: "Google Sheet delivery", d: "Or straight to your CRM or cold email."}
   feature_total: 28
   feature_groups:
     - {name: Ask for leads in a chat, items: [Request leads on Telegram or WhatsApp, Plain-language understanding]}
@@ -506,6 +614,15 @@ products:
     - {t: Your main domain stays safe., d: "Separate sending domains and inboxes. Your real business email is never touched."}
     - {t: It stops itself before damage is done., d: "Nightly checks pause an unhealthy account and tell you which one, and why, on WhatsApp."}
     - {t: Every reply caught in minutes., d: "Checked every ten minutes. A real reply stops the sequence and alerts you at once."}
+  key_features:
+    - {t: "Separate sending domains", src: "Separate sending domains", d: "Your main business email is never at risk."}
+    - {t: "Automatic warm-up network", src: "Automatic warm-up network", d: "Two weeks of warm-up before any cold email."}
+    - {t: "A seven-week ramp", src: "A seven-week ramp", d: "Volume climbs slowly and safely."}
+    - {t: "Email verification", src: "Email verification", d: "Clean, checked lists only."}
+    - {t: "Three-step sequences", src: "Three-step sequences", d: "Follow-ups in the same thread."}
+    - {t: "Personalised to each prospect", src: "Personalised to each prospect", d: "Plain text that reads like a person wrote it."}
+    - {t: "Instant WhatsApp alert for real replies", src: "Instant WhatsApp alert for real replies", d: "Replies checked every ten minutes."}
+    - {t: "Nightly health guard", src: "Nightly health guard", d: "An unhealthy inbox pauses itself."}
   feature_total: 48
   feature_groups:
     - {name: Sending accounts and domains, items: [Separate sending domains, Email authentication set up for you]}
@@ -547,6 +664,15 @@ products:
     - {t: "Researched, not made up.", d: "It searches the web for current facts before writing a single slide."}
     - {t: Always on brand., d: "Your colours, logo, handle, website and voice on every slide of every post."}
     - {t: You stay in control., d: "Nothing is posted until you approve each slide and the caption."}
+  key_features:
+    - {t: "Topic from chat", src: "Topic from chat", d: "Send one line from your phone."}
+    - {t: "Live web research", src: "Live web research", d: "Current, true facts on every slide."}
+    - {t: "Three versions of every slide", src: "Three versions of every slide", d: "Tap to pick the best one."}
+    - {t: "Your brand kit on every slide", src: "Your brand kit on every slide", d: "Colours, logo, handle and voice."}
+    - {t: "Captions written to be read", src: "Captions written to be read", d: "With a hashtag stack in every caption."}
+    - {t: "Tap to approve each slide", src: "Tap to approve each slide", d: "Nothing posts without your OK."}
+    - {t: "One-message publishing to Instagram", src: "One-message publishing to Instagram", d: "Type “Post now” and it is live."}
+    - {t: "Several brands, one studio", src: "Several brands, one studio", d: "For owners, teams and agencies."}
   feature_total: 24
   feature_groups:
     - {name: From idea to slide plan, items: [Topic from chat, Live web research]}
@@ -586,6 +712,15 @@ products:
     - {t: Never repeats a topic., d: "It remembers everything it has made and picks a fresh topic every time."}
     - {t: "Speaks your audience's language.", d: "Hindi voice-overs with Hinglish captions, English, or any of 75 languages."}
     - {t: Faceless by design., d: "No camera, no studio, no voice recording. Everything is created for you."}
+  key_features:
+    - {t: "Fresh topic every time", src: "Fresh topic every time", d: "Never repeats a topic."}
+    - {t: "Hindi voice with Hinglish captions", src: "Hindi voice with Hinglish captions", d: "Or English and many other languages."}
+    - {t: "Consistent characters", src: "Consistent characters", d: "Scene-by-scene visuals that match."}
+    - {t: "Word-by-word captions", src: "Word-by-word captions", d: "Plus background music and gentle motion."}
+    - {t: "Text to video", src: "Text to video", d: "Type a scene, get AI video clips."}
+    - {t: "Send a reel link, get fresh versions", src: "Send a reel link, get fresh versions", d: "Remix a reel you like."}
+    - {t: "Upload to YouTube", src: "Upload to YouTube", d: "And Instagram Reels, with thumbnails."}
+    - {t: "Review from your phone", src: "Review from your phone", d: "Approve before anything goes out."}
   feature_total: 24
   feature_groups:
     - {name: Story shorts on autopilot, items: [Hindi voice with Hinglish captions, Word-by-word captions, Consistent characters]}
@@ -623,6 +758,15 @@ products:
     - {t: "AI does more than move data — it makes small decisions.", d: "It reads a message, decides if the lead is hot, drafts a reply or flags the tone."}
     - {t: A human checks anything that could go wrong., d: "Money or real risk pauses for a person to approve before it goes out."}
     - {t: "Every automation is logged, so nothing fails silently.", d: "If a run fails, our team is alerted before your customer notices."}
+  key_features:
+    - {t: "A single engine for every tool you run", src: "A single engine for every tool you run", d: "CRM, inbox, WhatsApp, sheets, calendars, payments."}
+    - {t: "It reads and understands, not just copies", src: "It reads and understands, not just copies", d: "Sorts leads into hot, warm and cold."}
+    - {t: "Money and refunds wait for a human tick", src: "Money, refunds and anything sensitive wait for a human tick", d: "You approve on WhatsApp or Telegram."}
+    - {t: "Instant lead welcome", src: "Instant lead welcome", d: "WhatsApp welcome with your brochure in seconds."}
+    - {t: "Missed-call to WhatsApp", src: "Missed-call to WhatsApp", d: "An unanswered call gets a WhatsApp reply."}
+    - {t: "Payment reminder", src: "Payment reminder", d: "With a payment link; stops once paid."}
+    - {t: "Owner's daily summary", src: "Owner's daily summary", d: "New leads, open chats and deals won, every evening."}
+    - {t: "You get a report, not a black box", src: "You get a report, not a black box", d: "How many runs and hours saved."}
   feature_total: 29
   feature_label: capabilities and ready recipes
   feature_groups:
@@ -661,6 +805,15 @@ products:
     - {t: "Backed up every night, off-site.", d: "Databases, WhatsApp logins, settings and the full system, with 30 days of history."}
     - {t: A full health check every morning., d: "Numbers, inbox, CRM, automations, backups and security — summed up on your phone."}
     - {t: Silent failures caught., d: "We open real results to find the errors that never show up as red."}
+  key_features:
+    - {t: "Nightly database backups", src: "Nightly database backups", d: "Off-site and verified, 30 days of history."}
+    - {t: "Every system checked every morning", src: "Every system checked every morning", d: "Short summary on your phone."}
+    - {t: "Every enquiry traced end to end", src: "Every enquiry traced end to end", d: "The exact failure point named."}
+    - {t: "Number connection checks", src: "Number connection checks", d: "Know when a WhatsApp number logs out."}
+    - {t: "Hidden-error inspection", src: "Hidden-error inspection", d: "Finds failures that never show as red."}
+    - {t: "Record recovery", src: "Record recovery", d: "Damaged CRM records restored."}
+    - {t: "Security checks", src: "Security checks", d: "Plus load protection for your server."}
+    - {t: "Fixes with a paper trail", src: "Fixes with a paper trail", d: "Every incident written down, with a monthly report."}
   feature_total: 34
   feature_groups:
     - {name: Nightly backups, items: [Nightly database backups, Off-site and verified]}

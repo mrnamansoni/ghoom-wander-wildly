@@ -1,47 +1,32 @@
 <section class="page intro" data-page="intro">
-  <div class="bg-grid"></div>
-  <div class="bg-glow"></div>
   <div class="page-inner">
-    {{ m.rail("// 00 · The platform", 2) }}
-    <h2 class="intro-title">Everything a growing business needs to <span class="grad">answer, sell, book and follow up</span> — working as one.</h2>
-    <p class="intro-lead">{{ site.intro.lead }}</p>
-
-    <div class="flex-gap flex-gap-lg"></div>
-    <h3 class="lbl lbl-red">// The problem</h3>
-    <div class="intro-pains">
-      {% for x in site.intro.pains %}
-      <div class="ipain"><b>{{ x.t }}</b><span>{{ x.d }}</span></div>
-      {% endfor %}
+    <div class="showcase">
+    {{ m.head("The platform", 2) }}
+    <h2 class="page-title">Everything a growing business needs to <span class="accent">answer, sell, book and follow up</span> — working as one.</h2>
+    <p class="lead">{{ site.intro.lead }}</p>
     </div>
 
-    <div class="flex-gap flex-gap-lg"></div>
-    <h3 class="lbl">// How it works</h3>
+    <div class="gap"></div>
+    <h3 class="sec">How it works</h3>
     <ol class="journey">
       {% for s in site.intro.steps %}
       <li><i>{{ loop.index }}</i><b>{{ s.t }}</b><span>{{ s.d }}</span></li>
       {% endfor %}
     </ol>
 
-    <div class="flex-gap flex-gap-lg"></div>
-    <div class="intro-proof">
-      <div class="ip-head">
-        <h3 class="lbl lbl-green">// Proof</h3>
-        <p class="ip-title">{{ site.intro.proof_title }}</p>
-        <p class="ip-sub">{{ site.intro.proof_sub }}</p>
-      </div>
-      <div class="ip-stats">
-        {% for s in site.intro.stats %}
-        <div class="stat"><b>{{ s.n }}</b><span>{{ s.l }}</span></div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="flex-gap flex-gap-lg"></div>
-    <h3 class="lbl lbl-built">// Built for Indian businesses</h3>
-    <div class="industries">
-      {% for x in site.industries %}
-      <div class="ind"><b>{{ x.t }}</b><span>{{ x.d }}</span></div>
+    <div class="gap"></div>
+    <h3 class="sec">{{ site.intro.proof_title }} <em>Ghoomo Saste Me and Tripwaley, as of 27 Sep 2026</em></h3>
+    <div class="proof">
+      {% for s in site.intro.stats %}
+      <div class="stat"><b>{{ s.n }}</b><span>{{ s.l }}</span></div>
       {% endfor %}
     </div>
-    {{ m.foot(2) }}
+
+    <div class="gap"></div>
+    <h3 class="sec">Built for Indian businesses</h3>
+    <ul class="industries">
+      {% for x in site.industries %}<li>{{ x.t }}</li>{% endfor %}
+    </ul>
+    {{ m.foot() }}
   </div>
 </section>

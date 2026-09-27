@@ -39,16 +39,23 @@ Wakflow runs its own travel brands, Ghoomo Saste Me (GSM) and Tripwaley, on the 
 
 ## Brand Commitments
 
-Pinned by the owner ("we keep this exactly"):
+Pinned by the owner for the website ("we keep this exactly"). For the PDF catalogue the owner asked
+(27 Sep 2026) for a light edition: white with a shade of purple, less content, no boxes. The website's
+black background does not apply to the catalogue; the colours below are used as solid colours on light.
 
-- Black site with neon accents. Backgrounds #000 / #0a0a0a / #111.
+- Website: black with neon accents. Backgrounds #000 / #0a0a0a / #111.
 - Cyan #00C8FF main brand colour; Blue #4A90E2; Purple #7B35C1.
 - Orange #FF8A00 → #FFB347 is the action colour (buttons, stars, badges).
 - Green #10B981 / #34D399 for ticks and done states. Red #F87171 for "before"/problem states.
 - Grey #8892A4 for body copy.
 - Signature: cyan → blue → purple gradient on headline text, paired with orange gradient buttons.
 - Fonts: Oxanium 600–800 (headings, numbers, buttons), DM Sans 400–600 (body), JetBrains Mono (small uppercase labels with wide tracking, like `// 01 THE TRANSFORMATION`).
-- Logo: the owner will upload it. Until then a text wordmark stands in, built to be swapped.
+- Logo: the owner's "WF" mark (`wakflow-catalogue/assets/logo-original.webp`), set beside the word WAKFLOW in Oxanium.
+
+## Owner-provided facts (not in Part A)
+
+- Wakflow Inbox: unlimited WhatsApp numbers in one inbox, all usable at the same time.
+- Wakflow Instagram Automation: every comment reply is personalised for that customer by AI.
 
 ## Evidence on Hand
 

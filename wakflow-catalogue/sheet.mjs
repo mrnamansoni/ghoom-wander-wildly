@@ -4,8 +4,8 @@ import { readdirSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 const here = path.dirname(new URL(import.meta.url).pathname);
 const heroes = readdirSync(path.join(here, 'svg/hero')).sort();
-const css = `<link rel="stylesheet" href="styles/fonts.css"><style>body{background:#000;margin:0;padding:16px;display:grid;grid-template-columns:1fr;gap:18px;width:720px}
-div{border:1px solid #222}p{color:#8892A4;font:11px 'JetBrains Mono';margin:4px}</style>`;
+const css = `<link rel="stylesheet" href="styles/fonts.css"><style>body{background:#FBFAFE;margin:0;padding:16px;display:grid;grid-template-columns:1fr;gap:18px;width:720px}
+div{border:1px solid #E6E0F3;background:#fff}p{color:#8892A4;font:11px 'JetBrains Mono';margin:4px}</style>`;
 const out = path.join(here, '..', '.impeccable', 'review'); mkdirSync(out, { recursive: true });
 const b = await chromium.launch(); const pg = await b.newPage({ viewport: { width: 760, height: 900 }, deviceScaleFactor: 1.5 });
 const chunks = [heroes.slice(0, 6), heroes.slice(6, 12), heroes.slice(12)];

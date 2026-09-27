@@ -1,24 +1,23 @@
 <section class="page cover" data-page="cover">
-  <div class="bg-grid"></div>
-  <div class="bg-glow"></div>
+  <div class="band band-cover"></div>
   <div class="page-inner">
     <header class="cover-top">
-      <div class="cover-logo">{{ asset("logo.svg") }}</div>
-      <p class="cover-meta">Product catalogue<br><b>2026 edition</b></p>
+      {{ m.logo("logo-lg") }}
+      <p class="cover-meta">Product catalogue<br><b>2026</b></p>
     </header>
-    <h1 class="cover-title"><span class="grad">One system</span> for every message, every lead and every follow-up.</h1>
+    <h1 class="cover-title"><span class="accent">One system</span> for every message, every lead and every follow-up.</h1>
     <p class="cover-sub">{{ site.cover.sub }}</p>
     <figure class="cover-map">{{ svg("cover-map") }}</figure>
-    <div class="cover-legend">
+    <div class="cover-fams">
       {% for f in site.families %}
-      <div class="leg fam-{{ f.id }}"><b>{{ products|selectattr("family", "equalto", f.id)|list|length }}</b><span>{{ f.name }}</span></div>
+      <div class="fam fam-{{ f.id }}"><b>{{ products|selectattr("family", "equalto", f.id)|list|length }}</b><span>{{ f.name }}</span></div>
       {% endfor %}
     </div>
     <footer class="cover-bottom">
-      <p class="cover-count"><b>{{ total }}</b><span>products that work alone<br>or as one system</span></p>
-      <div class="cover-cta">
+      <p class="cover-count"><b>{{ total }}</b><span>products that work alone<br>or together as one system</span></p>
+      <div class="cta-block">
         <a class="btn" href="{{ site.contact.wa_url }}">Book a free demo{{ m.arrow() }}</a>
-        <span class="contact">wakflow.com · +91 96253 30270</span>
+        <span class="contact"><a href="{{ site.contact.web_url }}">wakflow.com</a> · <a href="tel:+919625330270">+91 96253 30270</a></span>
       </div>
     </footer>
   </div>

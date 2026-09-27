@@ -1,0 +1,684 @@
+# Catalogue content. Every line comes from Part A of the file named in `file`
+# (shortened, never changed in meaning). Proof numbers are copied exactly and
+# checked by tests/test_catalogue.py against content/source/.
+
+products:
+
+- code: "01"
+  slug: personal-ai-assistant
+  file: 16-personal-ai-assistant.md
+  name: Wakflow Personal AI Assistant
+  short: Personal AI Assistant
+  family: flagship
+  flagship: true
+  list_desc: Your own AI assistant in WhatsApp or Telegram. It remembers your business, works on a schedule while you sleep, and asks before anything risky.
+  headline: Your own AI employee. Works 24/7 from your phone.
+  sub: A private AI assistant in the chat app you already use. It knows your business, sends your daily reports on time, researches, drafts and follows up — and asks you before anything risky.
+  replaces: The AI chat app that forgets you, the assistant you brief every morning, and opening five apps to check the business is fine.
+  pains:
+    - Everything waits for me.
+    - ChatGPT is clever, but it forgets me and it can't actually do anything.
+    - Things break quietly and I find out late.
+  benefits:
+    - {t: It works while you sleep., d: "Tell it once — “every morning at 8, send me yesterday’s enquiries” — and it happens every day, on time."}
+    - {t: It remembers you and your business., d: "Your products, prices, people and the way you like things done. It gets better every week."}
+    - {t: It does the work, not just the talking., d: "Searches the web, reads PDFs and sheets, writes documents, builds decks and updates your apps."}
+    - {t: It asks before anything risky., d: "Checks only look. Anything that changes, sends or spends waits for your one-tap “yes”."}
+  feature_total: 84
+  feature_groups:
+    - {name: Talk to it anywhere, items: [Chat on WhatsApp or Telegram, "Voice notes in, voice replies out"]}
+    - {name: It remembers and learns, items: [Long-term memory, It learns new skills from experience]}
+    - {name: Works on a schedule, items: [Morning briefing, Silent unless something is wrong]}
+    - {name: Research and knowledge work, items: [Web research with sources, Reads long documents for you]}
+    - {name: Does real work in your tools, items: [Google Workspace, Browser automation]}
+    - {name: Creative and content, items: [Image generation, Content calendar]}
+    - {name: A team of assistants, items: [Parallel helpers, Separate assistants for separate jobs]}
+    - {name: Choose the brain, items: [Automatic fallback, Cost control]}
+    - {name: Safety and control, items: [Asks before risky actions, Undo]}
+    - {name: Looked after by Wakflow, items: ["Set up, hosted and maintained by us", Nightly backups]}
+  proof:
+    kind: numbers
+    title: We run our own business on it
+    items:
+      - {n: "51/53", l: "scheduled runs completed (96%) since 6 Sep 2026"}
+      - {n: "21 of 21", l: "daily checks completed, 6–26 Sep"}
+      - {n: "27 of 27", l: "leads confirmed in the CRM in one morning report"}
+      - {n: "3", l: "real problems found in its first week — all fixed"}
+  works_with: ["17", "09", "08", "02", "03", "16"]
+  cta: "Stop being the bottleneck. Get an assistant that never sleeps."
+  button: "Book your free demo"
+
+- code: "02"
+  slug: whatsapp-connect
+  file: 02-wakflow-whatsapp-connect.md
+  name: Wakflow WhatsApp Connect
+  short: WhatsApp Connect
+  family: talk
+  list_desc: Put your business WhatsApp number to work — every chat saved, shared with your team, and connected to your AI, CRM and automations.
+  headline: Your WhatsApp number, connected to everything your business runs.
+  sub: Links the number your customers already know to AI replies, a shared team inbox, your CRM and your automations — so no enquiry waits, and no conversation lives only on one phone.
+  replaces: WATI, Interakt and AiSensy — and the one shared phone sitting at the front desk.
+  pains:
+    - Our WhatsApp is on one phone.
+    - We pay for ads, people message us, and half of them never get a proper reply.
+    - Every enquiry has to be copied by hand.
+  benefits:
+    - {t: Keep your number. Go live the same day., d: "Scan a QR code or type a short pairing code. No new number, no waiting for approval."}
+    - {t: "Every chat saved, searchable and yours.", d: "Messages, contacts and receipts stored securely — not only on a phone that can be lost."}
+    - {t: Your whole team on one number., d: "Several people answer from laptops and mobiles; the customer sees one business."}
+    - {t: "Many numbers, one control room.", d: "Sales, support, each branch and each brand get their own number and settings."}
+  feature_total: 78
+  feature_groups:
+    - {name: Connect your number, items: [Connect with a QR code, Official WhatsApp Business API]}
+    - {name: Send every kind of message, items: [Real voice notes, Swipeable product cards]}
+    - {name: "Chats, contacts and history", items: ["Full chat history, safely stored", Check who is on WhatsApp]}
+    - {name: WhatsApp groups, items: [Create and brand groups, Invite links]}
+    - {name: Smart number settings, items: [Auto-reject calls with a message, Ignore groups]}
+    - {name: AI and chatbot connectors, items: [Understands voice notes, Human takeover]}
+    - {name: Team inbox connection, items: [Automatic inbox and two-way sync, Bring your old chats along]}
+    - {name: Events and integrations, items: [Live event feed, Delivery and read tracking]}
+    - {name: "Platform, security and operations", items: [A separate key for every number, "Quick, safe updates"]}
+  proof:
+    kind: numbers
+    title: Ghoomo Saste Me and Tripwaley, as of 27 Sep 2026
+    items:
+      - {n: "91,907", l: "messages held securely — not on a phone"}
+      - {n: "21,396", l: "contacts across five business numbers"}
+      - {n: "15,967", l: "messages in the last 30 days"}
+      - {n: "8,773", l: "replies sent in those 30 days"}
+  works_with: ["03", "06", "09", "08", "16", "07"]
+  cta: "Put your WhatsApp to work this week."
+  button: "Book a free demo"
+
+- code: "03"
+  slug: inbox
+  file: 03-wakflow-inbox.md
+  name: Wakflow Inbox
+  short: Inbox
+  family: talk
+  list_desc: Every WhatsApp, Instagram, Facebook, website and email conversation in one shared inbox your whole team can answer, on laptop or phone.
+  headline: One inbox. Every customer chat. Your whole team.
+  sub: WhatsApp, Instagram, Facebook, website chat and email land on one shared screen. Assign each chat to the right person and reply as a team from your own business number.
+  replaces: Freshdesk, Zendesk, Intercom and the WATI or Interakt team inbox — and the office phone everybody passes around.
+  pains:
+    - Our WhatsApp lives on one phone.
+    - I don't know who promised the customer what.
+    - Our leads are in five different places.
+  benefits:
+    - {t: No missed messages., d: "Every chat from every channel in one list with a clear status: open, pending, snoozed or resolved."}
+    - {t: Clear ownership., d: "Each conversation belongs to one person or team, and the manager sees who has not replied."}
+    - {t: "AI first, people next.", d: "The AI answers routine questions in seconds; a person takes over with the full history."}
+    - {t: Know how your team is doing., d: "Live reports on volume, first reply time, resolution time and customer satisfaction."}
+  feature_total: 96
+  feature_groups:
+    - {name: Every channel in one inbox, items: [WhatsApp by QR code, Instagram DMs]}
+    - {name: "Replying fast, as a team", items: [Private notes and @mentions, Collision alerts]}
+    - {name: Team and routing, items: [Automatic assignment, Business hours and away messages]}
+    - {name: "Automation, AI and bots", items: [Bring your AI agent, AI copilot for staff]}
+    - {name: Customer profiles, items: [Customer profiles, Pre-chat form]}
+    - {name: Help centre, items: [Self-service help site, Answers inside the chat bubble]}
+    - {name: Reports, items: [Live view, Satisfaction reports]}
+    - {name: Connections, items: [Shopify, Move from your old tool]}
+    - {name: "Security, control and your brand", items: [Two-step login, "Your brand, not ours"]}
+  proof:
+    kind: numbers
+    title: Our own brands' shared inbox, as of 27 Sep 2026
+    items:
+      - {n: "20,407", l: "customer conversations handled"}
+      - {n: "320,557", l: "messages since November 2025"}
+      - {n: "10", l: "team members replying in the last 30 days"}
+      - {n: "2,760", l: "private notes written inside chats"}
+  works_with: ["02", "06", "09", "08", "16", "11"]
+  cta: "Give every customer a fast answer — from one inbox your whole team shares."
+  button: "Book a free demo"
+
+- code: "04"
+  slug: instagram-automation
+  file: 08-instagram-automation.md
+  name: Wakflow Instagram Automation
+  short: Instagram Automation
+  family: talk
+  list_desc: Every comment answered, every DM guided to a phone number, and hot Instagram leads called back by an AI voice agent within minutes.
+  headline: Turn every Instagram comment into a lead.
+  sub: Replies to every comment and DM in seconds, in Hinglish or English, walks people through your packages with buttons and carousels, collects their number — and gets an AI voice agent to call them back.
+  replaces: ManyChat-style DM tools, a person who answers comments all day, and forwarded screenshots of Instagram enquiries.
+  pains:
+    - "Our reels get hundreds of comments saying ‘price?’ and ‘details pls’. Nobody replies for hours."
+    - "People DM us, we chat for twenty minutes, and we never even get their phone number."
+    - Instagram leads never reach the sales team.
+  benefits:
+    - {t: Every comment gets a real reply in seconds., d: "An AI writes a warm public reply and sends a private message to continue the chat."}
+    - {t: Every DM ends with a phone number., d: "Menus, quick-reply buttons and package carousels lead step by step to their number."}
+    - {t: "A call back in minutes, not tomorrow.", d: "An AI voice agent calls, already knowing they came from Instagram."}
+    - {t: Every Instagram lead reaches your team., d: "Tagged “Instagram”, marked hot, with a follow-up task in your CRM."}
+  feature_total: 25
+  feature_groups:
+    - {name: Comment automation, items: [AI replies to every comment, Private message to every commenter]}
+    - {name: DM menus and guided flows, items: [Welcome menu with buttons, Package carousels]}
+    - {name: Instant AI call-back, items: ["Number in the DM, call on the phone", The caller knows the context]}
+    - {name: Leads and follow-up, items: [Lead captured automatically, Instagram as a tracked source]}
+    - {name: Brand and control, items: ["Several accounts, one system", Official Instagram connection]}
+  proof:
+    kind: numbers
+    title: Ghoomo Saste Me on Instagram, as of 27 Sep 2026
+    items:
+      - {n: "454", l: "customers in the CRM came from Instagram"}
+      - {n: "440", l: "of them with a phone number collected in the DM"}
+      - {n: "216", l: "Instagram leads in June 2026 alone"}
+      - {n: "637", l: "comments, DMs and taps handled in 44 hours"}
+  works_with: ["07", "09", "08", "03", "14", "02"]
+  cta: "Reply to every comment. Call every lead."
+  button: "Automate my Instagram"
+
+- code: "05"
+  slug: dashboard-websites
+  file: 17-dashboard-websites.md
+  name: Wakflow Dashboard Websites
+  short: Dashboard Websites
+  family: talk
+  list_desc: A fast website you update yourself from your own dashboard — every change is live the moment you press Save, and every enquiry goes straight to your CRM.
+  headline: Your website, updated by you, live in seconds.
+  sub: Change a price, add a date, swap a photo or publish a new page from your own dashboard. No developer, no waiting. Every enquiry and booking goes straight to your WhatsApp, CRM and sheet.
+  replaces: The WordPress-plus-plugins website, the separate booking form tool, and “please ask the developer to change the price”.
+  pains:
+    - Every small change needs the developer.
+    - The website looks nice but brings no business.
+    - Google does not show us.
+  benefits:
+    - {t: "You change it, it is live.", d: "Press Save and the very next visitor sees the new price, date, photo or line of text."}
+    - {t: Every part of the page is editable., d: "Products, prices, dates, photos, reviews, FAQs, offers and whole page sections."}
+    - {t: Enquiries and bookings that actually reach you., d: "Every form checks the phone number and sends the lead to your CRM and sheet at once."}
+    - {t: "Take payment online, safely.", d: "Part-payment or advance by UPI or card, counted as paid only when the gateway confirms."}
+  feature_total: 41
+  feature_groups:
+    - {name: Edit everything from your dashboard, items: [Prices by location and option, "Dates, batches and slots", Coupons and offers]}
+    - {name: Changes go live instantly, items: ["No rebuild, no waiting", Draft and live switches]}
+    - {name: "Enquiries, bookings and payments", items: [Hold-my-seat and enquiry forms, Online part-payment]}
+    - {name: Found on Google and by AI assistants, items: [Structured data built in, Ready for AI search]}
+    - {name: "Fast, beautiful and accessible", items: [Images sized for each phone, Accessible to everyone]}
+    - {name: Safe and looked after, items: [Protected dashboard, Hosting included]}
+  proof:
+    kind: numbers
+    title: tripwaley.com, our own travel brand
+    items:
+      - {n: "214", l: "enquiries captured, 18 Jul – 26 Sep 2026"}
+      - {n: "92", l: "mobile performance on Google PageSpeed"}
+      - {n: "100", l: "for accessibility, best practices and SEO"}
+      - {n: "195", l: "city-wise prices managed without a developer"}
+  works_with: ["09", "08", "10", "06", "03", "07"]
+  cta: "Stop waiting for the developer. Run your website yourself."
+  button: "Book a free website walkthrough"
+
+- code: "06"
+  slug: ai-whatsapp-agent
+  file: 06-ai-whatsapp-agent.md
+  name: Wakflow AI WhatsApp Agent
+  short: AI WhatsApp Agent
+  family: ai
+  list_desc: An AI team member on your WhatsApp that sells, answers, books and hands over to your staff — 24x7, in Hinglish, from your own live data.
+  headline: Your best salesperson, on WhatsApp, every hour of the day.
+  sub: Answers every enquiry in seconds from your own price list, stock and policies — in Hinglish, Hindi or English — then qualifies the lead, sends photos and catalogues, and brings in your team the moment a human is needed.
+  replaces: Menu-style chatbot builders in WATI, Interakt and AiSensy, AI chat platforms, and the night-shift staff you would otherwise hire.
+  pains:
+    - Leads message at 11 pm and we reply next morning. By then they have booked with someone else.
+    - "My staff answer the same ten questions all day — and still get the price wrong."
+    - "Chatbots we tried were robotic. Customers typed ‘agent’ and left."
+  benefits:
+    - {t: "Replies in seconds, not hours.", d: "Every message answered immediately — nights, Sundays and festival days included."}
+    - {t: "Answers from your real data, never from guesswork.", d: "Looks up your live price list, stock, dates and policies before it says anything."}
+    - {t: "Sells, not just answers.", d: "Asks the right question, recommends two or three options and moves every chat to a next step."}
+    - {t: Knows when to call a human., d: "Big orders, discounts, complaints and ready-to-pay customers are flagged to your team instantly."}
+  feature_total: 47
+  feature_groups:
+    - {name: Conversations that feel human, items: ["Hinglish first, any language next", Understands voice notes]}
+    - {name: Answers from your own data, items: [Live price list and catalogue, Never invents a price]}
+    - {name: Sells like your best salesperson, items: [Objection handling, Always a next step]}
+    - {name: "Sends photos, catalogues and links", items: [Product photos on request, PDF catalogues]}
+    - {name: Hands over to your team at the right moment, items: [Instant alert to your team, Bot steps aside when your team replies]}
+    - {name: Captures and qualifies every lead, items: [Lead details extracted, "Hot, normal or cold score"]}
+    - {name: Follows up and re-engages, items: [Automatic follow-ups, Re-engage old leads]}
+    - {name: Reliable and safe by design, items: [Backup AI brain, "One agent per brand, number or branch"]}
+  proof:
+    kind: numbers
+    title: Our own agents at work, as of 27 Sep 2026
+    items:
+      - {n: "4,821", l: "conversations handled for Ghoomo Saste Me"}
+      - {n: "14 s", l: "typical reply for Tripwaley, with live price lookups"}
+      - {n: "868", l: "hand-over alerts sent to the senior team"}
+      - {n: "310", l: "product photos sent in chat for a furniture retailer"}
+  works_with: ["02", "03", "08", "09", "07", "11"]
+  cta: "Let your next enquiry get an answer in seconds — even at midnight."
+  button: "Book my free WhatsApp agent demo"
+
+- code: "07"
+  slug: ai-voice-calling-agent
+  file: 01-ai-voice-calling-agent.md
+  name: Wakflow AI Voice Calling Agent
+  short: AI Voice Calling Agent
+  family: ai
+  list_desc: An AI caller that phones every lead within a minute, talks in natural Hinglish, acts during the call and writes everything down.
+  headline: An AI caller that sounds human and calls within a minute.
+  sub: Phones every new enquiry in natural Hinglish, answers from your real prices and policies, sends details on WhatsApp during the call, and hands your team a recording, a summary and a follow-up task.
+  replaces: The manual telecalling shift, the “we will call you back” that never happens, and the recorded-message robocall.
+  pains:
+    - "By the time we call back, the lead has gone cold."
+    - We have more leads than people to call them.
+    - I never know what actually happened on the call.
+  benefits:
+    - {t: Every lead called in about a minute., d: "A fresh enquiry is dialled about sixty seconds after it arrives — while they still remember you."}
+    - {t: "Sounds like a person, not a robot.", d: "First word in under a second. She can be interrupted, and hears tone as well as words."}
+    - {t: Acts during the call., d: "Sends details on WhatsApp, books a callback and flags a hot lead — all while still talking."}
+    - {t: Every call written down and scored., d: "Recording, transcript, AI summary, lead details and a quality score out of 100."}
+  feature_total: 56
+  feature_groups:
+    - {name: Natural conversation, items: [Answers in under a second, You can interrupt her]}
+    - {name: Calling and campaigns, items: [Instant call on every new lead, Bulk campaigns from a spreadsheet]}
+    - {name: Actions during the call, items: [Sends WhatsApp while talking, Flags hot leads without ending the call]}
+    - {name: Your control panel, items: [Edit the script in your browser, Versions and one-click revert]}
+    - {name: Quality and records, items: [A quality score on every call, Stereo recordings]}
+    - {name: Compliance and safety, items: [Opt-out that nobody can switch off, Honest about being an AI]}
+    - {name: Connections, items: [Your CRM, Instant alerts on Telegram]}
+  proof:
+    kind: numbers
+    title: Musafir — the AI caller for Ghoomo Saste Me
+    items:
+      - {n: "85%", l: "of 68 pilot calls answered"}
+      - {n: "0.91 s", l: "to the first word after pickup"}
+      - {n: "82/100", l: "average quality score across 57 scored calls"}
+      - {n: "₹1 lakh", l: "group enquiry flagged to a human mid-call"}
+  works_with: ["04", "09", "06", "03", "08", "16"]
+  cta: "Hear your next lead get called in under a minute."
+  button: "Get a demo call to your phone"
+
+- code: "08"
+  slug: crm
+  file: 04-wakflow-crm.md
+  name: Wakflow CRM
+  short: CRM
+  family: sell
+  list_desc: Every lead, follow-up and booking in one CRM shaped around your business — filled automatically from WhatsApp, Instagram, your website and your calls.
+  headline: Every lead captured. Every follow-up done.
+  sub: Collects enquiries from your WhatsApp numbers, Instagram, website and calls, hands each one to a salesperson with a follow-up task, and is shaped around the way your business actually sells.
+  replaces: Salesforce, HubSpot, Zoho CRM, Pipedrive and LeadSquared — and the Excel sheet your team updates by hand.
+  pains:
+    - "Leads come in on three WhatsApp numbers, Instagram and the website — and half of them never get a call back."
+    - "When a salesperson leaves, their customers leave with them."
+    - Every CRM I tried was built for somebody else.
+  benefits:
+    - {t: Leads enter the CRM by themselves., d: "WhatsApp chats, Instagram DMs, website forms and calls become leads, tagged with their source."}
+    - {t: Nobody forgets a follow-up., d: "Every new lead gets a task with a due date and an owner — “My follow-ups today”."}
+    - {t: "Built around your business, not the other way round.", d: "Your own record types, fields and stages — Bookings, Site Visits, Students, Patients."}
+    - {t: Each salesperson sees their own leads. You see everything., d: "Set who can see, edit or delete what — down to single fields and records."}
+  feature_total: 62
+  feature_groups:
+    - {name: Shaped around your business, items: [Your own record types, Your own stages and statuses]}
+    - {name: Every customer on one page, items: [Full history timeline, Recycle bin]}
+    - {name: Views and pipelines, items: [Drag-and-drop pipeline boards, Calendar view]}
+    - {name: Leads that arrive by themselves, items: [Automatic lead capture from every channel, A follow-up task for every new lead]}
+    - {name: Email and calendar, items: [Email sync, Calendar sync]}
+    - {name: Automation inside the CRM, items: [One-click buttons, Scheduled jobs]}
+    - {name: AI in your CRM, items: [Ask your CRM in plain English]}
+    - {name: Dashboards, items: ["Owner's dashboard"]}
+    - {name: "Import, export and moving in", items: [Excel and CSV import, Export any time]}
+    - {name: Team access and security, items: [Roles and permissions, Audit logs]}
+    - {name: Connect anything, items: [WhatsApp conversations on the record]}
+    - {name: "Your brand, your language", items: ["Your logo, your look"]}
+  proof:
+    kind: numbers
+    title: Ghoomo Saste Me and Tripwaley sell on it, as of 27 Sep 2026
+    items:
+      - {n: "11,476", l: "Ghoomo Saste Me customers, plus 3,023 Tripwaley leads"}
+      - {n: "63", l: "of 11,476 ever typed in by hand"}
+      - {n: "11,781", l: "follow-up tasks worked by the team"}
+      - {n: "27", l: "salespeople, each seeing their own leads"}
+  works_with: ["09", "02", "03", "06", "07", "10"]
+  cta: "Stop losing leads between WhatsApp and Excel."
+  button: "Book a free demo"
+
+- code: "09"
+  slug: lead-capture-crm-sync
+  file: 07-lead-capture-crm-sync.md
+  name: Wakflow Lead Capture & CRM Sync
+  short: Lead Capture & CRM Sync
+  family: sell
+  list_desc: Every enquiry from every WhatsApp number, Instagram, your website and your calls lands in your CRM by itself — with its source, a follow-up task and a daily check that nothing was lost.
+  headline: Every enquiry in your CRM. Automatically.
+  sub: Picks up every enquiry from your WhatsApp numbers, Instagram, website and calls, cleans it, tags where it came from, puts it in your CRM with a follow-up task — and checks every morning that no lead was lost.
+  replaces: Copying numbers from WhatsApp into Excel, “please add this lead” messages, and the weekly argument about which ad brought the business.
+  pains:
+    - "We get enquiries on four WhatsApp numbers, Instagram and the website. Half of them never reach the sales sheet."
+    - "I spend lakhs on ads and I still don't know which number or post brings the bookings."
+    - "The same customer is in our system three times, and one of them has the wrong name."
+  benefits:
+    - {t: No lead is typed by hand., d: "Every message, comment, form or booking appears in your CRM within about a minute."}
+    - {t: You always know where each lead came from., d: "Which number, Instagram, website, partner or creator sent them."}
+    - {t: "One customer, one record.", d: "“+91 98…”, “098…” and “98…” are the same person — updated, never duplicated."}
+    - {t: Checked every single day., d: "A morning audit compares every new lead with your CRM: GREEN, AMBER or RED."}
+  feature_total: 26
+  feature_groups:
+    - {name: Capture from every channel, items: [Every WhatsApp number, Instagram DMs and comments, Website enquiry forms]}
+    - {name: "Clean, trustworthy data", items: [Phone numbers cleaned to one format, "Update, never duplicate"]}
+    - {name: Routing and follow-up, items: [Multi-brand routing, Automatic follow-up task]}
+    - {name: A register your team already knows, items: [Live Google Sheet register, "Edit in the sheet, sync to the CRM"]}
+    - {name: Checked and protected every day, items: [Daily lead audit, Lost-lead recovery list]}
+  proof:
+    kind: numbers
+    title: How our own brands capture leads, as of 27 Sep 2026
+    items:
+      - {n: "27 of 27", l: "new leads reached the CRM on 26 Sep — zero lost"}
+      - {n: "10,746", l: "customers came from WhatsApp, each tagged"}
+      - {n: "454", l: "came from Instagram"}
+      - {n: "288", l: "new leads in the last 30 days, each with a task"}
+  works_with: ["08", "02", "03", "04", "07", "10"]
+  cta: "Stop losing enquiries between WhatsApp and Excel."
+  button: "Connect my lead sources"
+
+- code: "10"
+  slug: bookings-payment-followups
+  file: 10-bookings-payment-followups.md
+  name: Wakflow Bookings & Payment Follow-ups
+  short: Bookings & Payment Follow-ups
+  family: sell
+  list_desc: Bookings, seat holds and payments recorded to the rupee — then reminders, payment links, invoices and renewals on WhatsApp so every advance and balance is collected on time.
+  headline: Every booking recorded. Every payment collected.
+  sub: Records each booking, seat hold and payment the moment it happens, then follows up on WhatsApp — confirmations, invoices, payment links, reminders and renewal alerts — until the money is in.
+  replaces: The bookings register someone updates at night, “sir payment kab tak?” calls, reminder diaries and separate invoicing tools.
+  pains:
+    - "The customer said yes, but the booking only reached the register three days later."
+    - Half our follow-up time is chasing payments.
+    - "People book and don't turn up."
+  benefits:
+    - {t: "Every booking lands in one register, instantly.", d: "Seat holds, online payments and team-confirmed bookings, with amounts and dates."}
+    - {t: Money tracked to the paisa., d: "Total, amount paid, advance due, balance, discount and coupon — exactly as charged."}
+    - {t: Payment reminders that go out by themselves., d: "A polite WhatsApp reminder with the amount and a payment link. It stops once paid."}
+    - {t: Fewer no-shows., d: "A confirmation on booking, and reminders a day and an hour before."}
+  feature_total: 23
+  feature_groups:
+    - {name: Booking capture, items: [Online seat holds and bookings, WhatsApp booking bot, Appointment and slot calendar]}
+    - {name: Payments, items: [Online payment with UPI and cards, Payment links on WhatsApp, Advance-collected tick]}
+    - {name: Reminders and follow-ups, items: [Payment-due reminders, Renewal reminders, Feedback and review requests]}
+    - {name: Invoices and records, items: [Branded PDF invoice, Invoice on WhatsApp, Daily bookings summary]}
+  proof:
+    kind: numbers
+    title: Ghoomo Saste Me and Tripwaley, as of 27 Sep 2026
+    items:
+      - {n: "366", l: "leads marked “Booking confirmed” by the sales team"}
+      - {n: "6", l: "live website bookings since 13 Sep, each with total, paid and balance"}
+      - {n: "Daily", l: "every online booking checked against the register and CRM"}
+  works_with: ["05", "08", "09", "02", "11", "06"]
+  cta: "Stop chasing payments by phone."
+  button: "Automate my bookings"
+
+- code: "11"
+  slug: whatsapp-broadcasts
+  file: 11-whatsapp-broadcasts.md
+  name: Wakflow WhatsApp Broadcasts
+  short: WhatsApp Broadcasts
+  family: sell
+  list_desc: Send offers, updates and reminders to your WhatsApp contacts — personalised, human-paced, and every reply answered.
+  headline: WhatsApp broadcasts that feel personal, not like spam.
+  sub: Reach your past enquiries and customers with offers, launches and reminders. Every message is written freshly for each person, sent at a human pace, and every reply is answered instantly.
+  replaces: The broadcast tools in WATI, Interakt and AiSensy, and the copy-paste “broadcast list” routine on your phone.
+  pains:
+    - We have thousands of old enquiries on WhatsApp and nobody follows them up.
+    - "When we tried bulk sending, the number got restricted."
+    - "The broadcast went out, 60 people replied, and we answered them the next day."
+  benefits:
+    - {t: Every message feels personal., d: "Your offer rewritten into many versions in your brand voice — Hinglish, Hindi or English."}
+    - {t: Sent at a human pace., d: "“Typing…” before every message, and natural, random gaps between them."}
+    - {t: Every reply answered in seconds., d: "Replies go to your AI WhatsApp Agent or team inbox while interest is still warm."}
+    - {t: Replies become leads., d: "Every responder saved to your sheet and CRM with the source “Bulk Message”."}
+  feature_total: 26
+  feature_groups:
+    - {name: Lists and audiences, items: [Send to a simple sheet, Clean numbers before sending]}
+    - {name: Personalised messages, items: [A fresh message for every person, "Buttons, lists and carousels"]}
+    - {name: "Safe, human-paced sending", items: ["\"Typing…\" before every message", Random gaps between messages]}
+    - {name: Replies handled instantly, items: [Every reply gets an instant answer, Opt-out detection]}
+    - {name: Official WhatsApp API campaigns, items: [Approved templates, Delivery and read tracking]}
+    - {name: Reports, items: [Campaign report]}
+  proof:
+    kind: numbers
+    title: Ghoomo Saste Me — “Fixed-Price Trips” offer
+    items:
+      - {n: "199", l: "contacts on the list"}
+      - {n: "188", l: "messages sent at a human pace, in many wordings"}
+      - {n: "27", l: "replies saved as leads within a week — about one in seven"}
+  works_with: ["02", "06", "03", "08", "09", "10"]
+  cta: "Turn your old WhatsApp enquiries into this month's sales."
+  button: "Plan my first broadcast"
+
+- code: "12"
+  slug: lead-finder
+  file: 13-lead-finder.md
+  name: Wakflow Lead Finder
+  short: Lead Finder
+  family: grow
+  list_desc: Tell it who you want to reach — it finds the people, their companies and their work emails, and drafts the first message.
+  headline: Your next 100 prospects, found while you sleep.
+  sub: "Type “50 marketing heads at real estate firms in Pune” into a chat. Lead Finder finds the people, their companies and work emails, and hands you a clean list — with a first message drafted for each one."
+  replaces: Hours of manual LinkedIn searching, copy-pasting into spreadsheets, and paid lists that are out of date the day you buy them.
+  pains:
+    - "My sales team spends the whole morning searching, not selling."
+    - We bought a database and half the emails bounced.
+    - "We don't know which companies need us right now."
+  benefits:
+    - {t: Ask in plain words., d: "Describe who you want — job title, industry, city, how many. No filters to learn."}
+    - {t: "Decision makers, not generic inboxes.", d: "Founders, directors, HR heads, marketing and operations managers."}
+    - {t: Work emails found and checked., d: "Several sources searched for each person, cleaned and checked before use."}
+    - {t: Companies that need you right now., d: "New job posts in your field and city — and who posted them."}
+  feature_total: 28
+  feature_groups:
+    - {name: Ask for leads in a chat, items: [Request leads on Telegram or WhatsApp, Plain-language understanding]}
+    - {name: People and company search, items: ["Search by title, industry and location", Top contacts per company]}
+    - {name: Buying signals from job posts, items: [New job posts in your market, Who posted the job]}
+    - {name: Email finding and checking, items: ["Several sources, one answer", Verification before use]}
+    - {name: Personalised first messages, items: [A first message for each lead, "Draft, never auto-send"]}
+    - {name: Recruitment edition, items: [Hiring-signal leads for staffing firms, Candidate and talent search]}
+    - {name: Delivery and follow-through, items: [Google Sheet delivery, Hand-off to cold email]}
+  proof:
+    kind: dayone
+    title: What you get on day one
+    items:
+      - A chat request line on Telegram or WhatsApp that turns a plain sentence into a lead search.
+      - Search by job title, industry and city, with profile links for every person found.
+      - A buying-signal feed of recent job posts in your market.
+      - Work emails from several sources, cleaned and verified, with a first message drafted for each lead.
+  works_with: ["13", "08", "01", "09", "16"]
+  cta: "Stop searching. Start selling."
+  button: "Build my first lead list"
+
+- code: "13"
+  slug: cold-email-engine
+  file: 12-cold-email-engine.md
+  name: Wakflow Cold Email Engine
+  short: Cold Email Engine
+  family: grow
+  list_desc: Cold email that lands in the inbox — warmed-up accounts, human-paced sending, and every reply caught the minute it arrives.
+  headline: Cold email that reaches the inbox, not spam.
+  sub: We warm up your sending accounts, send a few well-written emails a day at a human pace, follow up in the same thread, and ping you on WhatsApp the moment a prospect replies.
+  replaces: Instantly, Lemlist, Smartlead and separate warm-up tools — and the intern copying one email into Gmail a hundred times.
+  pains:
+    - "We sent 500 emails and got two replies — both asking us to stop."
+    - Our main domain got blacklisted and now our invoices go to spam.
+    - "Someone replied ‘interested’ and we saw it four days later."
+  benefits:
+    - {t: Lands in the inbox., d: "Every account is warmed up for two weeks; daily volume climbs slowly over seven weeks."}
+    - {t: Your main domain stays safe., d: "Separate sending domains and inboxes. Your real business email is never touched."}
+    - {t: It stops itself before damage is done., d: "Nightly checks pause an unhealthy account and tell you which one, and why, on WhatsApp."}
+    - {t: Every reply caught in minutes., d: "Checked every ten minutes. A real reply stops the sequence and alerts you at once."}
+  feature_total: 48
+  feature_groups:
+    - {name: Sending accounts and domains, items: [Separate sending domains, Email authentication set up for you]}
+    - {name: Warm-up, items: [Automatic warm-up network, Rescued from spam]}
+    - {name: Leads and list quality, items: [Email verification, Do-not-email lists]}
+    - {name: Campaigns and sequences, items: [Three-step sequences, Personalised to each prospect]}
+    - {name: "Safe, human-paced sending", items: [A seven-week ramp, Business hours only]}
+    - {name: "Replies, bounces and opt-outs", items: [Instant WhatsApp alert for real replies, Opt-outs honoured forever]}
+    - {name: Protection and monitoring, items: [Nightly health guard, Weekly inbox placement test]}
+    - {name: Reports, items: [Daily WhatsApp report]}
+  proof:
+    kind: dayone
+    title: What you get on day one
+    items:
+      - Separate sending domains and named inboxes, with email authentication checked and passing.
+      - An automatic warm-up network from the first day, with spam rescue and human timing.
+      - A clean, verified prospect list and a three-step campaign written in your voice.
+      - Reply, bounce and opt-out handling, with instant WhatsApp alerts for real replies.
+  works_with: ["12", "08", "02", "03", "07", "17"]
+  cta: "Start conversations with the businesses you actually want as customers."
+  button: "Start my outreach plan"
+
+- code: "14"
+  slug: ai-carousel-studio
+  file: 09-ai-carousel-studio.md
+  name: Wakflow AI Carousel Studio
+  short: AI Carousel Studio
+  family: grow
+  list_desc: Type a topic on your phone; get a researched, on-brand Instagram carousel and caption, approve it slide by slide, and publish it with one message.
+  headline: Instagram carousels made, approved and posted from chat.
+  sub: "Send one line — a topic, a city, a product. The studio researches it, writes every slide in your brand voice, designs the images, writes the caption and hashtags, and posts when you say “Post now”."
+  replaces: The freelance designer you brief every week, the hours spent in design apps, and separate caption and hashtag tools.
+  pains:
+    - "We know carousels get saved and shared, but one post takes half a day."
+    - Every designer makes our brand look different.
+    - I cannot sit at a laptop to approve posts.
+  benefits:
+    - {t: "One message in, a finished carousel out.", d: "Slides, images, caption and hashtags come back to the same chat, ready to check."}
+    - {t: "Researched, not made up.", d: "It searches the web for current facts before writing a single slide."}
+    - {t: Always on brand., d: "Your colours, logo, handle, website and voice on every slide of every post."}
+    - {t: You stay in control., d: "Nothing is posted until you approve each slide and the caption."}
+  feature_total: 24
+  feature_groups:
+    - {name: From idea to slide plan, items: [Topic from chat, Live web research]}
+    - {name: Slides that look designed, items: [Three versions of every slide, Your brand kit on every slide]}
+    - {name: Captions that sell, items: [Captions written to be read, A hashtag stack in every caption]}
+    - {name: Approve from your phone, items: [Tap to approve each slide, "\"Post now\" when you are ready"]}
+    - {name: Publishing and records, items: [One-message publishing to Instagram, Daily content log]}
+    - {name: "For owners, teams and agencies", items: ["Several brands, one studio", Request carousels from WhatsApp]}
+  proof:
+    kind: dayone
+    title: What you get on day one
+    items:
+      - "A studio set up for your brand: colours, logo, watermark, handle, website and voice."
+      - Your own chat bot on your phone, ready to take topics.
+      - Your Instagram business account connected for one-message publishing.
+      - A first carousel made with you on the call, from topic to published post.
+  works_with: ["04", "01", "15", "02", "09"]
+  cta: "Your next carousel is one message away."
+  button: "Get a free sample carousel"
+
+- code: "15"
+  slug: ai-video-factory
+  file: 14-ai-video-factory.md
+  name: Wakflow AI Video Factory
+  short: AI Video Factory
+  family: grow
+  list_desc: Faceless YouTube Shorts, Instagram Reels and AI video clips — written, voiced, edited and captioned for you from a topic, a prompt or a reel link.
+  headline: A video team that never sleeps, in your pocket.
+  sub: Turns a topic, a one-line prompt or a reel you like into finished vertical videos — script, Hindi or English voice-over, visuals, motion, captions and music — ready for YouTube Shorts and Instagram Reels.
+  replaces: The scriptwriter, voice artist, video editor and caption tool you would otherwise hire or juggle for every short video.
+  pains:
+    - "Everyone says post a Short every day. We cannot even post one a week."
+    - We do not want to be on camera.
+    - "Our videos all look the same, or we run out of ideas."
+  benefits:
+    - {t: "Finished videos, not raw clips.", d: "Script, voice, visuals, motion, captions and music in one vertical 1080×1920 video."}
+    - {t: Never repeats a topic., d: "It remembers everything it has made and picks a fresh topic every time."}
+    - {t: "Speaks your audience's language.", d: "Hindi voice-overs with Hinglish captions, English, or any of 75 languages."}
+    - {t: Faceless by design., d: "No camera, no studio, no voice recording. Everything is created for you."}
+  feature_total: 24
+  feature_groups:
+    - {name: Story shorts on autopilot, items: [Hindi voice with Hinglish captions, Word-by-word captions, Consistent characters]}
+    - {name: Ready-made formats, items: [Horror and true-crime shorts, "Kids' moral stories"]}
+    - {name: AI video clips from a prompt, items: [Text to video, Four options per request]}
+    - {name: Reel remix, items: ["Send a reel link, get fresh versions"]}
+    - {name: Publishing and control, items: [Upload to YouTube, Post to Instagram Reels]}
+  proof:
+    kind: dayone
+    title: What you get on day one
+    items:
+      - "One story format set up for your channel: topic style, story structure, voice, captions and music."
+      - Your content queue sheet with the first topics.
+      - A text-to-video bot on your phone for quick AI clips.
+      - Your first finished video, made together with you on the call.
+  works_with: ["14", "01", "04", "11", "17"]
+  cta: "Your first faceless video, made this week."
+  button: "Get a free sample video"
+
+- code: "16"
+  slug: automate
+  file: 05-wakflow-automate.md
+  name: Wakflow Automate
+  short: Automate
+  family: run
+  list_desc: The automation team behind every Wakflow product — connecting your WhatsApp, inbox, CRM and calendar so leads, follow-ups and reports run themselves.
+  headline: Stop doing by hand what your software should do for you.
+  sub: "The engine that does your team's repeated jobs — copying a lead into a sheet, sending the same WhatsApp twice, chasing an unpaid invoice — every single time, without anyone learning a new tool."
+  pains:
+    - "Your team's time goes into copying, not selling."
+    - "Off-the-shelf automation tools charge you per task and don't understand your business."
+    - "When it breaks, nobody notices until a customer complains."
+  benefits:
+    - {t: "One team does the wiring, forever.", d: "We build it, test it on your real data and keep it running. You get results, not a login."}
+    - {t: "AI does more than move data — it makes small decisions.", d: "It reads a message, decides if the lead is hot, drafts a reply or flags the tone."}
+    - {t: A human checks anything that could go wrong., d: "Money or real risk pauses for a person to approve before it goes out."}
+    - {t: "Every automation is logged, so nothing fails silently.", d: "If a run fails, our team is alerted before your customer notices."}
+  feature_total: 29
+  feature_label: capabilities and ready recipes
+  feature_groups:
+    - {name: Connect everything you already use, items: [A single engine for every tool you run, No app is too small or too local]}
+    - {name: "An AI that gets the work done, not just moves data", items: ["It reads and understands, not just copies", {show: "Runs on private AI models when data must stay in", src: "It can run entirely on our own private AI models when your data shouldn't leave our server"}]}
+    - {name: Someone checks before anything risky happens, items: [{show: "Money and refunds wait for a human tick", src: "Money, refunds and anything sensitive wait for a human tick"}]}
+    - {name: Built to grow with you, items: [{show: "One automation or a thousand a day", src: "The same engine runs one automation or a thousand a day"}, "You get a report, not a black box"]}
+    - {name: Recipe library, items: [Instant lead welcome, Missed-call to WhatsApp, Payment reminder, Stale deal follow-up, "Owner's daily summary", Quotation PDF]}
+  proof:
+    kind: numbers
+    title: This exact engine runs our own businesses
+    items:
+      - {n: "88", l: "automations built — 33 running daily for our brands and clients"}
+      - {n: "27 of 27", l: "new leads confirmed in the CRM by the daily audit"}
+      - {n: "15,967", l: "WhatsApp messages carried in the last 30 days"}
+  works_with: ["02", "03", "08", "06", "09", "17"]
+  cta: "Stop paying people to do what software should do by itself."
+  button: "Get a free automation audit"
+
+- code: "17"
+  slug: care
+  file: 15-wakflow-care.md
+  name: Wakflow Care
+  short: Care
+  family: run
+  list_desc: Nightly off-site backups, a daily health check of every system, and alerts before your customers notice.
+  headline: Your automations, watched every day and backed up every night.
+  sub: Backs up everything off-site every night, checks every system every morning — WhatsApp numbers, inbox, CRM, automations and leads — and alerts our team the moment something breaks.
+  replaces: “Someone will look at it when it breaks”, manual backups nobody tests, and hearing about a lost lead from an angry customer.
+  pains:
+    - "Everything looked fine — and we lost leads for weeks."
+    - Our server went down and nobody knew why.
+    - We have backups… we think.
+  benefits:
+    - {t: Every lead accounted for., d: "Each morning, every WhatsApp and website enquiry is checked against your sheet and CRM."}
+    - {t: "Backed up every night, off-site.", d: "Databases, WhatsApp logins, settings and the full system, with 30 days of history."}
+    - {t: A full health check every morning., d: "Numbers, inbox, CRM, automations, backups and security — summed up on your phone."}
+    - {t: Silent failures caught., d: "We open real results to find the errors that never show up as red."}
+  feature_total: 34
+  feature_groups:
+    - {name: Nightly backups, items: [Nightly database backups, Off-site and verified]}
+    - {name: Daily health check, items: [Every system checked every morning, Compares with yesterday]}
+    - {name: Lead-loss monitoring, items: [Every enquiry traced end to end, Exact failure point named]}
+    - {name: WhatsApp and inbox monitoring, items: [Number connection checks, Message sync checks]}
+    - {name: Automation monitoring, items: [Error alerts, Hidden-error inspection]}
+    - {name: CRM data protection, items: [Data-quality checks, Record recovery]}
+    - {name: Server health and security, items: [Load protection, Security checks]}
+    - {name: Maintenance and incident response, items: [Fixes with a paper trail, Monthly report]}
+  proof:
+    kind: numbers
+    title: Protecting our own brands, as of 27 Sep 2026
+    items:
+      - {n: "11", l: "nightly backups in a row — all 7 databases, verified"}
+      - {n: "21", l: "daily health checks in 21 days"}
+      - {n: "1,370", l: "damaged customer records restored, field by field"}
+      - {n: "13", l: "full-system backups, all complete"}
+  works_with: ["02", "03", "08", "16", "09", "01"]
+  cta: "Know every morning that your business systems are safe."
+  button: "Protect my systems"

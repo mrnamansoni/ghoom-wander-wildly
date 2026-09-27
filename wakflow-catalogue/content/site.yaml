@@ -1,0 +1,53 @@
+# Cover, intro, list and back-cover content — from Part A of 00-wakflow-platform-overview.md
+
+contact:
+  web: wakflow.com
+  web_url: https://wakflow.com
+  phone: +91 96253 30270
+  wa_url: https://wa.me/919625330270
+
+families:
+  - {id: flagship, name: Flagship, line: "The assistant that ties the whole platform together for a business owner."}
+  - {id: talk, name: Talk to customers, line: "Every channel your customers use, answered from one place."}
+  - {id: ai, name: AI agents, line: "AI that answers first — on chat and on the phone."}
+  - {id: sell, name: Capture and sell, line: "Every lead saved, every booking and payment followed up."}
+  - {id: grow, name: Grow, line: "Find new customers and keep your content flowing."}
+  - {id: run, name: Run and protect, line: "The engine behind it all, watched every day."}
+
+cover:
+  title: One system for every message, every lead and every follow-up.
+  sub: WhatsApp, team inbox, CRM, AI agents and automation — working as one system instead of a pile of apps that don't talk to each other. Built for Indian businesses.
+
+intro:
+  lead: Wakflow connects your WhatsApp number, your team's shared inbox, your CRM, your AI assistant and the automation that ties them together — so a new enquiry is answered in seconds, saved with its source, and followed up without anyone copying it between apps by hand.
+  pains:
+    - {t: "Your tools don't talk to each other.", d: "A WhatsApp lead is typed into a sheet by hand, and the follow-up depends on someone remembering."}
+    - {t: "Enquiries get answered late, or not at all.", d: "Nobody can watch WhatsApp, Instagram, a website form and a phone line at the same time."}
+    - {t: "Every extra app is another login and another bill.", d: "Small teams end up managing software instead of running their business."}
+    - {t: "When something breaks, nobody notices.", d: "A disconnected number or a stuck automation stays hidden until a customer complains."}
+  steps:
+    - {t: A customer gets in touch, d: "WhatsApp, Instagram DM or comment, website form, chat or email."}
+    - {t: An AI answers first, d: "24x7, from your own prices and policies, in the customer's language. Hot leads get a call back within a minute."}
+    - {t: The lead is saved, d: "In your CRM with its source and interest, plus a follow-up task for your team."}
+    - {t: A human takes over, d: "The full conversation sits in the shared inbox; the right person picks it up and the AI steps aside."}
+    - {t: Follow-ups run by themselves, d: "Confirmations, payment reminders, offers and feedback requests — no one pressing send."}
+    - {t: You stay in control, d: "One short morning report from your AI assistant, and nightly backups of everything."}
+  proof_title: We run our own businesses on Wakflow.
+  proof_sub: Ghoomo Saste Me and Tripwaley — our own travel brands — run on the same products we sell. As of 27 Sep 2026.
+  stats:
+    - {n: "91,907", l: "WhatsApp messages held across our brands' numbers"}
+    - {n: "20,407", l: "customer conversations in the shared team inbox"}
+    - {n: "63", l: "of 11,476 CRM customers ever typed in by hand"}
+    - {n: "0.91 s", l: "to the AI caller's first word — 85% of pilot calls answered"}
+    - {n: "51 of 53", l: "morning checks completed by our own AI assistant"}
+    - {n: "92 / 100", l: "mobile speed and SEO scores for our dashboard website"}
+
+back:
+  title: "Stop running your business across apps that don't talk to each other."
+  sub: "Tell us what's slowest in your business today, and we'll show you exactly which Wakflow products fix it — and how fast."
+  steps:
+    - {t: Tell us the one task that costs you the most time, d: "A short call about your business."}
+    - {t: We recommend what removes it fastest, d: "And show how it connects to the rest when you're ready."}
+    - {t: Go live step by step, d: "An existing WhatsApp number can be connected the same day. You see results from the first week."}
+  pricing: "A one-time setup fee, then a simple monthly plan — per WhatsApp number, inbox agent, CRM user or automation pack. We share an exact quote after a short call."
+  button: See what fits your business

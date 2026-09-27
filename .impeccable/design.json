@@ -1,0 +1,627 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-27T00:00:00+00:00",
+  "title": "Design System: Wakflow Catalogue",
+  "extensions": {
+    "colorMeta": {
+      "void": {
+        "role": "neutral",
+        "displayName": "Void",
+        "canonical": "#000000"
+      },
+      "surface-1": {
+        "role": "neutral",
+        "displayName": "Surface 1",
+        "canonical": "#0A0A0A",
+        "tonalRamp": [
+          "#141414",
+          "#2E2E2E",
+          "#4C4C4C",
+          "#6B6B6B",
+          "#8C8C8C",
+          "#ADADAD",
+          "#CCCCCC",
+          "#EBEBEB"
+        ]
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Surface 2",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "#141414",
+          "#2E2E2E",
+          "#4C4C4C",
+          "#6B6B6B",
+          "#8C8C8C",
+          "#ADADAD",
+          "#CCCCCC",
+          "#EBEBEB"
+        ]
+      },
+      "surface-3": {
+        "role": "neutral",
+        "displayName": "Surface 3",
+        "canonical": "#161B22",
+        "tonalRamp": [
+          "#101419",
+          "#242C38",
+          "#3C4A5D",
+          "#546782",
+          "#7488A5",
+          "#9CAABF",
+          "#C1CAD7",
+          "#E6EAEF"
+        ]
+      },
+      "surface-4": {
+        "role": "neutral",
+        "displayName": "Surface 4",
+        "canonical": "#1C222B",
+        "tonalRamp": [
+          "#101419",
+          "#242C38",
+          "#3C495D",
+          "#546782",
+          "#7487A4",
+          "#9CAABF",
+          "#C1CAD7",
+          "#E6EAEF"
+        ]
+      },
+      "signal-cyan": {
+        "role": "primary",
+        "displayName": "Signal Cyan",
+        "canonical": "#00C8FF",
+        "tonalRamp": [
+          "#002029",
+          "#00485C",
+          "#007899",
+          "#00A8D6",
+          "#1ACDFF",
+          "#5CDCFF",
+          "#99E9FF",
+          "#D6F6FF"
+        ]
+      },
+      "circuit-blue": {
+        "role": "primary",
+        "displayName": "Circuit Blue",
+        "canonical": "#4A90E2",
+        "tonalRamp": [
+          "#061323",
+          "#0D2B4F",
+          "#154884",
+          "#1E65B9",
+          "#3986DF",
+          "#72A9E8",
+          "#A7C9F1",
+          "#DCE9F9"
+        ]
+      },
+      "ultraviolet": {
+        "role": "primary",
+        "displayName": "Ultraviolet",
+        "canonical": "#7B35C1",
+        "tonalRamp": [
+          "#140920",
+          "#2E1448",
+          "#4C2178",
+          "#6B2EA8",
+          "#8C4BCE",
+          "#AD7FDC",
+          "#CCAFE9",
+          "#EBDFF6"
+        ]
+      },
+      "ai-violet": {
+        "role": "tertiary",
+        "displayName": "AI Violet",
+        "canonical": "#A56BE6",
+        "tonalRamp": [
+          "#140623",
+          "#2C0D4F",
+          "#491683",
+          "#671FB7",
+          "#883BDE",
+          "#AA73E7",
+          "#CAA8F0",
+          "#EADCF9"
+        ]
+      },
+      "demo-orange": {
+        "role": "secondary",
+        "displayName": "Demo Orange",
+        "canonical": "#FF8A00",
+        "tonalRamp": [
+          "#291600",
+          "#5C3200",
+          "#995300",
+          "#D67400",
+          "#FF961A",
+          "#FFB45C",
+          "#FFD099",
+          "#FFECD6"
+        ]
+      },
+      "demo-amber": {
+        "role": "secondary",
+        "displayName": "Demo Amber",
+        "canonical": "#FFB347",
+        "tonalRamp": [
+          "#291800",
+          "#5C3600",
+          "#995A00",
+          "#D67E00",
+          "#FFA01A",
+          "#FFBC5C",
+          "#FFD599",
+          "#FFEED6"
+        ]
+      },
+      "proof-green": {
+        "role": "tertiary",
+        "displayName": "Proof Green",
+        "canonical": "#10B981",
+        "tonalRamp": [
+          "#03261A",
+          "#07543B",
+          "#0C8D62",
+          "#11C589",
+          "#2CEDAD",
+          "#69F2C5",
+          "#A1F7DA",
+          "#D9FCF0"
+        ]
+      },
+      "tick-green": {
+        "role": "tertiary",
+        "displayName": "Tick Green",
+        "canonical": "#34D399",
+        "tonalRamp": [
+          "#072218",
+          "#104B36",
+          "#1B7E5A",
+          "#26B07E",
+          "#42D6A0",
+          "#79E2BC",
+          "#ABEDD5",
+          "#DDF8EE"
+        ]
+      },
+      "problem-red": {
+        "role": "tertiary",
+        "displayName": "Problem Red",
+        "canonical": "#F87171",
+        "tonalRamp": [
+          "#270202",
+          "#570404",
+          "#920707",
+          "#CC0A0A",
+          "#F42424",
+          "#F76363",
+          "#FA9E9E",
+          "#FDD8D8"
+        ]
+      },
+      "slate-grey": {
+        "role": "neutral",
+        "displayName": "Slate Grey",
+        "canonical": "#8892A4",
+        "tonalRamp": [
+          "#121417",
+          "#282C34",
+          "#424A57",
+          "#5D6779",
+          "#7D889C",
+          "#A3AAB8",
+          "#C5CAD3",
+          "#E8EAED"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#EEF3FA",
+        "tonalRamp": [
+          "#091320",
+          "#152A47",
+          "#234676",
+          "#3161A6",
+          "#4E82CB",
+          "#81A6DA",
+          "#B0C7E8",
+          "#DFE9F6"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#C9D3E0",
+        "tonalRamp": [
+          "#0F141A",
+          "#212C3A",
+          "#384A61",
+          "#4E6788",
+          "#6D88AB",
+          "#97ABC3",
+          "#BECADA",
+          "#E5EAF0"
+        ]
+      },
+      "hairline-cyan": {
+        "role": "neutral",
+        "displayName": "Hairline Cyan",
+        "canonical": "rgba(0, 200, 255, .12)"
+      },
+      "hairline-grey": {
+        "role": "neutral",
+        "displayName": "Hairline Grey",
+        "canonical": "rgba(136, 146, 164, .22)"
+      },
+      "svg-line": {
+        "role": "neutral",
+        "displayName": "SVG Line",
+        "canonical": "#262D38",
+        "tonalRamp": [
+          "#101418",
+          "#252C37",
+          "#3E495B",
+          "#576780",
+          "#7687A2",
+          "#9EAABD",
+          "#C2CAD6",
+          "#E7EAEF"
+        ]
+      },
+      "svg-line-2": {
+        "role": "neutral",
+        "displayName": "SVG Line 2",
+        "canonical": "#3A4250",
+        "tonalRamp": [
+          "#111418",
+          "#272C35",
+          "#404959",
+          "#5A667C",
+          "#7A879F",
+          "#A0AABA",
+          "#C4CAD4",
+          "#E7EAEE"
+        ]
+      },
+      "cyan-deep": {
+        "role": "primary",
+        "displayName": "Cyan Deep",
+        "canonical": "#06303D",
+        "tonalRamp": [
+          "#041D25",
+          "#084254",
+          "#0E6E8B",
+          "#1399C3",
+          "#2EBEEA",
+          "#6AD1F0",
+          "#A2E2F6",
+          "#DAF3FB"
+        ]
+      },
+      "purple-deep": {
+        "role": "primary",
+        "displayName": "Purple Deep",
+        "canonical": "#1E0F33",
+        "tonalRamp": [
+          "#130920",
+          "#2A1547",
+          "#462376",
+          "#6131A6",
+          "#824ECB",
+          "#A681DA",
+          "#C7B0E8",
+          "#E9DFF6"
+        ]
+      },
+      "green-deep": {
+        "role": "tertiary",
+        "displayName": "Green Deep",
+        "canonical": "#062A20",
+        "tonalRamp": [
+          "#05241B",
+          "#0B503D",
+          "#138666",
+          "#1BBB8F",
+          "#36E2B3",
+          "#70EBC9",
+          "#A6F2DD",
+          "#DBFAF1"
+        ]
+      },
+      "orange-deep": {
+        "role": "secondary",
+        "displayName": "Orange Deep",
+        "canonical": "#2E1A05",
+        "tonalRamp": [
+          "#251504",
+          "#532F09",
+          "#8A4E0F",
+          "#C16D15",
+          "#E98E30",
+          "#EFAF6C",
+          "#F5CDA3",
+          "#FBEBDA"
+        ]
+      },
+      "red-deep": {
+        "role": "tertiary",
+        "displayName": "Red Deep",
+        "canonical": "#2E1414",
+        "tonalRamp": [
+          "#1C0C0C",
+          "#401C1C",
+          "#6B2E2E",
+          "#954141",
+          "#B95F5F",
+          "#CE8D8D",
+          "#E0B8B8",
+          "#F3E3E3"
+        ]
+      },
+      "blue-deep": {
+        "role": "primary",
+        "displayName": "Blue Deep",
+        "canonical": "#0C1E33",
+        "tonalRamp": [
+          "#081321",
+          "#112C4A",
+          "#1D497C",
+          "#2966AD",
+          "#4587D3",
+          "#7BAAE0",
+          "#ACCAEC",
+          "#DEEAF7"
+        ]
+      },
+      "button-ink": {
+        "role": "neutral",
+        "displayName": "Button Ink",
+        "canonical": "#140A00",
+        "tonalRamp": [
+          "#291400",
+          "#5C2E00",
+          "#994C00",
+          "#D66B00",
+          "#FF8C1A",
+          "#FFAD5C",
+          "#FFCC99",
+          "#FFEBD6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Cover headline; 38/34/30/28px variants on back cover, index and intro."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Product name in brand gradient."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product one-line headline, spec group heads, step and package names, CTA line."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Feature counts, proof stats, legend counts, phone number."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default reading copy; floor 10px."
+      },
+      "body-strong": {
+        "displayName": "Body Strong",
+        "purpose": "Benefit titles and emphasised body."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "// LABEL mono rails, running rail, footer, captions; floor 9px."
+      }
+    },
+    "shadows": [
+      {
+        "name": "demo-glow",
+        "value": "0 6px 18px -6px rgba(255, 138, 0, .55)",
+        "purpose": "Orange under-glow on every demo pill."
+      },
+      {
+        "name": "accent-halo",
+        "value": "0 0 28px -8px color-mix(in srgb, var(--accent) 60%, transparent)",
+        "purpose": "Family-accent halo around the product icon tile."
+      },
+      {
+        "name": "signal-ring",
+        "value": "0 0 0 3px rgba(248, 113, 113, .15)",
+        "purpose": "Soft ring around red pain dots."
+      },
+      {
+        "name": "page-halo",
+        "value": "radial-gradient(420px 300px at 88% 4%, rgba(123, 53, 193, .22), transparent 70%), radial-gradient(380px 260px at 6% 38%, rgba(0, 200, 255, .09), transparent 70%)",
+        "purpose": "Default page glow; flagship swaps orange .20 top-right, cover centres violet .30 and cyan .16 behind the map."
+      },
+      {
+        "name": "page-grid",
+        "value": "28px grid of 1px rgba(0, 200, 255, .045) lines, masked 90% → 35% → 80% top to bottom",
+        "purpose": "Graph-paper ground on every page."
+      }
+    ],
+    "motion": [],
+    "breakpoints": [
+      {
+        "name": "a4-page",
+        "value": "794px × 1123px (210mm × 297mm at 96dpi)"
+      }
+    ],
+    "print": {
+      "pageSize": "A4 portrait, margin 0, print-color-adjust exact",
+      "bodyFloor": "10px (7.5pt)",
+      "labelFloor": "9px",
+      "svgLabelFloor": "9 units at ~0.98 render scale"
+    },
+    "familyAccents": {
+      "flagship": "#FFB347",
+      "talk": "#00C8FF",
+      "ai": "#A56BE6",
+      "sell": "#4A90E2",
+      "grow": "#34D399",
+      "run": "#C9D3E0"
+    },
+    "gradients": {
+      "brand": "linear-gradient(92deg, #00C8FF 0%, #4A90E2 48%, #7B35C1 100%)",
+      "demo": "linear-gradient(95deg, #FF8A00, #FFB347)"
+    },
+    "assets": {
+      "logo": {
+        "path": "wakflow-catalogue/assets/logo.svg",
+        "status": "placeholder wordmark until the owner uploads the real logo"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Demo Pill",
+      "kind": "button",
+      "refersTo": "button-demo",
+      "description": "The single orange call to action at the foot of every page.",
+      "html": "<span class=\"ds-btn\">Book a free demo<svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h9M8.5 4l4 4-4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span>",
+      "css": ":host{--bg:#000;--bg-1:#0a0a0a;--cyan:#00C8FF;--blue:#4A90E2;--purple:#7B35C1;--orange:#FF8A00;--orange-2:#FFB347;--green:#10B981;--green-2:#34D399;--red:#F87171;--grey:#8892A4;--ink:#EEF3FA;--ink-2:#C9D3E0;--line:rgba(0,200,255,.12);--line-2:rgba(136,146,164,.22);--grad:linear-gradient(92deg,var(--cyan) 0%,var(--blue) 48%,var(--purple) 100%);--grad-orange:linear-gradient(95deg,var(--orange),var(--orange-2));--f-display:'Oxanium',sans-serif;--f-body:'DM Sans',sans-serif;--f-mono:'JetBrains Mono',monospace;--accent:var(--cyan);} .ds-btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad-orange);color:#140a00;font:700 11px/1 var(--f-display);letter-spacing:.02em;padding:9px 14px 9px 16px;border-radius:999px;box-shadow:0 6px 18px -6px rgba(255,138,0,.55);} .ds-btn:hover{box-shadow:0 8px 24px -6px rgba(255,138,0,.7);} .ds-btn:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;}"
+    },
+    {
+      "name": "Slash Label",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "The brand's // LABEL section voice, colour-coded by meaning.",
+      "html": "<div class=\"ds-wrap\"><h3 class=\"ds-lbl\">// What changes</h3><h3 class=\"ds-lbl ds-red\">// The problem</h3><h3 class=\"ds-lbl ds-green\">// Proof <em>as of 27 Sep 2026</em></h3></div>",
+      "css": ":host{--bg:#000;--bg-1:#0a0a0a;--cyan:#00C8FF;--blue:#4A90E2;--purple:#7B35C1;--orange:#FF8A00;--orange-2:#FFB347;--green:#10B981;--green-2:#34D399;--red:#F87171;--grey:#8892A4;--ink:#EEF3FA;--ink-2:#C9D3E0;--line:rgba(0,200,255,.12);--line-2:rgba(136,146,164,.22);--grad:linear-gradient(92deg,var(--cyan) 0%,var(--blue) 48%,var(--purple) 100%);--grad-orange:linear-gradient(95deg,var(--orange),var(--orange-2));--f-display:'Oxanium',sans-serif;--f-body:'DM Sans',sans-serif;--f-mono:'JetBrains Mono',monospace;--accent:var(--cyan);} .ds-wrap{background:var(--bg);padding:16px;} .ds-lbl{font:500 9px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin:0 0 9px;} .ds-lbl em{font-style:normal;color:var(--grey);letter-spacing:.12em;margin-left:6px;} .ds-red{color:var(--red);} .ds-green{color:var(--green-2);}"
+    },
+    {
+      "name": "Running Rail",
+      "kind": "nav",
+      "refersTo": "label",
+      "description": "Top rail on every inner page: section in accent, logo, catalogue and page number.",
+      "html": "<header class=\"ds-rail\"><span class=\"ds-l\">// 02 · Talk to customers</span><span class=\"ds-m\">WAKFLOW</span><span class=\"ds-r\">Product catalogue 2026 <b>06</b></span></header>",
+      "css": ":host{--bg:#000;--bg-1:#0a0a0a;--cyan:#00C8FF;--blue:#4A90E2;--purple:#7B35C1;--orange:#FF8A00;--orange-2:#FFB347;--green:#10B981;--green-2:#34D399;--red:#F87171;--grey:#8892A4;--ink:#EEF3FA;--ink-2:#C9D3E0;--line:rgba(0,200,255,.12);--line-2:rgba(136,146,164,.22);--grad:linear-gradient(92deg,var(--cyan) 0%,var(--blue) 48%,var(--purple) 100%);--grad-orange:linear-gradient(95deg,var(--orange),var(--orange-2));--f-display:'Oxanium',sans-serif;--f-body:'DM Sans',sans-serif;--f-mono:'JetBrains Mono',monospace;--accent:var(--cyan);} .ds-rail{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:var(--bg);padding:12px 16px 9px;border-bottom:1px solid var(--line);font:500 9px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--grey);} .ds-l{color:var(--accent);} .ds-m{font:800 11px/1 var(--f-display);color:#fff;letter-spacing:.12em;} .ds-r{text-align:right;} .ds-r b{color:var(--ink);font-weight:500;margin-left:8px;}"
+    },
+    {
+      "name": "Works-with Chip",
+      "kind": "chip",
+      "refersTo": "chip-works-with",
+      "description": "Links a product to a related one, tinted by the target's family accent.",
+      "html": "<span class=\"ds-chip\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\"/><path d=\"M3 13h5l1.5 2.5h5L16 13h5\"/></svg><i>03</i>Inbox</span>",
+      "css": ":host{--bg:#000;--bg-1:#0a0a0a;--cyan:#00C8FF;--blue:#4A90E2;--purple:#7B35C1;--orange:#FF8A00;--orange-2:#FFB347;--green:#10B981;--green-2:#34D399;--red:#F87171;--grey:#8892A4;--ink:#EEF3FA;--ink-2:#C9D3E0;--line:rgba(0,200,255,.12);--line-2:rgba(136,146,164,.22);--grad:linear-gradient(92deg,var(--cyan) 0%,var(--blue) 48%,var(--purple) 100%);--grad-orange:linear-gradient(95deg,var(--orange),var(--orange-2));--f-display:'Oxanium',sans-serif;--f-body:'DM Sans',sans-serif;--f-mono:'JetBrains Mono',monospace;--accent:var(--cyan);} .ds-chip{--accent:var(--cyan);display:inline-flex;align-items:center;gap:5px;padding:4px 9px 4px 6px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent) 38%,transparent);background:color-mix(in srgb,var(--accent) 8%,#000);font:500 10px/1 var(--f-body);color:var(--ink-2);} .ds-chip svg{color:var(--accent);} .ds-chip i{font:500 9px/1 var(--f-mono);font-style:normal;color:var(--accent);} .ds-chip:hover{border-color:var(--accent);}"
+    },
+    {
+      "name": "Flagship Flag",
+      "kind": "chip",
+      "refersTo": "flag-flagship",
+      "description": "Amber pill marking the flagship product.",
+      "html": "<span class=\"ds-flag\"><svg width=\"11\" height=\"11\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2.8l2.7 5.9 6.4.7-4.8 4.3 1.4 6.3L12 16.8 6.3 20l1.4-6.3-4.8-4.3 6.4-.7z\" fill=\"currentColor\"/></svg> Flagship</span>",
+      "css": ":host{--bg:#000;--bg-1:#0a0a0a;--cyan:#00C8FF;--blue:#4A90E2;--purple:#7B35C1;--orange:#FF8A00;--orange-2:#FFB347;--green:#10B981;--green-2:#34D399;--red:#F87171;--grey:#8892A4;--ink:#EEF3FA;--ink-2:#C9D3E0;--line:rgba(0,200,255,.12);--line-2:rgba(136,146,164,.22);--grad:linear-gradient(92deg,var(--cyan) 0%,var(--blue) 48%,var(--purple) 100%);--grad-orange:linear-gradient(95deg,var(--orange),var(--orange-2));--f-display:'Oxanium',sans-serif;--f-body:'DM Sans',sans-serif;--f-mono:'JetBrains Mono',monospace;--accent:var(--cyan);} .ds-flag{display:inline-flex;align-items:center;gap:4px;font:600 9px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--orange-2);border:1px solid rgba(255,179,71,.5);background:rgba(255,138,0,.1);border-radius:999px;padding:4px 8px 3px 6px;}"
+    },
+    {
+      "name": "Product Title Block",
+      "kind": "custom",
+      "refersTo": "icon-tile",
+      "description": "Glowing accent icon tile, brand line, gradient product name and feature count.",
+      "html": "<div class=\"ds-title\"><div class=\"ds-icon\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\"/><path d=\"M3 13h5l1.5 2.5h5L16 13h5\"/></svg></div><div><span class=\"ds-brand\">Wakflow</span><h2 class=\"ds-name\">WhatsApp Connect</h2></div><div class=\"ds-count\"><b>78</b><span>features</span></div></div>",
+      "css": ":host{--bg:#000;--bg-1:#0a0a0a;--cyan:#00C8FF;--blue:#4A90E2;--purple:#7B35C1;--orange:#FF8A00;--orange-2:#FFB347;--green:#10B981;--green-2:#34D399;--red:#F87171;--grey:#8892A4;--ink:#EEF3FA;--ink-2:#C9D3E0;--line:rgba(0,200,255,.12);--line-2:rgba(136,146,164,.22);--grad:linear-gradient(92deg,var(--cyan) 0%,var(--blue) 48%,var(--purple) 100%);--grad-orange:linear-gradient(95deg,var(--orange),var(--orange-2));--f-display:'Oxanium',sans-serif;--f-body:'DM Sans',sans-serif;--f-mono:'JetBrains Mono',monospace;--accent:var(--cyan);} .ds-title{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--bg);padding:16px;} .ds-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;border:1px solid color-mix(in srgb,var(--accent) 55%,transparent);background:radial-gradient(circle at 50% 30%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 70%),var(--bg-1);color:var(--accent);box-shadow:0 0 28px -8px color-mix(in srgb,var(--accent) 60%,transparent);} .ds-icon svg{width:27px;height:27px;} .ds-brand{display:block;font:600 12px/1 var(--f-display);letter-spacing:.28em;text-transform:uppercase;color:var(--ink);margin-bottom:5px;} .ds-name{margin:0;font:800 33px/1.02 var(--f-display);letter-spacing:-.01em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;} .ds-count{text-align:right;border-left:1px solid var(--line-2);padding-left:16px;} .ds-count b{display:block;font:800 30px/1 var(--f-display);color:var(--ink);} .ds-count span{display:block;font:500 9px/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:4px;}"
+    },
+    {
+      "name": "Proof Panel",
+      "kind": "card",
+      "refersTo": "proof-panel",
+      "description": "Green-washed panel of measured, dated numbers.",
+      "html": "<div class=\"ds-proof\"><h3>// Ghoomo Saste Me and Tripwaley, as of 27 Sep 2026</h3><div class=\"ds-stats\"><div><b>91,907</b><span>messages held securely</span></div><div><b>21,396</b><span>contacts across five numbers</span></div><div><b>8,773</b><span>replies sent in 30 days</span></div></div></div>",
+      "css": ":host{--bg:#000;--bg-1:#0a0a0a;--cyan:#00C8FF;--blue:#4A90E2;--purple:#7B35C1;--orange:#FF8A00;--orange-2:#FFB347;--green:#10B981;--green-2:#34D399;--red:#F87171;--grey:#8892A4;--ink:#EEF3FA;--ink-2:#C9D3E0;--line:rgba(0,200,255,.12);--line-2:rgba(136,146,164,.22);--grad:linear-gradient(92deg,var(--cyan) 0%,var(--blue) 48%,var(--purple) 100%);--grad-orange:linear-gradient(95deg,var(--orange),var(--orange-2));--f-display:'Oxanium',sans-serif;--f-body:'DM Sans',sans-serif;--f-mono:'JetBrains Mono',monospace;--accent:var(--cyan);} .ds-proof{padding:10px 16px;border-radius:14px;border:1px solid rgba(52,211,153,.28);background:linear-gradient(100deg,rgba(16,185,129,.10),rgba(0,200,255,.04) 60%,rgba(0,0,0,0)),#000;} .ds-proof h3{font:500 9px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--green-2);margin:0 0 7px;} .ds-stats{display:grid;grid-template-columns:repeat(3,1fr);} .ds-stats div{padding:0 14px;border-left:1px solid var(--line-2);} .ds-stats div:first-child{border-left:0;padding-left:0;} .ds-stats b{display:block;font:800 24px/1.05 var(--f-display);color:var(--ink);letter-spacing:-.01em;font-variant-numeric:tabular-nums;} .ds-stats span{display:block;font:400 10px/1.35 var(--f-body);color:var(--grey);margin-top:3px;}"
+    },
+    {
+      "name": "Benefit Tick Item",
+      "kind": "custom",
+      "refersTo": "body-strong",
+      "description": "Green stroke tick with Ink title and grey detail.",
+      "html": "<ul class=\"ds-ben\"><li><svg width=\"14\" height=\"14\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3.5 8.5l3 3 6-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><div><b>Keep your number. Go live the same day.</b><span>Scan a QR code or type a short pairing code.</span></div></li></ul>",
+      "css": ":host{--bg:#000;--bg-1:#0a0a0a;--cyan:#00C8FF;--blue:#4A90E2;--purple:#7B35C1;--orange:#FF8A00;--orange-2:#FFB347;--green:#10B981;--green-2:#34D399;--red:#F87171;--grey:#8892A4;--ink:#EEF3FA;--ink-2:#C9D3E0;--line:rgba(0,200,255,.12);--line-2:rgba(136,146,164,.22);--grad:linear-gradient(92deg,var(--cyan) 0%,var(--blue) 48%,var(--purple) 100%);--grad-orange:linear-gradient(95deg,var(--orange),var(--orange-2));--f-display:'Oxanium',sans-serif;--f-body:'DM Sans',sans-serif;--f-mono:'JetBrains Mono',monospace;--accent:var(--cyan);} .ds-ben{list-style:none;margin:0;padding:16px;background:var(--bg);} .ds-ben li{display:flex;gap:8px;} .ds-ben svg{color:var(--green-2);flex:none;margin-top:1px;} .ds-ben b{display:block;font:600 11px/1.3 var(--f-body);color:var(--ink);} .ds-ben span{display:block;font:400 10px/1.38 var(--f-body);color:var(--grey);margin-top:1px;}"
+    },
+    {
+      "name": "Pin-Label Callout",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Datasheet pin label: hollow dot on the device, elbow leader, Ink label with grey sub-line.",
+      "html": "<svg class=\"ds-call\" viewBox=\"0 0 260 80\" fill=\"none\"><rect x=\"150\" y=\"10\" width=\"100\" height=\"60\" rx=\"10\" fill=\"#0A0A0A\" stroke=\"#3A4250\" stroke-width=\"1.2\"/><circle cx=\"170\" cy=\"40\" r=\"3.2\" fill=\"#000\" stroke=\"#00C8FF\" stroke-width=\"1.4\"/><circle cx=\"170\" cy=\"40\" r=\"1.3\" fill=\"#00C8FF\"/><path d=\"M170 40 L124 24 L110 24\" stroke=\"#00C8FF\" stroke-width=\".9\" opacity=\".7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"105\" y=\"27.8\" font-family=\"DM Sans\" font-size=\"11\" font-weight=\"600\" fill=\"#EEF3FA\" text-anchor=\"end\">Every chat saved</text><text x=\"105\" y=\"41\" font-family=\"DM Sans\" font-size=\"9.5\" fill=\"#8892A4\" text-anchor=\"end\">searchable and yours</text></svg>",
+      "css": ".ds-call{display:block;width:260px;background:#000;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Lit Datasheet",
+    "overview": "Every page is an engineering datasheet printed on black: a product drawn working as a thin-stroke neon device, its features pinned to it with elbow leaders like pin labels, then the spec block, the measured proof and the way in. The world is the owner's pinned Wakflow web brand carried into print: pure black ground, a faint cyan graph-paper grid, soft violet and cyan halos bleeding in from the page corners, a cyan→blue→purple gradient reserved for names, and one warm orange pill that always means \"book a demo\".\n\nDensity is high but ordered. A4 at 96dpi (794×1123 CSS px) holds a rail, title block, hero screen, problem/benefit split, spec grid, proof panel and footer CTA on every product page, separated by 1px hairlines rather than boxes. Colour is semantic: cyan is the system, red is the customer's pain, green is measured proof and done, orange is the action, and each of six product families carries its own accent through icon tile, chips, spec rules and rail label.\n\nThe type voice has three registers: Oxanium for names and numbers (squared, technical, heavy), DM Sans for everything a reader reads, and JetBrains Mono uppercase \"// LABEL\" rails for every section label, measurement and caption.",
+    "keyCharacteristics": [
+      "Pure black page with a 28px cyan grid at 4.5% opacity, masked to fade through the middle.",
+      "Radial neon halos (violet top-right, cyan left) behind every page; orange joins on flagship and back cover.",
+      "Gradient text (cyan→blue→purple) on product names and the key phrase of each headline.",
+      "\"// LABEL\" mono uppercase rails for all section labels, colour-coded by meaning.",
+      "Products drawn as vector SVG devices (phone, window, bubbles, nodes) with pin-label callouts.",
+      "Family accent (`--accent`) threads one hue through each product page.",
+      "One orange gradient pill CTA per page, bottom right."
+    ],
+    "rules": [
+      {
+        "name": "The Meaning-Not-Mood Rule",
+        "body": "Red is only pain, green only proof or done, orange only the call to action. A hue never switches role between pages.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Accent Per Product Rule",
+        "body": "Each product page resolves `--accent` from its family (flagship amber, talk cyan, AI violet, sell blue, grow green, run ink-2) and uses it for the icon tile, spec-rule underlines, spec bullets, chips and the rail label, never more.",
+        "section": "colors"
+      },
+      {
+        "name": "The Deep-Tint Fill Rule",
+        "body": "In SVG, a brand-coloured stroke sits on its matching deep tint, never on a lighter tint of itself.",
+        "section": "colors"
+      },
+      {
+        "name": "The Print Floor Rule",
+        "body": "Body text never below 10px (7.5pt); labels never below 9px. In SVG, the smallest label is 9 units, which renders at about 0.98 scale on the page.",
+        "section": "typography"
+      },
+      {
+        "name": "The Gradient-Is-A-Name Rule",
+        "body": "The cyan→blue→purple gradient text goes on product names and the key phrase of a headline (\"One system\", \"answer, sell, book and follow up\", \"wakflow.com\"), one span per heading. It is the owner's brand device, not decoration to spread.",
+        "section": "typography"
+      },
+      {
+        "name": "The Slash Voice Rule",
+        "body": "Every section label is JetBrains Mono uppercase prefixed \"// \", coloured by meaning (cyan default, red problem, green proof, amber built-for). An `em` inside a label drops to grey for the qualifier.",
+        "section": "typography"
+      },
+      {
+        "name": "The Light-Not-Lift Rule",
+        "body": "Nothing casts a directional drop shadow. Elements glow from their own hue or sit on a tinted wash.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep every page on the black ground with the masked 28px cyan grid and at least one radial halo.",
+      "Do put gradient text on the product name and one key headline phrase, never across whole paragraphs.",
+      "Do label every section with a \"// \" JetBrains Mono uppercase rail at 9px, coloured by meaning.",
+      "Do hold body copy at 10px or larger and labels at 9px or larger; SVG labels at 9 units or larger.",
+      "Do draw products as thin-stroke vector devices with pin-label callouts, and tag illustrative screens \"Example\".",
+      "Do use only measured, dated proof numbers in the green proof panel.",
+      "Do end each page with a single orange demo pill and the wakflow.com / phone contact line."
+    ],
+    "donts": [
+      "Don't use orange for anything but the call to action and the flagship marker.",
+      "Don't use red outside pain quotes, problem labels and the \"Replaces\" tag.",
+      "Don't add directional drop shadows; depth is glow and tinted washes.",
+      "Don't place a brand-coloured stroke on anything but its deep tint in SVG.",
+      "Don't invent UI copy inside device screens; use placeholder bars."
+    ]
+  }
+}

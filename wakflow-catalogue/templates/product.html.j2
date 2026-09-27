@@ -1,6 +1,6 @@
 {% set fam = families[p.family] %}
 {% set page_no = 4 + p.code|int %}
-<section class="page product fam-{{ p.family }}{% if p.get("flagship") %} is-flagship{% endif %}" data-code="{{ p.code }}">
+<section id="p{{ p.code }}" class="page product fam-{{ p.family }}{% if p.get("flagship") %} is-flagship{% endif %}" data-code="{{ p.code }}">
   <div class="bg-grid"></div>
   <div class="bg-glow"></div>
   <div class="page-inner">
@@ -82,8 +82,8 @@
       </div>
       <div class="cta">
         <p>{{ p.cta }}</p>
-        <span class="btn">{{ p.button }}{{ m.arrow() }}</span>
-        <span class="contact">wakflow.com · +91 96253 30270</span>
+        <a class="btn" href="{{ site.contact.wa_url }}">{{ p.button }}{{ m.arrow() }}</a>
+        <span class="contact"><a href="{{ site.contact.web_url }}">wakflow.com</a> · <a href="tel:+919625330270">+91 96253 30270</a></span>
       </div>
     </div>
   </div>

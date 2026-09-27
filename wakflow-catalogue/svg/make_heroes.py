@@ -486,8 +486,8 @@ def whatsapp_broadcasts(d):
         if i == 2:
             d.add(mono(446, y + 28, "typing…", 9, C["green2"], "end"))
     d.add(mono(368, 286, "Human pace · random gaps", 9, C["grey"], "middle"))
-    outs = [("Reply → AI agent", C["purple"], 30), ("Reply → team inbox", C["cyan"], 92),
-            ("Saved as a lead", C["green2"], 154), ("STOP → removed", C["red"], 216)]
+    outs = [("Replies to AI agent", C["purple"], 30), ("Replies to team inbox", C["cyan"], 92),
+            ("Saved as a lead", C["green2"], 154), ("STOP: removed at once", C["red"], 216)]
     for lab, col, y in outs:
         d.add(arrow(456, y + 16, 500, y + 16, col, 1.1, opacity=.9),
               rect(506, y, 180, 34, 8, C["bg1"], col, 1),

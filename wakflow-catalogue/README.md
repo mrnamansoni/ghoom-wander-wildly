@@ -10,8 +10,9 @@ cd wakflow-catalogue
 npm install            # once (Playwright + Chromium)
 pip install jinja2 pyyaml segno pymupdf pillow   # once
 python3 svg/make_icons.py && python3 svg/make_heroes.py   # only if drawings changed
+python3 fonts/make_static.py                              # only if font files changed
 python3 build.py && node render.mjs --shots
-python3 tests/test_catalogue.py    # must end with 12/12 passed
+python3 tests/test_catalogue.py    # must end with 16/16 passed
 ```
 
 `--shots` also saves a PNG of every page into `../.impeccable/review/` for checking.
@@ -37,6 +38,7 @@ If you only have a PNG, tell Claude — the templates switch from inline SVG to 
 
 Exactly 22 A4 pages · no page overflows · all three fonts loaded · no text below 7.5 pt (labels 6.5 pt) ·
 all 17 official names present · every proof number exists in the Part A source · feature counts match source ·
-no internal software, server or client names · correct page numbers in the list · contact on every product page.
+no internal software, server or client names · correct page numbers in the list · contact on every product page ·
+tappable WhatsApp, phone and website links (and list rows jump to their page) · fonts embedded as real fonts · file under 4 MB.
 
 Fonts (Oxanium, DM Sans, JetBrains Mono) are open source under the SIL Open Font License — see `fonts/OFL-*.txt`.

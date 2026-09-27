@@ -14,7 +14,7 @@
     <div class="idx-fam fam-{{ fid }}">
       <div class="idx-fam-head"><h3>{{ f.name }}</h3><p>{{ f.line }}</p></div>
       {% for p in products if p.family == fid %}
-      <div class="idx-row fam-{{ fid }}{% if p.get("flagship") %} is-flagship{% endif %}" data-code="{{ p.code }}" data-page="{{ 4 + p.code|int }}">
+      <a href="#p{{ p.code }}" class="idx-row fam-{{ fid }}{% if p.get("flagship") %} is-flagship{% endif %}" data-code="{{ p.code }}" data-page="{{ 4 + p.code|int }}">
         <span class="idx-code">{{ p.code }}</span>
         <span class="idx-icon">{{ svg("icons/" ~ p.slug) }}</span>
         <div class="idx-text">
@@ -22,7 +22,7 @@
           <span>{{ p.list_desc }}</span>
         </div>
         <span class="idx-page"><i>page</i>{{ "%02d" % (4 + p.code|int) }}</span>
-      </div>
+      </a>
       {% endfor %}
     </div>
     {% endfor %}

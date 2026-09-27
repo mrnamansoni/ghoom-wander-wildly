@@ -17,13 +17,13 @@
     <div class="back-contact">
       <div class="bc-main">
         <p class="lbl">// Talk to us</p>
-        <p class="bc-phone">+91 96253 30270</p>
-        <p class="bc-web grad">wakflow.com</p>
-        <span class="btn btn-lg">{{ site.back.button }}{{ m.arrow() }}</span>
+        <p class="bc-phone"><a href="tel:+919625330270">+91 96253 30270</a></p>
+        <p class="bc-web grad"><a href="{{ site.contact.web_url }}">wakflow.com</a></p>
+        <a class="btn btn-lg" href="{{ site.contact.wa_url }}">{{ site.back.button }}{{ m.arrow() }}</a>
       </div>
       <div class="bc-qrs">
-        <figure style="--qr: #34D399">{{ qr(site.contact.wa_url) }}<figcaption>Scan to chat<br>on WhatsApp</figcaption></figure>
-        <figure style="--qr: #00C8FF">{{ qr(site.contact.web_url) }}<figcaption>Scan to visit<br>wakflow.com</figcaption></figure>
+        <figure style="--qr: #34D399"><a href="{{ site.contact.wa_url }}">{{ qr(site.contact.wa_url) }}</a><figcaption>Scan to chat<br>on WhatsApp</figcaption></figure>
+        <figure style="--qr: #00C8FF"><a href="{{ site.contact.web_url }}">{{ qr(site.contact.web_url) }}</a><figcaption>Scan to visit<br>wakflow.com</figcaption></figure>
       </div>
     </div>
 

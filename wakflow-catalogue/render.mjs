@@ -7,7 +7,9 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-const html = path.join(here, 'dist', 'catalogue.html');
+const argHtml = process.argv.indexOf('--html');
+const html = argHtml > 0 ? path.resolve(process.argv[argHtml + 1]) : path.join(here, 'dist', 'catalogue.html');
+const checkOnly = process.argv.includes('--check-only');
 const pdf = path.join(here, 'dist', 'Wakflow-Catalogue-2026.pdf');
 const shots = process.argv.includes('--shots');
 
@@ -22,7 +24,12 @@ await page.evaluate(async (fonts) => { await Promise.all(fonts.map((f) => docume
 await page.emulateMedia({ media: 'print' });
 
 const report = await page.evaluate((fonts) => {
-  const missing = fonts.filter((f) => !document.fonts.check(f));
+  // document.fonts.check() is true when no face matches at all, so require a loaded FontFace per family + weight.
+  const faces = [...document.fonts].filter((f) => f.status === 'loaded');
+  const missing = fonts.filter((spec) => {
+    const [, weight, fam] = spec.match(/^(\d+) \S+ "?([^"]+)"?$/);
+    return !faces.some((f) => f.family.replace(/["']/g, '') === fam && (f.weight === weight || f.weight.includes(' ')));
+  });
   const pages = [...document.querySelectorAll('.page')];
   const overflows = [];
   pages.forEach((pg, i) => {
@@ -62,6 +69,8 @@ const report = await page.evaluate((fonts) => {
     min_label_pt: +minLabel.toFixed(2), min_label_where: minLabelWhere };
 }, FONTS);
 
+if (checkOnly) { await browser.close(); console.log(JSON.stringify(report)); process.exit(0); }
+
 if (shots) {
   const dir = path.join(here, '..', '.impeccable', 'review');
   mkdirSync(dir, { recursive: true });
@@ -76,3 +85,4 @@ await page.pdf({ path: pdf, preferCSSPageSize: true, printBackground: true });
 await browser.close();
 writeFileSync(path.join(here, 'dist', 'report.json'), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report));
+if (report.overflows.length || !report.fonts_ok) process.exitCode = 1;

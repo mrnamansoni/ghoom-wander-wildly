@@ -12,7 +12,7 @@ C = {
     "cyanDeep": "#06303D", "purpleDeep": "#1E0F33", "greenDeep": "#062A20",
     "orangeDeep": "#2E1A05", "redDeep": "#2E1414", "blueDeep": "#0C1E33",
 }
-DISPLAY, BODY, MONO = "Oxanium", "DM Sans", "JetBrains Mono"
+DISPLAY, BODY, MONO = "Oxanium, DM Sans", "DM Sans", "JetBrains Mono"  # DM Sans supplies ₹, which Oxanium lacks
 
 
 class Doc:

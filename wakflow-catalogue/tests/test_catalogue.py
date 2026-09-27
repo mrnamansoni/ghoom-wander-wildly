@@ -75,6 +75,11 @@ def _numbers_in(s):
     return [n.rstrip(".,") for n in NUM.findall(s)]
 
 
+def _num_in(n, src):
+    """True when number n appears in src as a whole number (not as part of a longer one)."""
+    return re.search(r"(?<![\d,.])" + re.escape(n) + r"(?![\d]|[,.]\d)", src) is not None
+
+
 def test_all_products_present():
     ps = _products()
     names = [p["name"] for p in ps]
@@ -92,13 +97,13 @@ def test_proof_numbers_in_source():
         texts = [f"{i['n']} {i['l']}" for i in items] if p["proof"]["kind"] == "numbers" else list(items)
         for tx in texts:
             for n in _numbers_in(tx):
-                if n not in src:
+                if not _num_in(n, src):
                     bad.append((p["code"], n, tx))
     site = _site()
     src0 = _norm(partA.text("00-wakflow-platform-overview.md"))
     for s in site["intro"]["stats"]:
         for n in _numbers_in(f"{s['n']} {s['l']}"):
-            if n not in src0:
+            if not _num_in(n, src0):
                 bad.append(("intro", n, s["n"]))
     assert not bad, bad
 
@@ -166,7 +171,7 @@ def _html():
 
 
 def _sections():
-    return re.findall(r'<section class="page ([^"]*)"([^>]*)>(.*?)</section>', _html(), re.S)
+    return re.findall(r'<section (?:id="[^"]*" )?class="page ([^"]*)"([^>]*)>(.*?)</section>', _html(), re.S)
 
 
 def test_no_banned_words():
@@ -197,6 +202,56 @@ def test_contact_printed():
     for cls, attrs, body in secs:
         if "product" in cls:
             assert "wakflow.com" in body and "+91 96253 30270" in body, attrs
+
+
+# ---------- Final review fixes ----------
+
+def test_proof_matcher_rejects_substrings():
+    src = "11,476 customers, 868 alerts, 4,821 chats, 0.91 seconds, 85% answered"
+    for good in ("11,476", "868", "4,821", "0.91", "85%"):
+        assert _num_in(good, src), good
+    for bad in ("1,476", "11,47", "86", "4,82", "0.9", "91"):
+        assert not _num_in(bad, src), bad
+
+
+def test_font_check_catches_missing_stylesheet():
+    """Rendering a copy whose stylesheet has no @font-face must report fonts_ok false."""
+    import shutil
+    import subprocess
+    css = (ROOT / "styles" / "catalogue.css").read_text().replace('@import url("fonts.css");', "")
+    (ROOT / "styles" / "_nofonts.css").write_text(css)
+    html = HTML.read_text().replace("../styles/catalogue.css", "../styles/_nofonts.css")
+    probe = DIST / "_nofonts.html"
+    probe.write_text(html)
+    try:
+        out = subprocess.run(["node", str(ROOT / "render.mjs"), "--html", str(probe), "--check-only"],
+                             capture_output=True, text=True, cwd=ROOT)
+        rep = json.loads(out.stdout.strip().splitlines()[-1])
+        assert rep["fonts_ok"] is False, rep
+    finally:
+        probe.unlink(missing_ok=True)
+        (ROOT / "styles" / "_nofonts.css").unlink(missing_ok=True)
+
+
+def test_pdf_has_tappable_links():
+    import pymupdf
+    doc = pymupdf.open(PDF)
+    back = [l.get("uri", "") for l in doc[-1].get_links()]
+    for want in ("https://wa.me/919625330270", "tel:+919625330270", "https://wakflow.com"):
+        assert any(u.startswith(want) for u in back), (want, back)
+    for i in range(4, 21):
+        uris = [l.get("uri", "") for l in doc[i].get_links()]
+        assert any(u.startswith("https://wa.me/919625330270") for u in uris), (i + 1, uris)
+    idx = [l for pg in (doc[2], doc[3]) for l in pg.get_links() if l.get("kind") in (pymupdf.LINK_GOTO, pymupdf.LINK_NAMED)]
+    assert len(idx) >= 17, len(idx)
+
+
+def test_fonts_embedded_as_real_fonts():
+    import pymupdf
+    doc = pymupdf.open(PDF)
+    kinds = {f[2] for pg in doc for f in pg.get_fonts()}
+    assert "Type3" not in kinds, kinds
+    assert PDF.stat().st_size < 4_000_000, PDF.stat().st_size
 
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@
   --line: rgba(0, 200, 255, .12); --line-2: rgba(136, 146, 164, .22);
   --grad: linear-gradient(92deg, var(--cyan) 0%, var(--blue) 48%, var(--purple) 100%);
   --grad-orange: linear-gradient(95deg, var(--orange), var(--orange-2));
-  --f-display: "Oxanium", sans-serif;
+  --f-display: "Oxanium", "DM Sans", sans-serif; /* DM Sans supplies ₹ */
   --f-body: "DM Sans", sans-serif;
   --f-mono: "JetBrains Mono", monospace;
   --accent: var(--cyan);
@@ -35,6 +35,7 @@ body {
 ::selection { background: rgba(0, 200, 255, .3); color: #fff; }
 ul, ol { list-style: none; }
 svg { display: block; }
+a { color: inherit; text-decoration: none; }
 
 /* ------------------------------------------------------------------ page frame */
 .page { width: 210mm; height: 297mm; position: relative; overflow: hidden; background: var(--bg); break-after: page; }
@@ -46,8 +47,6 @@ svg { display: block; }
     linear-gradient(rgba(0, 200, 255, .045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 200, 255, .045) 1px, transparent 1px);
   background-size: 28px 28px; background-position: -1px -1px;
-  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,.9), rgba(0,0,0,.35) 55%, rgba(0,0,0,.8));
-          mask-image: linear-gradient(180deg, rgba(0,0,0,.9), rgba(0,0,0,.35) 55%, rgba(0,0,0,.8));
 }
 .bg-glow {
   position: absolute; inset: 0;
@@ -131,7 +130,6 @@ svg { display: block; }
 
 .p-hero {
   margin: 8px -4px 0; border-radius: 16px; padding: 2px 4px;
-  background: linear-gradient(180deg, rgba(10, 10, 10, .6), rgba(0, 0, 0, 0));
 }
 .p-hero svg { width: 100%; height: auto; }
 
@@ -167,7 +165,7 @@ svg { display: block; }
 .spec li::before { content: ""; position: absolute; left: 0; top: 6px; width: 4px; height: 1.5px; background: var(--accent); }
 
 .p-proof { margin-top: 10px; padding: 10px 16px 10px; border-radius: 14px; border: 1px solid rgba(52, 211, 153, .28);
-  background: linear-gradient(100deg, rgba(16, 185, 129, .10), rgba(0, 200, 255, .04) 60%, rgba(0,0,0,0)); }
+  background: rgba(16, 185, 129, .07); }
 .p-proof .lbl { margin-bottom: 7px; }
 .stats { display: grid; gap: 0; }
 .stats.n4 { grid-template-columns: repeat(4, 1fr); }
@@ -247,7 +245,7 @@ svg { display: block; }
 .journey b { display: block; font: 700 12px/1.25 var(--f-display); color: var(--ink); }
 .journey span { display: block; font-size: 10px; line-height: 1.42; margin-top: 4px; }
 .intro-proof { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 16px 20px; margin-bottom: 20px; border-radius: 16px;
-  border: 1px solid rgba(52, 211, 153, .28); background: linear-gradient(100deg, rgba(16, 185, 129, .10), rgba(0, 200, 255, .04) 60%, rgba(0,0,0,0)); }
+  border: 1px solid rgba(52, 211, 153, .28); background: rgba(16, 185, 129, .07); }
 .ip-title { font: 700 17px/1.2 var(--f-display); color: var(--ink); }
 .ip-sub { font-size: 10.5px; line-height: 1.45; margin-top: 6px; }
 .ip-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 0; }
@@ -272,7 +270,7 @@ svg { display: block; }
 .idx-page { text-align: right; font: 800 18px/1 var(--f-display); color: var(--ink); }
 .idx-page i { display: block; font: 500 9px/1 var(--f-mono); font-style: normal; letter-spacing: .14em; text-transform: uppercase; color: var(--grey); margin-bottom: 4px; }
 .idx-row.is-flagship { padding: 16px 16px; margin-top: 8px; border: 1px solid rgba(255, 179, 71, .45); border-radius: 14px;
-  background: linear-gradient(100deg, rgba(255, 138, 0, .12), rgba(123, 53, 193, .08) 70%, rgba(0,0,0,0)); }
+  background: rgba(255, 138, 0, .09); }
 .idx-row.is-flagship .idx-text b { font-size: 18px; }
 .idx-row.is-flagship .idx-text span { font-size: 11px; color: var(--ink-2); }
 
@@ -292,7 +290,7 @@ svg { display: block; }
 .back-steps span { display: block; font-size: 10.5px; line-height: 1.45; margin-top: 4px; }
 .back-contact { margin-top: 38px; display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: center;
   padding: 26px 28px; border-radius: 20px; border: 1px solid rgba(0, 200, 255, .3);
-  background: linear-gradient(120deg, rgba(0, 200, 255, .08), rgba(123, 53, 193, .12)); }
+  background: rgba(40, 60, 140, .16); }
 .bc-phone { font: 800 34px/1.05 var(--f-display); color: var(--ink); margin-top: 4px; letter-spacing: .01em; }
 .bc-web { font: 800 30px/1.1 var(--f-display); margin: 4px 0 18px; }
 .bc-qrs { display: flex; gap: 18px; }

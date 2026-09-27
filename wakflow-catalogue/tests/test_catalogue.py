@@ -129,6 +129,31 @@ def test_works_with_codes_valid():
         assert 3 <= len(ww) <= 7 and set(ww) <= codes and p["code"] not in ww, (p["code"], ww)
 
 
+# ---------- Task 3: graphics ----------
+
+def test_svgs_valid():
+    import xml.etree.ElementTree as ET
+    sys.path.insert(0, str(ROOT / "svg"))
+    from kit import C
+    allowed = {v.upper() for v in C.values()}
+    slugs = [p["slug"] for p in _products()]
+    files = [ROOT / "svg" / "hero" / f"{s}.svg" for s in slugs] + [ROOT / "svg" / "icons" / f"{s}.svg" for s in slugs]
+    files += [ROOT / "svg" / "cover-map.svg"]
+    bad = []
+    for f in files:
+        if not f.exists():
+            bad.append((f.name, "missing"))
+            continue
+        txt = f.read_text()
+        root = ET.fromstring(txt)
+        if not root.get("viewBox") or root.get("width"):
+            bad.append((f.name, "needs viewBox and no fixed width"))
+        for hx in set(re.findall(r"#[0-9A-Fa-f]{6}\b", txt)):
+            if hx.upper() not in allowed:
+                bad.append((f.name, "off-brand colour", hx))
+    assert not bad, bad
+
+
 if __name__ == "__main__":
     names = sys.argv[1:] or [n for n in dict(globals()) if n.startswith("test_")]
     failed = 0

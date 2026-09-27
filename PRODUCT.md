@@ -41,7 +41,9 @@ Wakflow runs its own travel brands, Ghoomo Saste Me (GSM) and Tripwaley, on the 
 
 Pinned by the owner for the website ("we keep this exactly"). For the PDF catalogue the owner asked
 (27 Sep 2026) for a light edition: white with a shade of purple, less content, no boxes. The website's
-black background does not apply to the catalogue; the colours below are used as solid colours on light.
+black background does not apply to the light catalogue; the colours below are used as solid colours on light.
+Later the same day the owner also asked for a dark edition like the first version (black with neon), with
+the same content as the light edition. Both are kept; both use solid colours only.
 
 - Website: black with neon accents. Backgrounds #000 / #0a0a0a / #111.
 - Cyan #00C8FF main brand colour; Blue #4A90E2; Purple #7B35C1.

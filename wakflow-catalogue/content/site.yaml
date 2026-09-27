@@ -32,15 +32,6 @@ intro:
     - {t: A human takes over, d: "The full conversation sits in the shared inbox; the right person picks it up and the AI steps aside."}
     - {t: Follow-ups run by themselves, d: "Confirmations, payment reminders, offers and feedback requests — no one pressing send."}
     - {t: You stay in control, d: "One short morning report from your AI assistant, and nightly backups of everything."}
-  proof_title: We run our own businesses on Wakflow.
-  proof_sub: Ghoomo Saste Me and Tripwaley — our own travel brands — run on the same products we sell. As of 27 Sep 2026.
-  stats:
-    - {n: "91,907", l: "WhatsApp messages held across our brands' numbers"}
-    - {n: "20,407", l: "customer conversations in the shared team inbox"}
-    - {n: "Only 63", l: "of 11,476 CRM customers were ever typed in by hand"}
-    - {n: "0.91 s", l: "to the AI caller's first word — 85% of pilot calls answered"}
-    - {n: "51 of 53", l: "morning checks completed by our own AI assistant"}
-    - {n: "92 · 100", l: "Mobile speed 92, SEO 100 — our dashboard website on Google PageSpeed"}
 
 back:
   title: "Stop running your business across apps that don't talk to each other."

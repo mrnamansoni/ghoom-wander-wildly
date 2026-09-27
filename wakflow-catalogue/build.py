@@ -1,7 +1,9 @@
 """Builds dist/catalogue.html from content/*.yaml, svg/ and templates/.
 Run: python3 build.py && node render.mjs
+Dark edition: python3 build.py --theme dark && node render.mjs --theme dark  (writes catalogue-dark.html)
 """
 import re
+import sys
 from pathlib import Path
 
 import yaml
@@ -17,9 +19,13 @@ def load_yaml(name):
     return yaml.safe_load(path.read_text()) if path.exists() else None
 
 
+THEME = "dark" if "--theme" in sys.argv and sys.argv[sys.argv.index("--theme") + 1] == "dark" else "light"
+
+
 def svg(name, cls=""):
-    """Inline an SVG file from svg/ (without the XML prolog)."""
-    text = (ROOT / "svg" / f"{name}.svg").read_text()
+    """Inline an SVG file from svg/ (without the XML prolog). The dark edition uses svg/dark/ where it exists."""
+    dark = ROOT / "svg" / "dark" / f"{name}.svg"
+    text = (dark if THEME == "dark" and dark.exists() else ROOT / "svg" / f"{name}.svg").read_text()
     text = re.sub(r"<\?xml.*?\?>\s*", "", text)
     if cls:
         text = text.replace("<svg", f'<svg class="{cls}"', 1)
@@ -59,10 +65,12 @@ def build():
     by_code = {p["code"]: p for p in products["products"]}
     families = {f["id"]: f for f in site.get("families", [])}
     html = env.get_template("catalogue.html.j2").render(
-        products=products["products"], by_code=by_code, site=site, families=families, total=len(by_code))
+        products=products["products"], by_code=by_code, site=site, families=families, total=len(by_code),
+        theme=THEME)
     DIST.mkdir(exist_ok=True)
-    (DIST / "catalogue.html").write_text(html)
-    print(f"built {DIST / 'catalogue.html'} ({len(html) // 1024} KB)")
+    out = DIST / ("catalogue-dark.html" if THEME == "dark" else "catalogue.html")
+    out.write_text(html)
+    print(f"built {out} ({len(html) // 1024} KB)")
 
 
 if __name__ == "__main__":

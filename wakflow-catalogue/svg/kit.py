@@ -2,34 +2,60 @@
 All shapes are plain SVG strings so the output stays vector in the PDF."""
 from html import escape
 
-C = {
-    # brand colours (strokes and fills)
+import os
+
+THEME = os.environ.get("WAKFLOW_THEME", "light")  # "light" (default) or "dark" (the website's black + neon look)
+
+BRAND = {
     "cyan": "#00C8FF", "blue": "#4A90E2", "purple": "#7B35C1",
     "orange": "#FF8A00", "orange2": "#FFB347", "green": "#10B981", "green2": "#34D399",
-    "red": "#F87171",
-    # light theme neutrals: white paper with a lavender cast
-    "ink": "#1C1836", "grey": "#6E6A8A", "white": "#FFFFFF",
-    "bg": "#FFFFFF", "bg1": "#FFFFFF", "bg2": "#F7F5FC", "bg3": "#F4F1FB", "bg4": "#ECE7F7",
-    "line": "#E6E0F3", "line2": "#CEC5E4",
-    # light tints of brand colours, used as fills behind brand-coloured strokes
-    "cyanDeep": "#E4F8FF", "purpleDeep": "#F1E9FB", "greenDeep": "#E3F8EF",
-    "orangeDeep": "#FFF2E0", "redDeep": "#FDECEC", "blueDeep": "#E7F0FC",
+    "red": "#F87171", "white": "#FFFFFF",
 }
-# Brand colours are too light for text on white; text drawn in a brand colour uses its darker partner.
-TEXT = {
-    C["cyan"]: "#0784AD", C["blue"]: "#2A6CC2", C["purple"]: "#7B35C1", C["orange"]: "#B85E00",
-    C["orange2"]: "#B85E00", C["green"]: "#0B8A5E", C["green2"]: "#0B8A5E", C["red"]: "#C93A3A",
-}
+if THEME == "dark":
+    C = {
+        **BRAND,
+        # dark theme neutrals: the website's black, with cool grey lines
+        "ink": "#EEF3FA", "grey": "#8892A4",
+        "bg": "#000000", "bg1": "#0F1217", "bg2": "#12161C", "bg3": "#161B22", "bg4": "#1C222B",
+        "line": "#262D38", "line2": "#3A4250",
+        # deep tints of brand colours, used as fills behind brand-coloured strokes
+        "cyanDeep": "#06303D", "purpleDeep": "#1E0F33", "greenDeep": "#062A20",
+        "orangeDeep": "#2E1A05", "redDeep": "#2E1414", "blueDeep": "#0C1E33",
+    }
+    # Brand colours read well on black; only purple text needs a lighter partner.
+    TEXT = {C["purple"]: "#B386EC"}
+    BASE = "#0A0A0A"      # colour of the band the drawings sit on; mix() blends onto it
+    LOGO = "logo-mark-dark.png"
+else:
+    C = {
+        **BRAND,
+        # light theme neutrals: white paper with a lavender cast
+        "ink": "#1C1836", "grey": "#6E6A8A",
+        "bg": "#FFFFFF", "bg1": "#FFFFFF", "bg2": "#F7F5FC", "bg3": "#F4F1FB", "bg4": "#ECE7F7",
+        "line": "#E6E0F3", "line2": "#CEC5E4",
+        # light tints of brand colours, used as fills behind brand-coloured strokes
+        "cyanDeep": "#E4F8FF", "purpleDeep": "#F1E9FB", "greenDeep": "#E3F8EF",
+        "orangeDeep": "#FFF2E0", "redDeep": "#FDECEC", "blueDeep": "#E7F0FC",
+    }
+    # Brand colours are too light for text on white; text drawn in a brand colour uses its darker partner.
+    TEXT = {
+        C["cyan"]: "#0784AD", C["blue"]: "#2A6CC2", C["purple"]: "#7B35C1", C["orange"]: "#B85E00",
+        C["orange2"]: "#B85E00", C["green"]: "#0B8A5E", C["green2"]: "#0B8A5E", C["red"]: "#C93A3A",
+    }
+    BASE = "#FFFFFF"
+    LOGO = "logo-mark.png"
+LOGO_BG = "#0A0A0A" if THEME == "dark" else "#F4F0FC"  # the logo PNG is flattened onto this colour
 SIZE = 1.08  # all drawing text is scaled up slightly for phone reading
 
 
 def mix(color, opacity):
-    """Solid colour equal to `color` at `opacity` over white. PDFs render true transparency badly."""
+    """Solid colour equal to `color` at `opacity` over the page colour. PDFs render true transparency badly."""
     if opacity is None or color in (None, "none") or not color.startswith("#"):
         return color
     r, g, b = (int(color[i:i + 2], 16) for i in (1, 3, 5))
-    m = lambda c: round(255 - (255 - c) * opacity)  # noqa: E731
-    return f"#{m(r):02X}{m(g):02X}{m(b):02X}"
+    br, bg_, bb = (int(BASE[i:i + 2], 16) for i in (1, 3, 5))
+    m = lambda c, base: round(base + (c - base) * opacity)  # noqa: E731
+    return f"#{m(r, br):02X}{m(g, bg_):02X}{m(b, bb):02X}"
 
 
 DISPLAY, BODY, MONO = "Oxanium, DM Sans", "DM Sans", "JetBrains Mono"  # DM Sans supplies ₹, which Oxanium lacks

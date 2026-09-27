@@ -6,11 +6,12 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from kit import (C, DISPLAY, BODY, Doc, t, mono, rect, line, path, circle, bars, tick, chip, button,  # noqa: E402
+from kit import (C, THEME, LOGO, LOGO_BG, DISPLAY, BODY, Doc, t, mono, rect, line, path, circle, bars, tick, chip, button,  # noqa: E402
                  phone, window, bubble, wave, callout, example_tag, arrow, node)
 
 W, H = 700, 290
-OUT = Path(__file__).resolve().parent
+SVG = Path(__file__).resolve().parent
+OUT = SVG / "dark" if THEME == "dark" else SVG  # dark drawings go to svg/dark/
 
 
 def lines(x, y, rows, size=9.5, fill=C["ink"], gap=12.5, weight=400, family=BODY, anchor="start"):
@@ -725,7 +726,7 @@ def cover_map(products):
     for r, o in ((R + 46, .10), (R, .22), (132, .16), (90, .22)):
         d.add(circle(cx, cy, r, "none", C["cyan"], .8, opacity=o))
     n = len(products)
-    icon_dir = OUT / "icons"
+    icon_dir = SVG / "icons"
     pts = []
     for i, p in enumerate(products):
         a = -math.pi / 2 + i * 2 * math.pi / n
@@ -763,9 +764,9 @@ def cover_map(products):
             cy_code, cy_name = y - 4, y + 11
         d.add(t(lx, (cy_code + cy_name) / 2 + 2, MAP_NAME[p["code"]], 11.5, C["ink"], BODY, 600, anchor))
     # core: the Wakflow logo mark
-    d.add(circle(cx, cy, 70, C["cyan"], opacity=.08), circle(cx, cy, 58, "#F4F0FC", C["cyan"], 1.6),
+    d.add(circle(cx, cy, 70, C["cyan"], opacity=.08), circle(cx, cy, 58, LOGO_BG, C["cyan"], 1.6),
           circle(cx, cy, 64, "none", C["purple"], 1, opacity=.6),
-          f'<image href="../assets/logo-mark.png" x="{cx - 44}" y="{cy - 30}" width="88" height="38.3" '
+          f'<image href="../assets/{LOGO}" x="{cx - 44}" y="{cy - 30}" width="88" height="38.3" '
           f'preserveAspectRatio="xMidYMid meet"/>',
           mono(cx, cy + 27, "One system", 9, C["purple"], "middle"))
     return d.render()
@@ -784,8 +785,8 @@ SCENES = {
 
 def main():
     import yaml
-    products = yaml.safe_load((OUT.parent / "content" / "products.yaml").read_text())["products"]
-    (OUT / "hero").mkdir(exist_ok=True)
+    products = yaml.safe_load((SVG.parent / "content" / "products.yaml").read_text())["products"]
+    (OUT / "hero").mkdir(parents=True, exist_ok=True)
     for slug, fn in SCENES.items():
         d = Doc(slug, W, H)
         fn(d)

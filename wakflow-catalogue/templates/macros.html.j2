@@ -1,5 +1,5 @@
 {% macro logo(cls="") -%}
-<span class="logo {{ cls }}"><img src="../assets/logo-mark.png" alt=""><b>Wakflow</b></span>
+<span class="logo {{ cls }}"><img src="../assets/{{ "logo-mark-dark.png" if theme == "dark" else "logo-mark.png" }}" alt=""><b>Wakflow</b></span>
 {%- endmacro %}
 
 {% macro head(label, page_no) -%}

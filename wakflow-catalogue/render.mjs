@@ -8,9 +8,11 @@ import path from 'node:path';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const argHtml = process.argv.indexOf('--html');
-const html = argHtml > 0 ? path.resolve(process.argv[argHtml + 1]) : path.join(here, 'dist', 'catalogue.html');
+const dark = process.argv.includes('--theme') && process.argv[process.argv.indexOf('--theme') + 1] === 'dark';
+const html = argHtml > 0 ? path.resolve(process.argv[argHtml + 1])
+  : path.join(here, 'dist', dark ? 'catalogue-dark.html' : 'catalogue.html');
 const checkOnly = process.argv.includes('--check-only');
-const pdf = path.join(here, 'dist', 'Wakflow-Catalogue-2026.pdf');
+const pdf = path.join(here, 'dist', dark ? 'Wakflow-Catalogue-2026-Dark.pdf' : 'Wakflow-Catalogue-2026.pdf');
 
 const FONTS = ['600 20px Oxanium', '700 20px Oxanium', '800 20px Oxanium',
   '400 12px "DM Sans"', '500 12px "DM Sans"', '600 12px "DM Sans"',
@@ -72,6 +74,6 @@ if (checkOnly) { await browser.close(); console.log(JSON.stringify(report)); pro
 
 await page.pdf({ path: pdf, preferCSSPageSize: true, printBackground: true });
 await browser.close();
-writeFileSync(path.join(here, 'dist', 'report.json'), JSON.stringify(report, null, 2));
+writeFileSync(path.join(here, 'dist', dark ? 'report-dark.json' : 'report.json'), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report));
 if (report.overflows.length || !report.fonts_ok) process.exitCode = 1;

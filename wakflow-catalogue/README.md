@@ -1,7 +1,10 @@
 # Wakflow Product Catalogue (PDF)
 
-The finished file is **`dist/Wakflow-Catalogue-2026.pdf`** — 22 A4 pages:
+Two editions with the same content — 22 A4 pages each:
 cover · platform intro · product list (2 pages) · one page per product (17) · back cover.
+
+- **`dist/Wakflow-Catalogue-2026.pdf`** — light edition (white with a lavender band)
+- **`dist/Wakflow-Catalogue-2026-Dark.pdf`** — dark edition (the website's black with neon colours)
 
 ## Rebuild after a change
 
@@ -13,7 +16,12 @@ python3 svg/make_icons.py && python3 svg/make_heroes.py   # only if drawings cha
 python3 fonts/make_static.py                              # only if font files changed
 python3 build.py && node render.mjs
 python3 review.py                  # renders every page as a PDF reader shows it
-python3 tests/test_catalogue.py    # must end with 21/21 passed
+python3 tests/test_catalogue.py    # must end with 23/23 passed
+
+# dark edition (same content, colours from styles/dark.css, drawings in svg/dark/)
+WAKFLOW_THEME=dark python3 svg/make_heroes.py             # only if drawings changed
+python3 build.py --theme dark && node render.mjs --theme dark
+WAKFLOW_THEME=dark python3 tests/test_catalogue.py
 ```
 
 `review.py` saves every page (rendered from the PDF itself, not the browser) into `../.impeccable/review/`.
@@ -26,12 +34,15 @@ Always check those images: browsers show effects that PDF readers turn into boxe
 | Product text (from Part A only) | `content/products.yaml` |
 | Cover, intro, packages, back cover text | `content/site.yaml` |
 | Page layouts | `templates/*.html.j2` |
-| Colours, fonts, spacing | `styles/catalogue.css` |
-| Product drawings (SVG) | `svg/make_heroes.py` → `svg/hero/` |
+| Colours, fonts, spacing | `styles/catalogue.css` (dark colours: `styles/dark.css`) |
+| Product drawings (SVG) | `svg/make_heroes.py` → `svg/hero/` (dark: `svg/dark/hero/`) |
 | Product icons | `svg/make_icons.py` → `svg/icons/` |
-| Logo | `assets/logo-mark.png` (cropped from `assets/logo-original.webp`) |
+| Logo | `assets/logo-mark.png` and `assets/logo-mark-dark.png` (cropped from `assets/logo-original.webp`) |
 
-## Design rules (light edition)
+## Design rules
+
+The dark edition swaps only colour values (black `#000`, band `#0A0A0A`, cyan highlight, neon family
+colours); layout and content are shared, and it follows the same solid-colour rule below.
 
 White pages with a lavender band, brand colours as solid colours only. No transparency, shadows, blur,
 masks or gradient text — PDF readers draw those as boxes. The tests fail the build if any appear.

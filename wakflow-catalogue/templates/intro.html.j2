@@ -15,17 +15,9 @@
     </ol>
 
     <div class="gap"></div>
-    <h3 class="sec">{{ site.intro.proof_title }} <em>Ghoomo Saste Me and Tripwaley, as of 27 Sep 2026</em></h3>
-    <div class="proof">
-      {% for s in site.intro.stats %}
-      <div class="stat"><b>{{ s.n }}</b><span>{{ s.l }}</span></div>
-      {% endfor %}
-    </div>
-
-    <div class="gap"></div>
     <h3 class="sec">Built for Indian businesses</h3>
     <ul class="industries">
-      {% for x in site.industries %}<li>{{ x.t }}</li>{% endfor %}
+      {% for x in site.industries %}<li><b>{{ x.t }}</b><span>{{ x.d }}</span></li>{% endfor %}
     </ul>
     {{ m.foot() }}
   </div>

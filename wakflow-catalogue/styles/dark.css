@@ -1,0 +1,30 @@
+/* Wakflow catalogue — dark edition: the website's black with neon brand colours.
+   Loaded after catalogue.css (build.py --theme dark). It only swaps colour tokens, so the content
+   and layout stay the same as the light edition. Same PDF-safe rule: solid colours only. */
+
+:root {
+  --paper: #000000;         /* website background */
+  --wash: #0A0A0A;          /* top band, one step up from black */
+  --wash-2: #1C222B;
+  --line: #1F2630;
+  --ink: #EEF3FA;           /* headings */
+  --body: #A7B0BF;          /* body text: brand grey, lifted a little for small sizes */
+  --muted: #8892A4;         /* brand grey */
+  --purple: #A56BE6;
+  --hi: #00C8FF;            /* brand cyan leads on black */
+  --on-hi: #000000;
+  --gold: #FFB347;
+  --green: #34D399;
+  --qr-line: #FFFFFF;
+  --accent: var(--hi);
+  --accent-tint: #06303D;
+}
+.fam-flagship { --accent: #FFB347; --accent-tint: #2E1A05; }
+.fam-talk { --accent: #00C8FF; --accent-tint: #06303D; }
+.fam-ai { --accent: #A56BE6; --accent-tint: #1E0F33; }
+.fam-sell { --accent: #5AA2F0; --accent-tint: #0C1E33; }
+.fam-grow { --accent: #34D399; --accent-tint: #062A20; }
+.fam-run { --accent: #C9D3E0; --accent-tint: #1C222B; }
+
+/* the one call to action keeps the website's orange button with dark text */
+.btn { color: #1C1300; }

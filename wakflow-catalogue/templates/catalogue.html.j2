@@ -5,7 +5,8 @@
 <title>Wakflow Product Catalogue 2026</title>
 <meta name="description" content="All 17 Wakflow products: WhatsApp, team inbox, CRM, AI agents and automation for Indian businesses.">
 <link rel="stylesheet" href="../styles/catalogue.css">
-</head>
+{% if theme == "dark" %}<link rel="stylesheet" href="../styles/dark.css">
+{% endif %}</head>
 <body>
 {% import "macros.html.j2" as m with context %}
 {% include "cover.html.j2" %}

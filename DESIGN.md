@@ -1,275 +1,291 @@
 ---
 name: Wakflow Catalogue
-description: A4 print catalogue for the Wakflow suite; each product is a spec sheet pinned to a live neon screen.
+description: Light-edition A4 PDF catalogue for the Wakflow suite; white paper with a lavender wash, one product per page, drawn as clean vector datasheets.
 colors:
-  void: "#000000"
-  surface-1: "#0A0A0A"
-  surface-2: "#111111"
-  surface-3: "#161B22"
-  surface-4: "#1C222B"
-  signal-cyan: "#00C8FF"
-  circuit-blue: "#4A90E2"
-  ultraviolet: "#7B35C1"
-  ai-violet: "#A56BE6"
+  paper: "#FFFFFF"
+  lavender-wash: "#F4F0FC"
+  lavender-rule: "#EBE4F8"
+  hairline: "#E2DAF2"
+  ink: "#1C1836"
+  body-ink: "#45415F"
+  muted-ink: "#736E90"
+  brand-purple: "#7B35C1"
+  purple-tint: "#F1E9FB"
   demo-orange: "#FF8A00"
-  demo-amber: "#FFB347"
-  proof-green: "#10B981"
-  tick-green: "#34D399"
-  problem-red: "#F87171"
-  slate-grey: "#8892A4"
-  ink: "#EEF3FA"
-  ink-2: "#C9D3E0"
-  hairline-cyan: "rgba(0, 200, 255, .12)"
-  hairline-grey: "rgba(136, 146, 164, .22)"
-  svg-line: "#262D38"
-  svg-line-2: "#3A4250"
-  cyan-deep: "#06303D"
-  purple-deep: "#1E0F33"
-  green-deep: "#062A20"
-  orange-deep: "#2E1A05"
-  red-deep: "#2E1414"
-  blue-deep: "#0C1E33"
-  button-ink: "#140A00"
+  button-ink: "#1C1300"
+  flagship-amber: "#C26A00"
+  flagship-amber-tint: "#FFF1DF"
+  flag-pill-orange: "#E27A00"
+  talk-teal: "#0784AD"
+  talk-tint: "#E2F6FD"
+  sell-blue: "#2A6CC2"
+  sell-tint: "#E7F0FC"
+  grow-green: "#0B8A5E"
+  grow-tint: "#E3F7EF"
+  run-slate: "#3D3A58"
+  run-tint: "#ECEAF3"
+  stroke-cyan: "#00C8FF"
+  stroke-blue: "#4A90E2"
+  stroke-green: "#10B981"
+  stroke-red: "#F87171"
+  drawing-line: "#E6E0F3"
+  drawing-line-strong: "#CEC5E4"
+  drawing-grey: "#6E6A8A"
 typography:
   display:
-    fontFamily: "Oxanium, sans-serif"
-    fontSize: "46px"
+    fontFamily: "Oxanium, DM Sans, sans-serif"
+    fontSize: "44px"
     fontWeight: 800
-    lineHeight: 1.04
+    lineHeight: 1.07
     letterSpacing: "-0.015em"
   headline:
-    fontFamily: "Oxanium, sans-serif"
-    fontSize: "33px"
+    fontFamily: "Oxanium, DM Sans, sans-serif"
+    fontSize: "32px"
     fontWeight: 800
-    lineHeight: 1.02
+    lineHeight: 1.12
     letterSpacing: "-0.01em"
-  title:
-    fontFamily: "Oxanium, sans-serif"
-    fontSize: "17px"
-    fontWeight: 600
-    lineHeight: 1.25
+  product-title:
+    fontFamily: "Oxanium, DM Sans, sans-serif"
+    fontSize: "31px"
+    fontWeight: 800
+    lineHeight: 1.08
+    letterSpacing: "-0.01em"
   numeral:
-    fontFamily: "Oxanium, sans-serif"
-    fontSize: "24px"
+    fontFamily: "Oxanium, DM Sans, sans-serif"
+    fontSize: "26px"
     fontWeight: 800
     lineHeight: 1.05
-    letterSpacing: "-0.01em"
     fontFeature: "tnum"
+  title:
+    fontFamily: "DM Sans, sans-serif"
+    fontSize: "17px"
+    fontWeight: 700
+    lineHeight: 1.3
+  section:
+    fontFamily: "Oxanium, DM Sans, sans-serif"
+    fontSize: "15px"
+    fontWeight: 700
+    lineHeight: 1.2
+  lead:
+    fontFamily: "DM Sans, sans-serif"
+    fontSize: "13.5px"
+    fontWeight: 400
+    lineHeight: 1.6
   body:
     fontFamily: "DM Sans, sans-serif"
-    fontSize: "10.5px"
+    fontSize: "12px"
     fontWeight: 400
-    lineHeight: 1.45
+    lineHeight: 1.5
     fontFeature: "tnum"
-  body-strong:
+  body-small:
+    fontFamily: "DM Sans, sans-serif"
+    fontSize: "11px"
+    fontWeight: 400
+    lineHeight: 1.4
+  label:
     fontFamily: "DM Sans, sans-serif"
     fontSize: "11px"
     fontWeight: 600
-    lineHeight: 1.3
-  label:
-    fontFamily: "JetBrains Mono, monospace"
-    fontSize: "9px"
-    fontWeight: 500
     lineHeight: 1
-    letterSpacing: "0.16em"
+  drawing-mono:
+    fontFamily: "JetBrains Mono, monospace"
+    fontSize: "9.72px"
+    fontWeight: 500
+    letterSpacing: "1.2px"
 rounded:
-  tag: "4px"
-  icon-sm: "11px"
-  card: "14px"
-  panel: "16px"
-  panel-lg: "20px"
+  feature-dot: "2px"
+  index-icon: "12px"
+  product-icon: "16px"
+  panel: "22px"
   pill: "999px"
 spacing:
-  page-top: "24px"
-  page-bottom: "20px"
-  page-x: "40px"
-  grid-cell: "28px"
-  gutter-sm: "8px"
-  gutter: "16px"
-  gutter-lg: "24px"
-  flex-gap-max: "26px"
-  flex-gap-lg-max: "64px"
+  page-x: "46px"
+  page-top: "30px"
+  page-bottom: "26px"
+  head-gap: "26px"
+  column-gap: "28px"
+  gap-min: "14px"
+  gap-max: "44px"
 components:
   button-demo:
     backgroundColor: "{colors.demo-orange}"
     textColor: "{colors.button-ink}"
-    typography: "{typography.title}"
     rounded: "{rounded.pill}"
-    padding: "9px 14px 9px 16px"
-  button-demo-lg:
+    padding: "12px 18px 12px 20px"
+  button-demo-large:
     backgroundColor: "{colors.demo-orange}"
     textColor: "{colors.button-ink}"
     rounded: "{rounded.pill}"
-    padding: "13px 20px 13px 22px"
-  chip-works-with:
-    textColor: "{colors.ink-2}"
+    padding: "14px 22px 14px 24px"
+  product-icon:
+    backgroundColor: "{colors.paper}"
+    rounded: "{rounded.product-icon}"
+    size: "54px"
+  index-icon:
+    backgroundColor: "{colors.purple-tint}"
+    textColor: "{colors.brand-purple}"
+    rounded: "{rounded.index-icon}"
+    size: "42px"
+  new-pill:
+    backgroundColor: "{colors.brand-purple}"
+    textColor: "{colors.paper}"
     rounded: "{rounded.pill}"
-    padding: "4px 9px 4px 6px"
-  flag-flagship:
-    textColor: "{colors.demo-amber}"
-    typography: "{typography.label}"
+    padding: "2px 6px 3px"
+  flag-pill:
+    backgroundColor: "{colors.flag-pill-orange}"
+    textColor: "{colors.paper}"
     rounded: "{rounded.pill}"
-    padding: "4px 8px 3px 6px"
-  tag-replaces:
-    textColor: "{colors.problem-red}"
-    typography: "{typography.label}"
-    rounded: "{rounded.tag}"
-    padding: "3px 6px 2px"
-  icon-tile:
-    backgroundColor: "{colors.surface-1}"
-    rounded: "{rounded.card}"
-    size: "52px"
-  proof-panel:
-    textColor: "{colors.slate-grey}"
-    rounded: "{rounded.card}"
-    padding: "10px 16px"
-  legend-strip:
-    backgroundColor: "{colors.surface-1}"
-    rounded: "{rounded.card}"
-    padding: "11px 12px 12px"
+    padding: "4px 8px"
+  contact-panel:
+    backgroundColor: "{colors.paper}"
+    rounded: "{rounded.panel}"
+    padding: "28px 30px"
 ---
 
 # Design System: Wakflow Catalogue
 
 ## Overview
 
-**Creative North Star: "The Lit Datasheet"**
+**Creative North Star: "The Lavender Datasheet"**
 
-Every page is an engineering datasheet printed on black: a product drawn working as a thin-stroke neon device, its features pinned to it with elbow leaders like pin labels, then the spec block, the measured proof and the way in. The world is the owner's pinned Wakflow web brand carried into print: pure black ground, a faint cyan graph-paper grid, soft violet and cyan halos bleeding in from the page corners, a cyan→blue→purple gradient reserved for names, and one warm orange pill that always means "book a demo".
+The Wakflow catalogue is a 22-page A4 PDF (cover, platform intro, two index pages, seventeen product pages, back page) that a business owner is sent on WhatsApp and reads on a phone or prints. The light edition replaced the earlier black-and-neon catalogue at the owner's direction (27 Sep 2026): white with a shade of purple, far less content, no boxes, the demo button only on the first and last pages, and the owner's own WF logo. The website keeps its black world; the catalogue does not inherit it.
 
-Density is high but ordered. A4 at 96dpi (794×1123 CSS px) holds a rail, title block, hero screen, problem/benefit split, spec grid, proof panel and footer CTA on every product page, separated by 1px hairlines rather than boxes. Colour is semantic: cyan is the system, red is the customer's pain, green is measured proof and done, orange is the action, and each of six product families carries its own accent through icon tile, chips, spec rules and rail label.
+Each page is white paper with a lavender wash across its top: the wash carries the page head, the title and the product drawing, and the white below carries the reading content in open, unboxed lists separated by hairlines. Brand colours from the website survive only as solid strokes and small accents on light ground, each paired with a darker text partner so type in a brand colour stays readable on white. Purple is the house voice; orange appears only as the demo button and the flagship marker.
 
-The type voice has three registers: Oxanium for names and numbers (squared, technical, heavy), DM Sans for everything a reader reads, and JetBrains Mono uppercase "// LABEL" rails for every section label, measurement and caption.
+The world is built for PDF readers first. Every colour is solid, every drawing is flat vector, and nothing relies on transparency, shadow, blur or gradient to read. Depth is carried by the lavender wash against white, by hairline rules, and by colour-tinted icon plates.
 
 **Key Characteristics:**
-- Pure black page with a 28px cyan grid at 4.5% opacity, masked to fade through the middle.
-- Radial neon halos (violet top-right, cyan left) behind every page; orange joins on flagship and back cover.
-- Gradient text (cyan→blue→purple) on product names and the key phrase of each headline.
-- "// LABEL" mono uppercase rails for all section labels, colour-coded by meaning.
-- Products drawn as vector SVG devices (phone, window, bubbles, nodes) with pin-label callouts.
-- Family accent (`--accent`) threads one hue through each product page.
-- One orange gradient pill CTA per page, bottom right.
+- White paper, lavender wash band on top, open unboxed content below
+- Purple as the single house accent; six family accents with pale tints
+- Oxanium for display and numerals, DM Sans for reading, JetBrains Mono only inside drawings
+- Flat vector datasheet drawings with pin-label callouts
+- Solid colours only: PDF-safe by rule and by test
+- Orange demo pill on the cover and back page only
 
 ## Colors
 
-A black-ground neon palette where every hue carries a fixed meaning.
+A cool white-and-lavender paper system with one purple voice, family accents deepened for legibility on white, and brand neons kept for drawing strokes only.
 
 ### Primary
-- **Signal Cyan** (signal-cyan): the system colour. Default label rails, hairlines (at 12%), grid (at 4.5%), the first stop of the brand gradient, journey step rings, back-cover step numerals, the Talk-to-customers family accent.
-- **Circuit Blue** (circuit-blue): gradient midpoint; the Capture-and-sell family accent.
-- **Ultraviolet** (ultraviolet): gradient end and the main halo hue (22–30% alpha radial glows).
+- **Wakflow Purple** (brand-purple): the house accent. Accent words in page titles and cover headline, "Wakflow" in product names, statistics, step numerals, journey discs, the footer link, the "New" feature pill, and the AI-agents family.
+- **Purple Tint** (purple-tint): pale plate behind purple icons on the index and the purple family.
 
 ### Secondary
-- **Demo Orange → Demo Amber** (demo-orange → demo-amber, 95deg): the action gradient on every "Book a free demo" pill, with dark Button Ink text. Amber alone marks the flagship (flag pill, flagship accent, footer WhatsApp line, "Built for Indian businesses" label).
+- **Demo Orange** (demo-orange) with **Button Ink** (button-ink): the "Book a free demo" pill, and nothing else in page CSS.
+- **Flagship Amber** (flagship-amber, tint flagship-amber-tint): the flagship family accent, the "Our flagship product" flag, and the flagship package name. **Flag Pill Orange** (flag-pill-orange) fills the index "Flagship" pill.
 
-### Tertiary
-- **Tick Green / Proof Green** (tick-green, proof-green): ticks, "// Proof" labels, the proof panel's border (tick-green at 28%) and wash (proof-green at 10% fading to cyan 4%). Grow family accent.
-- **Problem Red** (problem-red): "// The problem" labels, pain-quote bullet dots with a 15% ring, the "Replaces" tag.
-- **AI Violet** (ai-violet): the AI-agents family accent (a lighter ultraviolet for legibility on black).
+### Tertiary: family accents
+Each product family sets its own accent and tint on its pages (heading label, icon stroke, benefit ticks, feature dots, index rules and page numbers): Talk to customers **Talk Teal** (talk-teal / talk-tint), AI agents Wakflow Purple, Capture and sell **Sell Blue** (sell-blue / sell-tint), Grow **Grow Green** (grow-green / grow-tint), Run and protect **Run Slate** (run-slate / run-tint).
+
+### Drawing palette
+Drawings (svg/kit.py) stroke in the website's brand colours: **Signal Cyan** (stroke-cyan), **Circuit Blue** (stroke-blue), Wakflow Purple, Demo Orange (with light #FFB347), **Tick Green** (stroke-green, light #34D399), **Problem Red** (stroke-red). Fills behind those strokes are their pale tints (cyan #E4F8FF, purple #F1E9FB, green #E3F8EF, orange #FFF2E0, red #FDECEC, blue #E7F0FC). Text drawn in a brand colour is always swapped for its darker partner: cyan to #0784AD, blue to #2A6CC2, orange to #B85E00, green to #0B8A5E, red to #C93A3A; purple stays #7B35C1. Neutrals: drawing-line, drawing-line-strong, drawing-grey, and surfaces #F7F5FC / #F4F1FB / #ECE7F7.
 
 ### Neutral
-- **Void** (void) page ground; **Surface 1–4** (surface-1 … surface-4) tile fills, device bodies and chat bubbles inside SVGs.
-- **Ink** (ink): headlines, names, numerals, strong body. **Ink 2** (ink-2): leads, pain quotes, chip text; Run-and-protect family accent.
-- **Slate Grey** (slate-grey): default body text and mono meta.
-- **Hairline Cyan / Hairline Grey**: section rules and stat dividers in HTML. **SVG Line / Line 2**: opaque stroke greys inside the drawing kit.
-- **Deep tints** (cyan-deep, purple-deep, green-deep, orange-deep, red-deep, blue-deep): fills placed behind a stroke of the same brand hue in SVG (e.g. the business-side chat bubble is cyan-deep with a cyan stroke).
+- **Paper** (paper): the page and the lower reading zone.
+- **Lavender Wash** (lavender-wash): the top band on product and intro pages, the whole page on cover and back. This is "white with a shade of purple".
+- **Lavender Rule** (lavender-rule): rules on the lavender cover and back pages, and the contact panel border.
+- **Hairline** (hairline): header and footer rules, feature and index row dividers, QR frames.
+- **Ink** (ink): headings, bold list heads, logo word.
+- **Body Ink** (body-ink): body copy.
+- **Muted Ink** (muted-ink): page numbers, footers, section asides, contact line.
 
 ### Named Rules
-**The Meaning-Not-Mood Rule.** Red is only pain, green only proof or done, orange only the call to action. A hue never switches role between pages.
+**The Solid Colour Rule.** Every colour in the PDF is a solid value. No rgba, opacity, color-mix, gradient text, box-shadow, text-shadow, blur, filter, mask or backdrop-filter in CSS; no opacity, radialGradient, filter or mask in SVG. PDF readers render transparency as boxes. When a softened colour is needed, pre-blend it over white with kit.py `mix()` and write the resulting hex. Enforced by `test_css_has_no_pdf_unsafe_effects`, `test_pdf_has_no_transparency` and `test_svgs_valid`.
 
-**The One Accent Per Product Rule.** Each product page resolves `--accent` from its family (flagship amber, talk cyan, AI violet, sell blue, grow green, run ink-2) and uses it for the icon tile, spec-rule underlines, spec bullets, chips and the rail label, never more.
+**The Dark Partner Rule.** Brand neons are strokes and fills, never text on white. Any text drawn in a brand colour uses its darker partner from kit.py `TEXT`.
 
-**The Deep-Tint Fill Rule.** In SVG, a brand-coloured stroke sits on its matching deep tint, never on a lighter tint of itself.
+**The One Orange Rule.** Orange means "book a demo" or "flagship". The demo button appears only on the cover and the back page.
 
 ## Typography
 
-**Display Font:** Oxanium (with sans-serif)
-**Body Font:** DM Sans (with sans-serif)
-**Label/Mono Font:** JetBrains Mono (with monospace)
+**Display Font:** Oxanium (with DM Sans fallback, which also supplies the ₹ glyph Oxanium lacks)
+**Body Font:** DM Sans
+**Label/Mono Font:** JetBrains Mono, inside drawings only
 
-**Character:** Oxanium's squared heavy forms make names and numbers read as instrument readouts; DM Sans keeps the reading copy plain and friendly for non-technical owners; JetBrains Mono supplies the datasheet margin voice. All fonts are self-hosted woff2 subsets under OFL. Numerals are tabular throughout.
+**Character:** Oxanium's squared, engineered letterforms carry titles, numerals and buttons; DM Sans does all the reading at print-comfortable sizes with tabular figures.
 
 ### Hierarchy
-- **Display** (800, 46px, 1.04, -0.015em): cover headline only; back cover uses 38px, intro 30px, index 34px/28px at the same weight.
-- **Headline** (800, 33px, 1.02): product name, set in the brand gradient, under a 12px 600 Oxanium "WAKFLOW" brand line tracked at 0.28em that is the first word of the product's own name.
-- **Title** (600–700, 11–17px, 1.2–1.3): product one-line headline (17px), spec group heads (10.5px, accent underline), step and package names (12–13px), CTA line (12px).
-- **Numeral** (800, 22–40px, ~1.05): feature counts (30px), proof stats (23–24px), legend counts (22px), cover total (40px), phone number (34px).
-- **Body** (400, 10.5px, 1.45): default; leads rise to 12–13px in Ink 2. Spec items and captions 10px. Max measure about 560–690px.
-- **Label** (500, 9px, 0.12–0.18em, uppercase): "// LABEL" rails, running rail, footer, meta, chip codes, captions.
+- **Display** (800, 44px, 1.07): cover headline and the cover's product count.
+- **Headline** (800, 32px, 1.12; 34px on the back page): intro, index and back page titles, with one accent phrase in Wakflow Purple.
+- **Product title** (800, 31px, 1.08): "Wakflow" in purple, product name in ink.
+- **Numeral** (800, 26px): intro statistics; step numerals on the back page at 34px; cover family counts at 22px.
+- **Title** (DM Sans 700, 17px, 1.3): product headline under the title.
+- **Section** (Oxanium 700, 15px): "What you get", "Key features" and similar; an aside in muted DM Sans 11.5px may follow on the same baseline. Index product names use the same step.
+- **Lead** (13.5px, 1.6, max 660px): page intros; cover sub at 14px.
+- **Body** (12px, 1.5): default; product sub at 12.5px; list descriptions 11.5px.
+- **Body small / Label** (11px): feature descriptions, footers, head labels, captions. This is the floor.
+- **Drawing mono** (500, 9px x SIZE 1.08, uppercase, 1.2 tracking): chip labels, window titles, "Example" tags inside drawings.
 
 ### Named Rules
-**The Print Floor Rule.** Body text never below 10px (7.5pt); labels never below 9px. In SVG, the smallest label is 9 units, which renders at about 0.98 scale on the page.
+**The Print Floor Rule.** Page body text never goes below 11px (8.25pt); drawing labels never below 7pt, after the kit's SIZE factor of 1.08. `test_min_font_size` checks the rendered PDF.
 
-**The Gradient-Is-A-Name Rule.** The cyan→blue→purple gradient text goes on product names and the key phrase of a headline ("One system", "answer, sell, book and follow up", "wakflow.com"), one span per heading. It is the owner's brand device, not decoration to spread.
-
-**The Slash Voice Rule.** Every section label is JetBrains Mono uppercase prefixed "// ", coloured by meaning (cyan default, red problem, green proof, amber built-for). An `em` inside a label drops to grey for the qualifier.
+**The Mono Stays Drawn Rule.** JetBrains Mono uppercase is the voice of the illustrated product screens, not of the page. Page headings and labels are Oxanium or DM Sans in sentence case.
 
 ## Layout
 
-Fixed A4 portrait pages (210×297mm, 794×1123 CSS px), zero page margin, printed with exact colour. Each page is a flex column with 24px top, 20px bottom and 40px side padding. Inner pages open with a three-column rail (section label in accent / logo centred / "Product catalogue 2026" with the page number) over a cyan hairline, and close with a mono footer rail or the CTA block, both pushed down with `margin-top: auto`.
+Fixed A4 pages (210 x 297mm, zero page margin), inner padding 30px top, 46px sides, 26px bottom, laid out as a flex column so the footer sits at the bottom. Vertical breathing room between blocks comes from flexible gaps (min 14px, max 44px; 64px on the back page) so every page fills its sheet without overflow.
 
-Vertical rhythm between sections comes from flexible spacers that grow to at most 26px (64px on the intro and back cover, capped at 30px on the intro), so each page fills its height without overflow. Content blocks use CSS grid: title block `auto 1fr auto`; problem/benefit split 232px + 1fr at 24px gap; spec grid in 3, 4 or 5 columns depending on group count; proof stats in 3 or 4 columns divided by grey hairlines; journey in 6 columns joined by a 2px gradient line.
+Product pages: a lavender showcase band bleeds edge to edge behind the head, title, headline, sub and full-width hero drawing; below, on white, a two-column benefits list (16px x 28px gap) and a two-column feature list, then the footer. Intro, index and back pages use three-column grids (journey, proof statistics, industries, steps) or single-column index rows (42px icon, text, page number). The cover and back page are lavender throughout.
 
-The product hero figure bleeds 4px past the text column and the cover map 30px, so drawings feel larger than the text frame.
+Every page carries the same head (WF logo and wordmark, family or section label in accent, page number) over a hairline, and interior pages carry the same footer (catalogue name, wakflow.com in purple) over a hairline.
 
 ## Elevation & Depth
 
-Depth is light, not shadow. Surfaces are flat black; separation comes from hairlines, faint tinted washes (8–12% of a hue fading to transparent) and radial glows. Glow is part of the world: page halos, icon-tile halos, SVG node halos and the demo pill's orange under-glow.
-
-### Shadow Vocabulary
-- **Demo glow** (`box-shadow: 0 6px 18px -6px rgba(255, 138, 0, .55)`): under every orange pill.
-- **Accent halo** (`box-shadow: 0 0 28px -8px color-mix(in srgb, var(--accent) 60%, transparent)`): product icon tile.
-- **Signal ring** (`box-shadow: 0 0 0 3px rgba(248, 113, 113, .15)`): the red pain dot.
-- **Page halos** (radial gradients, 380–520px ellipses, 9–30% alpha): violet upper right, cyan left; flagship swaps in orange; cover centres violet and cyan behind the system map.
+Completely flat. There are no shadows anywhere, by rule: box-shadow and blur are banned for PDF safety. Depth comes from three tonal moves only: the lavender wash band against white paper, pale family tints behind icons, and 1px hairline rules. Drawings are flat vector with 1 to 1.4px strokes; the kit's old `halo()` glow is a no-op in this edition.
 
 ### Named Rules
-**The Light-Not-Lift Rule.** Nothing casts a directional drop shadow. Elements glow from their own hue or sit on a tinted wash.
+**The No-Box Rule.** Page content is not boxed. Lists are open rows separated by hairlines; benefits hang on a tick, features on a 7px square dot. The only framed shapes on the page are icon plates, QR codes, the contact panel on the back page, and the product screens drawn inside illustrations.
 
 ## Shapes
 
-Soft technical geometry. Pills (999px) for every button, chip, flag and SVG chip; 14px rounded cards for icon tiles, proof panels, legend strip and flagship rows; 16px for the hero frame and intro proof; 20px for the back-cover contact panel; 11px for small index icon tiles; 4px only on the "Replaces" tag. Rules are 1px hairlines; bullets are small circles (pains) or 4×1.5px accent dashes (spec items). SVG devices use 22px phone corners and 10px window corners, 0.8–1.2 stroke weights.
+Soft geometric. Icon plates are rounded squares (16px at 54px on product pages, 12px at 42px on the index); pills are fully round (demo button, "New", "Flagship"); list markers are 7px squares with 2px corners; intro journey steps sit on 30px purple discs. The cover family strip uses a 3px accent top rule per family; the index uses a 2px accent rule under each family name. Drawings use 6 to 10px rounded rectangles, 22px-corner phones, and elbow leaders ending in a ringed dot for callouts.
 
 ## Components
 
 ### Buttons
 - **Shape:** full pill (999px).
-- **Primary (demo):** orange→amber gradient, Button Ink text, Oxanium 700 11px, trailing 13px stroke arrow, demo glow. Large variant 14px on the back cover. One per page, bottom right with the mono contact line beneath.
-- **States:** print artifact; no hover or focus states exist.
+- **Demo button:** solid Demo Orange with Button Ink text, Oxanium 700 13px, trailing 14px arrow drawn as a stroked SVG path. Large variant on the back page at 15px.
+- **Placement:** cover and back page only; never on product or index pages.
+- **States:** none; this is print. Buttons are live links to WhatsApp.
 
 ### Chips
-- **Works-with chip:** pill, 1px border at 38% of the target product's family accent over an 8% wash, 12px product icon, mono 9px code, DM Sans 10px name in Ink 2.
-- **Flagship flag:** pill, amber mono 9px uppercase with a star, amber 50% border on orange 10% wash.
-- **Replaces tag:** 4px-radius red mono tag followed by the replaced tools in grey.
+- **New pill:** white on Wakflow Purple, DM Sans 700 9.5px, after a feature name the owner added.
+- **Flagship pill:** white on Flag Pill Orange with a star, on the index.
+- **Drawing chips:** pale tint fill, pre-mixed stroke, mono uppercase label in the dark partner colour.
 
 ### Cards / Containers
-- **Proof panel:** 14px radius, green 28% border, green→cyan→transparent 100deg wash, green "// label", Oxanium numerals over grey captions.
-- **Icon tile:** 52px square, 14px radius, accent 55% border, radial accent 22% glow on Surface 1.
-- **Legend strip / back contact panel:** hairline-divided cells on translucent Surface 1; the contact panel carries a cyan→violet wash and a 30% cyan border.
+- **Product icon plate:** 54px, white fill, 1.5px family-accent border, 16px corners, 28px line icon in accent.
+- **Index icon plate:** 42px, family tint fill, no border, 12px corners, 22px icon in accent.
+- **Contact panel (back page only):** white on lavender, 1.5px Lavender Rule border, 22px corners, 28px x 30px padding; holds phone number, web address, large demo button and two 112px QR codes.
 
 ### Navigation
-- **Logo:** `wakflow-catalogue/assets/logo.svg` is a placeholder wordmark (gradient-stroked W tile plus Oxanium 800 WAKFLOW) until the owner uploads the real logo; swap the file, not the layouts (30px tall on the cover, 24px on the back, 15px in the rail).
-- **Running rail:** mono 9px uppercase, accent left label, centred 15px logo, page number in Ink. Index rows map each product to its page with code, icon tile, name, description and a large Oxanium page number.
+- **Page head:** logo (22px mark, 15px Oxanium 800 uppercase wordmark with 0.06em tracking; 44px / 26px on the cover), right-aligned label in family accent (DM Sans 600 11px) and page number (Oxanium 700 12px, muted).
+- **Index rows:** every product row links to its page; page number in family accent.
+- **Footer:** muted catalogue name, purple wakflow.com link.
 
-### Pin-Label Callout (signature)
-A hollow 3.2r dot with a solid 1.3r core on the device, a 0.9 stroke elbow leader at 70% opacity, and an 11px DM Sans 600 label in Ink with an optional 9.5px grey sub-line. This is how features attach to the live screen.
+### Lists
+- **Benefits:** two columns; family-accent circled tick, bold ink head (13px), body description (11.5px).
+- **Features:** two columns between hairlines; 7px accent square dot, bold head (12px), description (11px).
+- **Packages (back page):** two columns of name/best-for rows between Lavender Rule hairlines; flagship name in amber with a star.
 
-### Neon Device Kit (signature)
-Phones, windows, chat bubbles (customer side Surface 4, business side cyan-deep with cyan stroke), system nodes with an 8% halo ring, audio waves, mono chips and an "Example" tag on illustrative screens, all emitted as plain vector SVG so the PDF stays sharp.
+### Datasheet Drawing (signature)
+Each product page carries one full-width vector hero drawn with svg/kit.py: a product screen (phone or window) in white with lavender neutrals, tinted brand-colour highlights, and pin-label callouts (ringed dot, elbow leader, DM Sans 600 label with a grey sub-line) on either side. Placeholder bars stand in for UI copy that would otherwise be invented, and an "Example" tag marks every screen as illustrative. The cover carries the system map: seventeen product nodes on a ring around the WF mark.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** keep every page on the black ground with the masked 28px cyan grid and at least one radial halo.
-- **Do** put gradient text on the product name and one key headline phrase, never across whole paragraphs.
-- **Do** label every section with a "// " JetBrains Mono uppercase rail at 9px, coloured by meaning.
-- **Do** hold body copy at 10px or larger and labels at 9px or larger; SVG labels at 9 units or larger.
-- **Do** draw products as thin-stroke vector devices with pin-label callouts, and tag illustrative screens "Example".
-- **Do** use only measured, dated proof numbers in the green proof panel.
-- **Do** end each page with a single orange demo pill and the wakflow.com / phone contact line.
+- **Do** use solid colours only; pre-blend softened colours over white with `mix()` and write the hex.
+- **Do** keep the lavender wash on the top band (or the whole page on cover and back) and white for the reading zone.
+- **Do** swap brand-colour text for its darker partner from kit.py `TEXT`.
+- **Do** keep page body text at 11px or larger and drawing labels at 7pt or larger.
+- **Do** review pages rendered from the PDF by MuPDF (`python3 wakflow-catalogue/review.py`, output in .impeccable/review/), never browser screenshots.
+- **Do** use the owner's WF logo beside the WAKFLOW wordmark on every page head.
+- **Do** set one accent phrase per title in Wakflow Purple.
 
 ### Don't:
-- **Don't** use orange for anything but the call to action and the flagship marker.
-- **Don't** use red outside pain quotes, problem labels and the "Replaces" tag.
-- **Don't** add directional drop shadows; depth is glow and tinted washes.
-- **Don't** place a brand-coloured stroke on anything but its deep tint in SVG.
-- **Don't** invent UI copy inside device screens; use placeholder bars.
+- **Don't** use rgba, opacity, color-mix, gradients on text, box-shadow, text-shadow, blur, filters or masks; PDF readers render them as boxes.
+- **Don't** put content in boxes or cards; use open rows and hairlines.
+- **Don't** place the demo button anywhere but the cover and the back page.
+- **Don't** bring back the website's black background or neon glows into the catalogue.
+- **Don't** set text in raw cyan, blue, orange, green or red on white.
+- **Don't** add content back to product pages beyond title, headline, sub, drawing, benefits and key features.

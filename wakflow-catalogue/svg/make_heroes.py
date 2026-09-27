@@ -457,7 +457,10 @@ def bookings_payment_followups(d):
     wx, wy = 370, 104
     d.add(bubble(wx, wy, 300, 92, "out"),
           mono(wx + 12, wy + 18, "WhatsApp reminder", 9, C["cyan"]),
-          lines(wx + 12, wy + 38, ["Hi! Your balance of ₹34,000 is due on 20 Oct.", "Pay safely by UPI or card:"], 10),
+          t(wx + 12, wy + 38, "Hi! Your balance of", 10, C["ink"]),
+          t(wx + 106, wy + 38, "₹34,000", 10.5, C["ink"], DISPLAY, 700),
+          t(wx + 151, wy + 38, "is due on 20 Oct.", 10, C["ink"]),
+          t(wx + 12, wy + 50.5, "Pay safely by UPI or card:", 10, C["ink"]),
           button(wx + 12, wy + 64, 100, 20, "Pay now", "orange", size=10))
     d.add(rect(wx, wy + 104, 190, 36, 8, C["bg1"], C["line2"], 1),
           path(f"M{wx + 14} {wy + 112} h12 l5 5 v14 h-17 z", C["red"], 1.1),
@@ -516,9 +519,9 @@ def lead_finder(d):
     for i, ttl in enumerate(titles):
         y = sy + 66 + i * 32
         d.add(bars(sx + 12, y - 6, [70], 5), t(sx + 100, y, ttl, 9.5, C["ink"]),
-              bars(sx + 208, y - 6, [62], 5), bars(sx + 292, y - 6, [60], 5, fill=C["cyan"]))
+              bars(sx + 208, y - 6, [62], 5), bars(sx + 292, y - 6, [60 if i != 4 else 30], 5, fill=C["cyan"]))
         if i == 4:
-            s, _ = chip(sx + 358, y - 12, "Check", C["orange2"], 9, 4, 14)
+            s, _ = chip(sx + 330, y - 12, "Check", C["orange2"], 9, 4, 14)
             d.add(s)
         else:
             d.add(tick(sx + 364, y - 9, 10))
@@ -725,8 +728,8 @@ MAP_NAME = {  # README "Short name" column
 
 
 def cover_map(products):
-    d = Doc("cover", 760, 560)
-    cx, cy, R = 380, 280, 192
+    d = Doc("cover", 760, 590)
+    cx, cy, R = 380, 290, 206
     d.halo(cx, cy, 330, 270, C["purple"], .26, "hp")
     d.halo(cx, cy, 220, 200, C["cyan"], .22, "hc")
     for r, o in ((R + 46, .10), (R, .22), (132, .16), (90, .22)):
@@ -759,11 +762,17 @@ def cover_map(products):
         s = 1.25 if big else 1.0
         d.add(f'<g transform="translate({x - 12 * s:.1f} {y - 12 * s:.1f}) scale({s})" stroke="{col}" '
               f'stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" color="{col}">{inner}</g>')
-        lx, ly = x + (r + 14) * math.cos(a), y + (r + 14) * math.sin(a)
-        anchor = "middle" if abs(math.cos(a)) < .3 else ("start" if math.cos(a) > 0 else "end")
-        dy = 4 if abs(math.sin(a)) < .5 else (14 if math.sin(a) > 0 else -4)
-        d.add(mono(lx, ly + dy - 12 if dy < 0 else ly + dy, p["code"], 9, col, anchor),
-              t(lx, (ly + dy + 2) if dy < 0 else ly + dy + 13, MAP_NAME[p["code"]], 11.5, C["ink"], BODY, 600, anchor))
+        ca, sa = math.cos(a), math.sin(a)
+        lx, ly = x + (r + 12) * ca, y + (r + 12) * sa
+        anchor = "middle" if abs(ca) < .35 else ("start" if ca > 0 else "end")
+        if sa > .35:        # label block below the node
+            cy_code, cy_name = ly + 9, ly + 23
+        elif sa < -.35:     # label block above the node
+            cy_code, cy_name = ly - 17, ly - 3
+        else:               # beside the node, vertically centred
+            cy_code, cy_name = y - 4, y + 11
+        d.add(mono(lx, cy_code, p["code"], 9, col, anchor),
+              t(lx, cy_name, MAP_NAME[p["code"]], 11.5, C["ink"], BODY, 600, anchor))
     # core
     d.add(circle(cx, cy, 70, C["cyan"], opacity=.08), circle(cx, cy, 58, C["bg"], C["cyan"], 1.6),
           circle(cx, cy, 64, "none", C["purple"], 1, opacity=.6),

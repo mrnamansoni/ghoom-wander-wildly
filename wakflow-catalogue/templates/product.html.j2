@@ -19,10 +19,11 @@
 
     <p class="p-headline">{{ p.headline }}</p>
     <p class="p-sub">{{ p.sub }}</p>
-    {% if p.get("replaces") %}<p class="p-replaces"><span>Replaces</span>{{ p.replaces }}</p>{% endif %}
+    {% if p.get("replaces") %}<p class="p-replaces"><span>Replaces</span><em>{{ p.replaces }}</em></p>{% endif %}
 
     <figure class="p-hero">{{ svg("hero/" ~ p.slug) }}</figure>
 
+    <div class="flex-gap"></div>
     <div class="p-split">
       <div class="p-pains">
         <h3 class="lbl lbl-red">// The problem</h3>
@@ -40,9 +41,11 @@
       </div>
     </div>
 
+    <div class="flex-gap"></div>
     <div class="p-spec">
       <h3 class="lbl">// Inside <em>{{ p.feature_total }} {{ p.get("feature_label", "features") }} in {{ p.feature_groups|length }} groups · highlights</em></h3>
-      <div class="spec-grid cols-{{ 4 if p.feature_groups|length > 6 or p.feature_groups|length == 4 else 3 }}">
+      {% set ng = p.feature_groups|length %}
+      <div class="spec-grid cols-{{ 3 if ng in (5, 6, 9) else (5 if ng == 10 else 4) }}">
         {% for g in p.feature_groups %}
         <div class="spec">
           <h4>{{ g.name }}</h4>
@@ -52,6 +55,7 @@
       </div>
     </div>
 
+    <div class="flex-gap"></div>
     <div class="p-proof kind-{{ p.proof.kind }}">
       <h3 class="lbl lbl-green">// {{ p.proof.title }}</h3>
       {% if p.proof.kind == "numbers" %}

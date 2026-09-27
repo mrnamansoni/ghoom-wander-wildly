@@ -6,12 +6,14 @@
     <h2 class="back-title">{{ site.back.title }}</h2>
     <p class="back-sub">{{ site.back.sub }}</p>
 
+    <div class="flex-gap flex-gap-lg"></div>
     <ol class="back-steps">
       {% for s in site.back.steps %}
       <li><i>{{ loop.index }}</i><b>{{ s.t }}</b><span>{{ s.d }}</span></li>
       {% endfor %}
     </ol>
 
+    <div class="flex-gap flex-gap-lg"></div>
     <div class="back-contact">
       <div class="bc-main">
         <p class="lbl">// Talk to us</p>
@@ -20,22 +22,24 @@
         <span class="btn btn-lg">{{ site.back.button }}{{ m.arrow() }}</span>
       </div>
       <div class="bc-qrs">
-        <figure>{{ qr(site.contact.wa_url, "#34D399") }}<figcaption>Scan to chat<br>on WhatsApp</figcaption></figure>
-        <figure>{{ qr(site.contact.web_url, "#00C8FF") }}<figcaption>Scan to visit<br>wakflow.com</figcaption></figure>
+        <figure style="--qr: #34D399">{{ qr(site.contact.wa_url) }}<figcaption>Scan to chat<br>on WhatsApp</figcaption></figure>
+        <figure style="--qr: #00C8FF">{{ qr(site.contact.web_url) }}<figcaption>Scan to visit<br>wakflow.com</figcaption></figure>
       </div>
     </div>
 
-    <h3 class="lbl back-pk-lbl">// Start with a package</h3>
+    <div class="flex-gap flex-gap-lg"></div>
+    <h3 class="lbl back-pk-lbl">// Start with a package <em>best for</em></h3>
     <div class="packages">
       {% for k in site.packages %}
-      <div class="pk{% if k.get("star") %} is-flagship{% endif %}"><i>{{ k.n }}</i><b>{{ k.t }}{% if k.get("star") %} {{ m.star() }}{% endif %}</b><span>Best for: {{ k.d }}</span></div>
+      <div class="pk{% if k.get("star") %} is-flagship{% endif %}"><b>{{ k.t }}{% if k.get("star") %} {{ m.star() }}{% endif %}</b><span>{{ k.d }}</span></div>
       {% endfor %}
     </div>
+    <div class="flex-gap flex-gap-lg"></div>
     <p class="back-pricing"><span class="lbl">// How pricing works</span>{{ site.back.pricing }} Add-ons for any package: official WhatsApp API, AI Voice Calling Agent, Instagram Automation, Dashboard Website, growth content and outbound sales.</p>
 
     <footer class="back-foot">
       <div class="back-logo">{{ asset("logo.svg") }}</div>
-      <p>All figures are measured on our own brands, Ghoomo Saste Me and Tripwaley, as of 27 Sep 2026. Clients are not named. Example screens are illustrations.</p>
+      <p>All figures are measured, as of 27 Sep 2026, on our own brands Ghoomo Saste Me and Tripwaley and on anonymised client work — clients are never named. Example screens are illustrations.</p>
     </footer>
   </div>
 </section>

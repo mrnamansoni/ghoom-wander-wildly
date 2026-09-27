@@ -32,15 +32,15 @@ def asset(name):
     return Markup(re.sub(r"<\?xml.*?\?>\s*", "", text))
 
 
-def qr(data, color="#00C8FF"):
+def qr(data, color="#000000"):
     """QR code as inline SVG path."""
     import segno
     import io
     buf = io.BytesIO()
     code = segno.make(data, error="m")
-    code.save(buf, kind="svg", dark=color, light=None, border=0,
+    code.save(buf, kind="svg", dark=color, light="#FFFFFF", border=4,
               xmldecl=False, svgns=True, nl=False, scale=1)
-    w, h = code.symbol_size(border=0)
+    w, h = code.symbol_size(border=4)
     out = buf.getvalue().decode()
     out = re.sub(r'\swidth="\d+"\sheight="\d+"', f' viewBox="0 0 {w} {h}"', out, count=1)
     return Markup(out.replace("<svg", '<svg class="qr"', 1))

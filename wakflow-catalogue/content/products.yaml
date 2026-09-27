@@ -240,7 +240,7 @@ products:
     - {name: Reliable and safe by design, items: [Backup AI brain, "One agent per brand, number or branch"]}
   proof:
     kind: numbers
-    title: Our own agents at work, as of 27 Sep 2026
+    title: Real deployments — our brands and a client, as of 27 Sep 2026
     items:
       - {n: "4,821", l: "conversations handled for Ghoomo Saste Me"}
       - {n: "14 s", l: "typical reply for Tripwaley, with live price lookups"}

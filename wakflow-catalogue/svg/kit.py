@@ -81,8 +81,9 @@ def t(x, y, s, size=11, fill=C["ink"], family=BODY, weight=400, anchor="start", 
             f'fill="{fill}" text-anchor="{anchor}"{extra}>{escape(s)}</text>')
 
 
-def mono(x, y, s, size=9, fill=C["grey"], anchor="start", weight=500):
-    return t(x, y, s.upper(), size, fill, MONO, weight, anchor, ls=1.2)
+def mono(x, y, s, size=9, fill=C["grey"], anchor="start", weight=600):
+    """Small drawing label: DM Sans, sentence case, never below 8pt on the page."""
+    return t(x, y, s, max(size, 9.8), fill, BODY, weight, anchor)
 
 
 def rect(x, y, w, h, r=6, fill=C["bg1"], stroke=C["line"], sw=1, opacity=None, dash=None):
@@ -121,16 +122,17 @@ def tick(x, y, s=10, color=C["green2"], sw=1.6):
 
 
 def chip(x, y, label, color=C["cyan"], size=9, pad=7, h=17, fill_opacity=0.14, text_fill=None):
-    w = len(label) * (size * SIZE * 0.6 + 1.2) + pad * 2
+    w = len(label) * max(size, 9.8) * SIZE * 0.56 + pad * 2
     return (f'<rect x="{x}" y="{y}" width="{w:.1f}" height="{h}" rx="{h / 2}" fill="{mix(color, fill_opacity)}" '
             f'stroke="{mix(color, .55)}" stroke-width=".8"/>'
             + mono(x + pad, y + h / 2 + size * .36, label, size, text_fill or color)), w
 
 
 def button(x, y, w, h, label, kind="orange", uid="b", size=10):
-    fill = {"orange": C["orange"], "green": C["green"], "ghost": C["bg3"]}[kind]
-    stroke = {"orange": C["orange2"], "green": C["green2"], "ghost": C["line2"]}[kind]
-    col = C["ink"] if kind == "orange" else (C["white"] if kind == "green" else C["ink"])
+    # orange belongs to the catalogue's one real call to action, so buttons inside drawings are purple
+    fill = {"orange": C["purple"], "green": C["green"], "ghost": C["bg3"]}[kind]
+    stroke = {"orange": C["purple"], "green": C["green"], "ghost": C["line2"]}[kind]
+    col = C["white"] if kind in ("orange", "green") else C["ink"]
     return (rect(x, y, w, h, h / 2, fill, stroke, .8)
             + t(x + w / 2, y + h / 2 + size * .36, label, size, col, DISPLAY, 700, "middle"))
 
@@ -194,8 +196,8 @@ def callout(px, py, lx, ly, label, side="left", color=C["cyan"], sub=None):
 
 
 def example_tag(x, y):
-    return (rect(x, y, 72, 17, 8.5, C["bg"], C["line2"], .8)
-            + mono(x + 36, y + 12, "Example", 9, C["grey"], "middle"))
+    return (rect(x, y, 72, 18, 9, C["bg"], C["line2"], .8)
+            + mono(x + 36, y + 13, "Example", 9, C["grey"], "middle"))
 
 
 def arrow(x1, y1, x2, y2, color=C["cyan"], sw=1.2, dash=None, head=5, opacity=None):

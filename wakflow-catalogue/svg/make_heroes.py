@@ -73,12 +73,7 @@ def personal_ai_assistant(d):
           callout(291, 247, 196, 240, "Asks before anything risky", "left", C["green2"], sub="one tap to approve"),
           callout(416, 95, 504, 52, "Remembers your business", "right", sub="prices, people, rules"),
           callout(416, 130, 504, 128, "Works on a schedule", "right", sub="silent unless something's wrong"),
-          callout(416, 228, 504, 204, "Does work in your apps", "right", C["purple"]))
-    x = 514
-    for lab, col in (("CRM", C["cyan"]), ("Sheets", C["green2"]), ("Gmail", C["orange2"])):
-        s, w = chip(x, 222, lab, col)
-        d.add(s)
-        x += w + 6
+          callout(416, 228, 504, 214, "Drafts and sends for you", "right", C["purple"], sub="after your OK"))
 
 
 # ---------------------------------------------------------------- 02
@@ -87,9 +82,10 @@ def whatsapp_connect(d):
     d.halo(120, 150, 120, 120, C["green"], .14)
     # phone with QR
     d.add(phone(52, 22, 128, 244, C["green2"]),
-          mono(116, 62, "Link a device", 9, C["grey"], "middle"),
-          rect(74, 74, 84, 84, 6, C["bg2"], C["line2"], .8),
-          qr_grid(80, 80, 6.6),
+          mono(116, 62, "Linked devices", 9, C["grey"], "middle"),
+          rect(74, 74, 84, 84, 14, C["greenDeep"], C["green2"], 1.2),
+          circle(116, 116, 22, C["green"]),
+          tick(106, 106, 20, C["white"], 3),
           t(116, 182, "Scan once", 11, C["ink"], DISPLAY, 700, "middle"),
           t(116, 197, "or type an", 9.5, C["grey"], BODY, 400, "middle"),
           t(116, 209, "8-character code", 9.5, C["grey"], BODY, 400, "middle"),
@@ -106,7 +102,7 @@ def whatsapp_connect(d):
         s, w = chip(x, 222, lab, C["cyan"])
         d.add(s)
         x += w + 8
-    d.add(mono(350, 258, "Many numbers, one control room", 9, C["grey"], "middle"))
+    d.add(mono(350, 258, "Many numbers, one place", 9, C["grey"], "middle"))
     # destinations
     dests = [("Team inbox", C["cyan"]), ("AI agent", C["purple"]), ("CRM", C["blue"]), ("Automations", C["orange2"])]
     for i, (lab, col) in enumerate(dests):
@@ -116,7 +112,6 @@ def whatsapp_connect(d):
               rect(540, y, 140, 36, 8, C["bg1"], col, 1),
               circle(558, y + 18, 5, col, opacity=.9),
               t(572, y + 22, lab, 11, C["ink"], BODY, 600))
-    d.add(mono(610, 282, "Every chat saved", 9, C["grey"], "middle"))
 
 
 # ---------------------------------------------------------------- 03
@@ -156,8 +151,6 @@ def inbox(d):
           bars(tx + 20, y0 + 241, [80], 4.5), circle(tx + 150, y0 + 243, 7, C["cyan"]))
     d.add(example_tag(x0 + 14, y0 + h - 26))
     d.add(callout(x0 + 16, y0 + 63, 128, 44, "Unlimited WhatsApp", "left", C["green2"], sub="numbers, used at once"),
-          callout(lx + 134, y0 + 40, 128, 150, "One owner per chat", "left", C["purple"], sub="auto-assigned"),
-          callout(lx + 60, y0 + 219, 128, 218, "Clear status", "left", C["green2"], sub="open to resolved"),
           callout(tx + 162, y0 + 39, 588, 44, "Collision alerts", "right"),
           callout(tx + 162, y0 + 165, 588, 160, "Private notes", "right", C["orange2"], sub="@mentions"))
 
@@ -198,7 +191,7 @@ def instagram_automation(d):
         d.add(s)
         x += w + 5
     d.add(bubble(318, 196, 142, 28, "out"), t(328, 214, "My number: 98•• ••• •••", 9.5, C["ink"]),
-          mono(274, 250, "Every DM ends with", 9, C["grey"]), mono(274, 263, "a phone number", 9, C["grey"]))
+          )
     d.add(arrow(478, 150, 500, 150, C["cyan"], 1.3))
     # call + crm
     d.add(rect(506, 24, 180, 124, 14, C["bg1"], C["orange"], 1.2),
@@ -381,7 +374,6 @@ def crm(d):
             d.add(tick(fx + 16, y + 1, 10, C["green2"], 1.5))
         d.add(bars(fx + 38, y + 1, [96 if i % 2 else 80, 60], 4.5, 10, C["line2"] if not done else C["line"]),
               mono(fx + 176, y + 11, tm, 9, C["grey"], "end"))
-    d.add(mono(fx + 14, 270, "Every lead gets a task", 9, C["grey"]))
 
 
 # ---------------------------------------------------------------- 09
@@ -465,7 +457,7 @@ def bookings_payment_followups(d):
           path(f"M{wx + 14} {wy + 112} h12 l5 5 v14 h-17 z", C["red"], 1.1),
           t(wx + 40, wy + 126, "Invoice-1042.pdf", 10, C["ink"], BODY, 600))
     d.add(mono(wx + 202, wy + 126, "Branded invoice", 9, C["grey"]))
-    d.add(example_tag(wx, wy + 152), mono(wx + 84, wy + 164, "Stops the moment it's paid", 9, C["green2"]))
+    d.add(example_tag(wx, wy + 152))
 
 
 # ---------------------------------------------------------------- 11
@@ -475,9 +467,9 @@ def whatsapp_broadcasts(d):
     d.add(rect(14, 94, 176, 104, 12, C["bg1"], C["cyan"], 1.2),
           mono(28, 114, "One base message", 9, C["cyan"]),
           bars(28, 126, [140, 120, 132, 70], 5, 12))
-    d.add(mono(28, 190, "Rewritten per person", 9, C["grey"]))
+    d.add(mono(28, 190, "Rewritten for each person", 9, C["grey"]))
     times = ["10:02", "10:07", "10:11", "10:19", "10:26", "10:34"]
-    widths = [[110, 80], [96, 104], [120, 60], [88, 112], [104, 90], [116, 74]]
+    widths = [[96, 70], [84, 92], [100, 56], [78, 96], [92, 80], [100, 66]]
     for i, tm in enumerate(times):
         y = 14 + i * 45
         d.add(path(f"M190 146 C 240 146, 240 {y + 17}, 282 {y + 17}", C["cyan"], .9, opacity=.6),
@@ -485,7 +477,6 @@ def whatsapp_broadcasts(d):
               mono(446, y + 14, tm, 9, C["grey"], "end"))
         if i == 2:
             d.add(mono(446, y + 28, "typing…", 9, C["green2"], "end"))
-    d.add(mono(368, 286, "Human pace · random gaps", 9, C["grey"], "middle"))
     outs = [("Replies to AI agent", C["purple"], 30), ("Replies to team inbox", C["cyan"], 92),
             ("Saved as a lead", C["green2"], 154), ("STOP: removed at once", C["red"], 216)]
     for lab, col, y in outs:
@@ -546,7 +537,7 @@ def cold_email_engine(d):
               mono(x + 10, base + 16, labels[i], 9, C["purple"] if warm else C["grey"], "middle"))
     d.add(line(x0 - 6, base, x0 + 256, base, C["line2"]),
           path(f"M{x0 + 66} {base - 30} L{x0 + 234} {base - 166}", C["green2"], 1.2, dash="3 4"),
-          mono(x0, base + 40, "Two weeks warm-up, then slow and steady", 9, C["grey"]))
+          )
     # inbox card
     ix = 318
     d.add(rect(ix, 30, 196, 230, 12, C["bg1"], C["line2"], 1.2),
@@ -555,7 +546,6 @@ def cold_email_engine(d):
     for i in range(5):
         y = 80 + i * 34
         d.add(circle(ix + 24, y + 10, 7, C["bg4"], C["line2"], .8), bars(ix + 38, y + 4, [120 - i * 8, 90], 4.5, 10))
-    d.add(mono(ix + 12, 250, "Plain text, real names", 9, C["grey"]))
     # reply alert
     ax = 530
     d.add(arrow(516, 146, 530, 146, C["green2"], 1.2),
@@ -660,7 +650,7 @@ def automate(d):
           box(190, 110, 148, 66, "AI decides", "Hot, warm or cold?", C["purple"]),
           t(202, 166, "reads voice notes too", 9.5, C["grey"]))
     # approval branch
-    d.add(path("M338 130 C 370 130, 370 50, 400 50", C["orange2"], 1.2), mono(372, 104, "money?", 9, C["orange2"]),
+    d.add(path("M338 130 C 370 130, 370 50, 400 50", C["orange2"], 1.2), 
           rect(404, 22, 172, 58, 10, C["bg1"], C["orange"], 1.2),
           mono(416, 40, "Human approval", 9, C["orange2"]),
           t(416, 60, "Refund ₹2,400?", 11, C["ink"], DISPLAY, 700),
@@ -680,18 +670,19 @@ def automate(d):
         d.add(tick(lx + 10, y - 8, 9), mono(lx + 26, y, tm, 9, C["ink"]))
         if i == 6:
             d.add(mono(lx + 70, y, "!", 9, C["orange2"]))
-    d.add(mono(12, 270, "Logged · alerts before customers notice", 9, C["grey"]), example_tag(12, 212))
+    d.add(example_tag(12, 212))
 
 
 # ---------------------------------------------------------------- 17
 def care(d):
     d.halo(350, 145, 200, 150, C["green"], .20)
     d.halo(350, 145, 120, 100, C["cyan"], .14)
-    d.add(path("M0 150 H250 L268 150 L280 108 L296 196 L312 128 L324 150 H700", C["cyan"], 1.4, opacity=.55))
+    d.add(path("M228 150 H236 L244 112 L256 188 L266 132 L274 150 H286", C["cyan"], 1.4, opacity=.55),
+          path("M414 150 H470", C["cyan"], 1.4, opacity=.55))
     d.add(path("M350 52 L412 76 V140 C412 190 386 222 350 236 C314 222 288 190 288 140 V76 Z", C["green2"], 1.6,
                fill=C["bg1"]),
           path("M322 146 h14 l8 -18 l12 34 l8 -16 h14", C["green2"], 1.8),
-          mono(350, 262, "Watched daily", 9, C["green2"], "middle"))
+          )
     # status list
     d.add(rect(14, 40, 214, 206, 12, C["bg1"], C["line2"], 1.2),
           mono(28, 62, "Morning health check", 9, C["grey"]))
@@ -770,10 +761,9 @@ def cover_map(products):
             cy_code, cy_name = ly - 17, ly - 3
         else:               # beside the node, vertically centred
             cy_code, cy_name = y - 4, y + 11
-        d.add(mono(lx, cy_code, p["code"], 9, col, anchor),
-              t(lx, cy_name, MAP_NAME[p["code"]], 11.5, C["ink"], BODY, 600, anchor))
+        d.add(t(lx, (cy_code + cy_name) / 2 + 2, MAP_NAME[p["code"]], 11.5, C["ink"], BODY, 600, anchor))
     # core: the Wakflow logo mark
-    d.add(circle(cx, cy, 70, C["cyan"], opacity=.08), circle(cx, cy, 58, C["bg"], C["cyan"], 1.6),
+    d.add(circle(cx, cy, 70, C["cyan"], opacity=.08), circle(cx, cy, 58, "#F4F0FC", C["cyan"], 1.6),
           circle(cx, cy, 64, "none", C["purple"], 1, opacity=.6),
           f'<image href="../assets/logo-mark.png" x="{cx - 44}" y="{cy - 30}" width="88" height="38.3" '
           f'preserveAspectRatio="xMidYMid meet"/>',

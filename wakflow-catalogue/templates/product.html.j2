@@ -7,13 +7,9 @@
 
     <div class="p-title">
       <span class="p-icon">{{ svg("icons/" ~ p.slug) }}</span>
-      <div>
-        {% if p.get("flagship") %}<p class="flag">{{ m.star() }} Our flagship product</p>{% endif %}
-        <h2><span class="brand-word">Wakflow</span> {{ p.name[8:] }}</h2>
-      </div>
+      <h2><span class="brand-word">Wakflow</span> {{ p.name[8:] }}</h2>
     </div>
     <p class="p-headline">{{ p.headline }}</p>
-    <p class="p-sub">{{ p.sub }}</p>
 
     <figure class="p-hero">{{ svg("hero/" ~ p.slug) }}</figure>
     </div>
@@ -27,10 +23,10 @@
     </ul>
 
     <div class="gap"></div>
-    <h3 class="sec">Key features <em>{{ p.feature_total }} {{ p.get("feature_label", "features") }} in total</em></h3>
+    <h3 class="sec">Key features</h3>
     <ul class="features">
-      {% for k in p.key_features %}
-      <li{% if k.get("owner") %} class="is-new"{% endif %}><b>{{ k.t }}</b><span>{{ k.d }}</span></li>
+      {% for k in p.key_features[:6] %}
+      <li{% if k.get("owner") %} class="is-new"{% endif %}>{{ k.t }}</li>
       {% endfor %}
     </ul>
 

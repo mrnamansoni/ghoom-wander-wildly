@@ -5,6 +5,6 @@
   "fonts_missing": [],
   "min_body_pt": 8.25,
   "min_body_where": "p1: \"Flagship\"",
-  "min_label_pt": 7.42,
-  "min_label_where": "p1: \"01\""
+  "min_label_pt": 7.43,
+  "min_label_where": "p11: \"form, DM, ad\""
 }

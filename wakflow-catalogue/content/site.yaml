@@ -37,10 +37,10 @@ intro:
   stats:
     - {n: "91,907", l: "WhatsApp messages held across our brands' numbers"}
     - {n: "20,407", l: "customer conversations in the shared team inbox"}
-    - {n: "63", l: "of 11,476 CRM customers ever typed in by hand"}
+    - {n: "Only 63", l: "of 11,476 CRM customers were ever typed in by hand"}
     - {n: "0.91 s", l: "to the AI caller's first word — 85% of pilot calls answered"}
     - {n: "51 of 53", l: "morning checks completed by our own AI assistant"}
-    - {n: "92 / 100", l: "mobile speed and SEO scores for our dashboard website"}
+    - {n: "92 · 100", l: "Mobile speed 92, SEO 100 — our dashboard website on Google PageSpeed"}
 
 back:
   title: "Stop running your business across apps that don't talk to each other."

@@ -261,7 +261,7 @@ def test_fonts_embedded_as_real_fonts():
 def test_css_has_no_pdf_unsafe_effects():
     css = (ROOT / "styles" / "catalogue.css").read_text()
     for bad in ("background-clip", "box-shadow", "mask-image", "filter:", "backdrop-filter", "rgba(", "opacity:",
-                "color-mix", "text-shadow"):
+                "color-mix", "text-shadow", "features in total"):
         assert bad not in css, bad
 
 
@@ -278,6 +278,8 @@ def test_pdf_has_no_transparency():
                     bad.append((x, m.group(0)))
             if re.search(r"/SMask\s*<<", obj):
                 bad.append((x, "SMask"))
+        if re.search(r"/SMask\s+\d+\s+0\s+R", obj):
+            bad.append((x, "image soft mask"))
     assert not bad, bad[:10]
 
 
@@ -304,6 +306,23 @@ def test_owner_requested_features_present():
     assert "unlimited whatsapp numbers" in inbox and "same time" in inbox
     ig = " ".join(str(k) for k in by["instagram-automation"]["key_features"]).lower()
     assert "personalised" in ig and "comment" in ig
+
+
+def test_product_pages_are_short_and_readable():
+    """Reading text (outside the drawings) stays short enough for a phone; body text >= 8.25pt."""
+    for cls, attrs, body in _sections():
+        if "product" not in cls:
+            continue
+        text = re.sub(r"<svg.*?</svg>", " ", body, flags=re.S)
+        words = len(re.sub(r"<[^>]+>", " ", text).split())
+        assert words <= 165, (attrs, words)
+    assert _report()["min_body_pt"] >= 8.25
+
+
+def test_no_page_codes_that_clash_with_page_numbers():
+    txt = (ROOT / "svg" / "cover-map.svg").read_text()
+    codes = re.findall(r">(\d\d)</text>", txt)
+    assert not codes, codes
 
 
 if __name__ == "__main__":

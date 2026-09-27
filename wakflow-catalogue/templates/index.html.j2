@@ -17,7 +17,7 @@
       <a href="#p{{ p.code }}" class="idx-row fam-{{ fid }}{% if p.get("flagship") %} is-flagship{% endif %}" data-code="{{ p.code }}" data-page="{{ 4 + p.code|int }}">
         <span class="idx-icon">{{ svg("icons/" ~ p.slug) }}</span>
         <div class="idx-text">
-          <b>{{ p.name }}{% if p.get("flagship") %} <span class="flag-inline">{{ m.star() }} Flagship</span>{% endif %}</b>
+          <b>{{ p.name }}</b>
           <span>{{ p.list_desc }}</span>
         </div>
         <span class="idx-page">{{ "%02d" % (4 + p.code|int) }}</span>

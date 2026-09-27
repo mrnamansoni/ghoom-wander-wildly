@@ -114,8 +114,8 @@ products:
   name: Wakflow Inbox
   short: Inbox
   family: talk
-  list_desc: Every WhatsApp, Instagram, Facebook, website and email conversation in one shared inbox your whole team can answer, on laptop or phone.
-  headline: One inbox. Every customer chat. Your whole team.
+  list_desc: Every WhatsApp number you own — all live at the same time — plus Instagram, Facebook, website chat and email, in one shared inbox your whole team answers.
+  headline: Every WhatsApp number you own, in one inbox, all live at once.  # owner-provided fact
   sub: WhatsApp, Instagram, Facebook, website chat and email land on one shared screen. Assign each chat to the right person and reply as a team from your own business number.
   replaces: Freshdesk, Zendesk, Intercom and the WATI or Interakt team inbox — and the office phone everybody passes around.
   pains:
@@ -123,10 +123,10 @@ products:
     - I don't know who promised the customer what.
     - Our leads are in five different places.
   benefits:
-    - {t: No missed messages., d: "Every chat from every channel in one list with a clear status: open, pending, snoozed or resolved."}
-    - {t: Clear ownership., d: "Each conversation belongs to one person or team, and the manager sees who has not replied."}
+    - {t: "All your WhatsApp numbers, live at once.", d: "Connect unlimited WhatsApp numbers and use them all at the same time.", owner: true}
+    - {t: No missed messages., d: "WhatsApp, Instagram, Facebook, website and email chats in one list with a clear status."}
+    - {t: Clear ownership., d: "Each chat belongs to one person or team, and the manager sees who has not replied."}
     - {t: "AI first, people next.", d: "The AI answers routine questions in seconds; a person takes over with the full history."}
-    - {t: Know how your team is doing., d: "Live reports on volume, first reply time, resolution time and customer satisfaction."}
   key_features:
     - {t: "Unlimited WhatsApp numbers", d: "Connect all your WhatsApp numbers in one inbox and use them at the same time.", owner: true}  # owner-provided, not in Part A
     - {t: "WhatsApp by QR code", src: "WhatsApp by QR code", d: "Keep the number your customers already know."}
@@ -165,8 +165,8 @@ products:
   name: Wakflow Instagram Automation
   short: Instagram Automation
   family: talk
-  list_desc: Every comment answered, every DM guided to a phone number, and hot Instagram leads called back by an AI voice agent within minutes.
-  headline: Turn every Instagram comment into a lead.
+  list_desc: Every comment gets its own AI-written reply, every DM is guided to a phone number, and hot leads are called back by an AI voice agent within minutes.
+  headline: Every comment gets its own AI reply — and becomes a lead.  # owner-provided fact
   sub: Replies to every comment and DM in seconds, in Hinglish or English, walks people through your packages with buttons and carousels, collects their number — and gets an AI voice agent to call them back.
   replaces: ManyChat-style DM tools, a person who answers comments all day, and forwarded screenshots of Instagram enquiries.
   pains:
@@ -174,7 +174,7 @@ products:
     - "People DM us, we chat for twenty minutes, and we never even get their phone number."
     - Instagram leads never reach the sales team.
   benefits:
-    - {t: Every comment gets a real reply in seconds., d: "An AI writes a warm public reply and sends a private message to continue the chat."}
+    - {t: Every comment gets its own reply., d: "AI writes a personalised reply for each customer in seconds, then continues in DM.", owner: true}
     - {t: Every DM ends with a phone number., d: "Menus, quick-reply buttons and package carousels lead step by step to their number."}
     - {t: "A call back in minutes, not tomorrow.", d: "An AI voice agent calls, already knowing they came from Instagram."}
     - {t: Every Instagram lead reaches your team., d: "Tagged “Instagram”, marked hot, with a follow-up task in your CRM."}

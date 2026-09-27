@@ -9,8 +9,7 @@
     <div class="p-title">
       <div class="p-icon">{{ svg("icons/" ~ p.slug) }}</div>
       <div class="p-name">
-        <p class="p-brand">Wakflow{% if p.get("flagship") %} <span class="flag">{{ m.star() }} Flagship</span>{% endif %}</p>
-        <h2 class="grad">{{ p.name[8:] }}</h2>
+        <h2><span class="p-brand">Wakflow{% if p.get("flagship") %} <span class="flag">{{ m.star() }} Flagship</span>{% endif %}</span><span class="grad">{{ p.name[8:] }}</span></h2>
       </div>
       <div class="p-count">
         <b>{{ p.feature_total }}</b>

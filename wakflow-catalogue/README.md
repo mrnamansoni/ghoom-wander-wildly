@@ -8,7 +8,7 @@ cover · platform intro · product list (2 pages) · one page per product (17) �
 ```bash
 cd wakflow-catalogue
 npm install            # once (Playwright + Chromium)
-pip install jinja2 pyyaml segno pymupdf pillow   # once
+pip install jinja2 pyyaml segno pymupdf pillow fonttools brotli   # once
 python3 svg/make_icons.py && python3 svg/make_heroes.py   # only if drawings changed
 python3 fonts/make_static.py                              # only if font files changed
 python3 build.py && node render.mjs --shots

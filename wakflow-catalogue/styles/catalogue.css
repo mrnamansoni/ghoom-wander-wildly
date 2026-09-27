@@ -1,0 +1,23 @@
+@import url("fonts.css");
+
+:root {
+  --bg: #000; --bg-1: #0a0a0a; --bg-2: #111;
+  --cyan: #00C8FF; --blue: #4A90E2; --purple: #7B35C1;
+  --orange: #FF8A00; --orange-2: #FFB347;
+  --green: #10B981; --green-2: #34D399;
+  --red: #F87171; --grey: #8892A4;
+  --ink: #EEF3FA; --line: rgba(0, 200, 255, .12);
+  --grad: linear-gradient(92deg, var(--cyan) 0%, var(--blue) 48%, var(--purple) 100%);
+  --grad-orange: linear-gradient(95deg, var(--orange), var(--orange-2));
+  --f-display: "Oxanium", sans-serif;
+  --f-body: "DM Sans", sans-serif;
+  --f-mono: "JetBrains Mono", monospace;
+}
+
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); }
+body { color: var(--grey); font: 400 9pt/1.45 var(--f-body); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 210mm; height: 297mm; position: relative; overflow: hidden; background: var(--bg); break-after: page; }
+.page:last-child { break-after: auto; }

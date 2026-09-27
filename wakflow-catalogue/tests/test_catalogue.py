@@ -154,6 +154,51 @@ def test_svgs_valid():
     assert not bad, bad
 
 
+# ---------- Task 4: pages ----------
+
+BANNED_CI = ["n8n", "chatwoot", "baileys", "livekit", "vobiz", "minio", "edge-tts", "nca toolkit", "crm2",
+             "naveen", "hermes agent", "evolution api", "gemini live", "tripwaley.in", "ghoomosasteme.in"]
+BANNED_CS = [r"\bEvolution\b", r"\bTwenty\b", r"\bHermes\b", r"\bNCA\b"]
+
+
+def _html():
+    return HTML.read_text()
+
+
+def _sections():
+    return re.findall(r'<section class="page ([^"]*)"([^>]*)>(.*?)</section>', _html(), re.S)
+
+
+def test_no_banned_words():
+    html = _html()
+    low = html.lower()
+    hits = [w for w in BANNED_CI if w in low]
+    hits += [p for p in BANNED_CS if re.search(p, html)]
+    hits += re.findall(r"\b\d{1,3}(?:\.\d{1,3}){3}\b", html)
+    assert not hits, hits
+
+
+def test_index_page_numbers():
+    secs = _sections()
+    assert len(secs) == EXPECTED_PAGES, len(secs)
+    rows = re.findall(r'class="idx-row[^"]*" data-code="(\d+)" data-page="(\d+)"', _html())
+    assert len(rows) == 17, rows
+    for code, pg in rows:
+        n = int(pg)
+        assert n == 4 + int(code), (code, pg)
+        cls, attrs, _ = secs[n - 1]
+        assert "product" in cls and f'data-code="{code}"' in attrs, (code, n, cls, attrs)
+
+
+def test_contact_printed():
+    secs = _sections()
+    back = secs[-1][2]
+    assert "wakflow.com" in back and "+91 96253 30270" in back
+    for cls, attrs, body in secs:
+        if "product" in cls:
+            assert "wakflow.com" in body and "+91 96253 30270" in body, attrs
+
+
 if __name__ == "__main__":
     names = sys.argv[1:] or [n for n in dict(globals()) if n.startswith("test_")]
     failed = 0

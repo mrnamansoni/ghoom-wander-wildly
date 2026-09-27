@@ -3,11 +3,22 @@
 <head>
 <meta charset="utf-8">
 <title>Wakflow Product Catalogue 2026</title>
+<meta name="description" content="All 17 Wakflow products: WhatsApp, team inbox, CRM, AI agents and automation for Indian businesses.">
 <link rel="stylesheet" href="../styles/catalogue.css">
 </head>
 <body>
-{% for i in range(22) %}
-<section class="page"><p style="font-family:Oxanium;font-weight:800;color:#fff">Page {{ i + 1 }} <span style="font-family:'DM Sans'">body</span> <span style="font-family:'JetBrains Mono'">label</span></p></section>
+{% import "macros.html.j2" as m with context %}
+{% include "cover.html.j2" %}
+{% include "intro.html.j2" %}
+{% set fam_order = ["flagship", "talk", "ai"] %}
+{% set index_page = 1 %}
+{% include "index.html.j2" %}
+{% set fam_order = ["sell", "grow", "run"] %}
+{% set index_page = 2 %}
+{% include "index.html.j2" %}
+{% for p in products %}
+{% include "product.html.j2" %}
 {% endfor %}
+{% include "back.html.j2" %}
 </body>
 </html>

@@ -1,0 +1,25 @@
+<section class="page cover" data-page="cover">
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="page-inner">
+    <header class="cover-top">
+      <div class="cover-logo">{{ asset("logo.svg") }}</div>
+      <p class="cover-meta">Product catalogue<br><b>2026 edition</b></p>
+    </header>
+    <h1 class="cover-title"><span class="grad">One system</span> for every message, every lead and every follow-up.</h1>
+    <p class="cover-sub">{{ site.cover.sub }}</p>
+    <figure class="cover-map">{{ svg("cover-map") }}</figure>
+    <div class="cover-legend">
+      {% for f in site.families %}
+      <div class="leg fam-{{ f.id }}"><b>{{ products|selectattr("family", "equalto", f.id)|list|length }}</b><span>{{ f.name }}</span></div>
+      {% endfor %}
+    </div>
+    <footer class="cover-bottom">
+      <p class="cover-count"><b>{{ total }}</b><span>products that work alone<br>or as one system</span></p>
+      <div class="cover-cta">
+        <span class="btn">Book a free demo{{ m.arrow() }}</span>
+        <span class="contact">wakflow.com · +91 96253 30270</span>
+      </div>
+    </footer>
+  </div>
+</section>

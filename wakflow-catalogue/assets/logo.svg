@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 32" fill="none" role="img" aria-label="Wakflow">
+<defs><linearGradient id="logo-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00C8FF"/><stop offset=".5" stop-color="#4A90E2"/><stop offset="1" stop-color="#7B35C1"/></linearGradient></defs>
+<rect x="1" y="1" width="30" height="30" rx="8" stroke="url(#logo-g)" stroke-width="1.6"/>
+<path d="M7 10.5l4 11 5-9 5 9 4-11" stroke="url(#logo-g)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="42" y="23" font-family="Oxanium" font-weight="800" font-size="19" letter-spacing="2" fill="#FFFFFF">WAKFLOW</text>
+</svg>

@@ -663,7 +663,7 @@ def automate(d):
           mono(416, 40, "Human approval", 9, C["orange2"]),
           t(416, 60, "Refund ₹2,400?", 11, C["ink"], DISPLAY, 700),
           button(520, 46, 46, 18, "Yes", "green", size=9.5))
-    actions = [("WhatsApp welcome + brochure", C["green2"]), ("CRM record + follow-up task", C["blue"]),
+    actions = [("WhatsApp welcome sent", C["green2"]), ("CRM record + follow-up task", C["blue"]),
                ("Owner alert on Telegram", C["orange2"])]
     for i, (lab, col) in enumerate(actions):
         y = 104 + i * 46

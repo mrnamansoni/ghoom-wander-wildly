@@ -1,0 +1,41 @@
+<section class="page back" data-page="back">
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="page-inner">
+    {{ m.rail("// Get started", 22) }}
+    <h2 class="back-title">{{ site.back.title }}</h2>
+    <p class="back-sub">{{ site.back.sub }}</p>
+
+    <ol class="back-steps">
+      {% for s in site.back.steps %}
+      <li><i>{{ loop.index }}</i><b>{{ s.t }}</b><span>{{ s.d }}</span></li>
+      {% endfor %}
+    </ol>
+
+    <div class="back-contact">
+      <div class="bc-main">
+        <p class="lbl">// Talk to us</p>
+        <p class="bc-phone">+91 96253 30270</p>
+        <p class="bc-web grad">wakflow.com</p>
+        <span class="btn btn-lg">{{ site.back.button }}{{ m.arrow() }}</span>
+      </div>
+      <div class="bc-qrs">
+        <figure>{{ qr(site.contact.wa_url, "#34D399") }}<figcaption>Scan to chat<br>on WhatsApp</figcaption></figure>
+        <figure>{{ qr(site.contact.web_url, "#00C8FF") }}<figcaption>Scan to visit<br>wakflow.com</figcaption></figure>
+      </div>
+    </div>
+
+    <h3 class="lbl back-pk-lbl">// Start with a package</h3>
+    <div class="packages">
+      {% for k in site.packages %}
+      <div class="pk{% if k.get("star") %} is-flagship{% endif %}"><i>{{ k.n }}</i><b>{{ k.t }}{% if k.get("star") %} {{ m.star() }}{% endif %}</b><span>Best for: {{ k.d }}</span></div>
+      {% endfor %}
+    </div>
+    <p class="back-pricing"><span class="lbl">// How pricing works</span>{{ site.back.pricing }} Add-ons for any package: official WhatsApp API, AI Voice Calling Agent, Instagram Automation, Dashboard Website, growth content and outbound sales.</p>
+
+    <footer class="back-foot">
+      <div class="back-logo">{{ asset("logo.svg") }}</div>
+      <p>All figures are measured on our own brands, Ghoomo Saste Me and Tripwaley, as of 27 Sep 2026. Clients are not named. Example screens are illustrations.</p>
+    </footer>
+  </div>
+</section>

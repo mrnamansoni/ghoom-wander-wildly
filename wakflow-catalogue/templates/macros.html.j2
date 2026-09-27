@@ -1,0 +1,28 @@
+{% macro rail(left, page_no) -%}
+<header class="rail">
+  <span class="rail-left">{{ left }}</span>
+  <span class="rail-mid">{{ asset("logo.svg") }}</span>
+  <span class="rail-right">Product catalogue 2026 <b>{{ "%02d" % page_no }}</b></span>
+</header>
+{%- endmacro %}
+
+{% macro foot(page_no) -%}
+<footer class="page-foot">
+  <span>wakflow.com</span>
+  <span class="dot"></span>
+  <span>+91 96253 30270</span>
+  <span class="page-foot-right">Book a free demo on WhatsApp</span>
+</footer>
+{%- endmacro %}
+
+{% macro star() -%}
+<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.7 5.9 6.4.7-4.8 4.3 1.4 6.3L12 16.8 6.3 20l1.4-6.3-4.8-4.3 6.4-.7z" fill="currentColor"/></svg>
+{%- endmacro %}
+
+{% macro arrow() -%}
+<svg class="btn-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+{%- endmacro %}
+
+{% macro tick() -%}
+<svg class="tick" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+{%- endmacro %}

@@ -51,3 +51,23 @@ back:
     - {t: Go live step by step, d: "An existing WhatsApp number can be connected the same day. You see results from the first week."}
   pricing: "A one-time setup fee, then a simple monthly plan — per WhatsApp number, inbox agent, CRM user or automation pack. We share an exact quote after a short call."
   button: See what fits your business
+
+industries:  # 00 overview "Use cases" table, solutions shortened
+  - {t: Travel and tours, d: "AI agent quoting live packages, AI call-backs, seat-hold bookings with payment reminders."}
+  - {t: Real estate, d: "Instant welcome with brochure and location, site-visit booking agent, property pipeline."}
+  - {t: Clinics and hospitals, d: "AI receptionist for bookings and timings, reminders, reports sent on WhatsApp."}
+  - {t: Coaching and education, d: "Admissions CRM, AI counsellor on WhatsApp, fee reminders and class alerts."}
+  - {t: E-commerce and D2C, d: "Order-status agent, one inbox for Instagram and WhatsApp, cart-recovery broadcasts."}
+  - {t: Restaurants and cloud kitchens, d: "Menu and location auto-replies, booking agent, daily offers and review requests."}
+  - {t: Furniture and home décor, d: "AI agent matching products from your live catalogue sheet, then a salesperson."}
+  - {t: Gyms and salons, d: "Membership renewal and appointment reminders, an Instagram DM inbox."}
+  - {t: B2B distributors, d: "Dealer CRM, WhatsApp order capture, payment reminders, outbound prospecting."}
+  - {t: Service businesses, d: "Client CRM, automatic document collection and a personal AI assistant for the owner."}
+
+packages:  # 00 overview "Packages"
+  - {n: "1", t: WhatsApp Starter, d: "Small shops, tutors, clinics, salons and local services (1–2 people)."}
+  - {n: "2", t: Team Inbox, d: "Teams of 2–25 people handling customer chats."}
+  - {n: "3", t: AI Receptionist, d: "Clinics, real estate, coaching, salons, hotels and travel agents."}
+  - {n: "4", t: Sales CRM, d: "Sales teams, B2B distributors, agencies and admissions teams."}
+  - {n: "5", t: Growth OS (all-in-one), d: "Growing businesses that want one complete system."}
+  - {n: "6", t: Personal AI Assistant, d: "Owners and founders who want an assistant, not another app.", star: true}

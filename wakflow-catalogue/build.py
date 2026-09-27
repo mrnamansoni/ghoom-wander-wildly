@@ -26,15 +26,23 @@ def svg(name, cls=""):
     return Markup(text)
 
 
+def asset(name):
+    """Inline a file from assets/ (the logo lives here; replace assets/logo.svg with the real one)."""
+    text = (ROOT / "assets" / name).read_text()
+    return Markup(re.sub(r"<\?xml.*?\?>\s*", "", text))
+
+
 def qr(data, color="#00C8FF"):
     """QR code as inline SVG path."""
     import segno
     import io
     buf = io.BytesIO()
-    segno.make(data, error="m").save(buf, kind="svg", dark=color, light=None, border=0,
-                                     xmldecl=False, svgns=True, nl=False, scale=1)
+    code = segno.make(data, error="m")
+    code.save(buf, kind="svg", dark=color, light=None, border=0,
+              xmldecl=False, svgns=True, nl=False, scale=1)
+    w, h = code.symbol_size(border=0)
     out = buf.getvalue().decode()
-    out = re.sub(r'\swidth="\d+"\sheight="\d+"', "", out, count=1)
+    out = re.sub(r'\swidth="\d+"\sheight="\d+"', f' viewBox="0 0 {w} {h}"', out, count=1)
     return Markup(out.replace("<svg", '<svg class="qr"', 1))
 
 
@@ -45,12 +53,13 @@ def fmt_code(n):
 def build():
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), undefined=StrictUndefined,
                       autoescape=True, trim_blocks=True, lstrip_blocks=True)
-    env.globals.update(svg=svg, qr=qr, fmt_code=fmt_code)
+    env.globals.update(svg=svg, qr=qr, asset=asset, fmt_code=fmt_code)
     products = load_yaml("products.yaml") or {"products": []}
     site = load_yaml("site.yaml") or {}
     by_code = {p["code"]: p for p in products["products"]}
+    families = {f["id"]: f for f in site.get("families", [])}
     html = env.get_template("catalogue.html.j2").render(
-        products=products["products"], by_code=by_code, site=site)
+        products=products["products"], by_code=by_code, site=site, families=families, total=len(by_code))
     DIST.mkdir(exist_ok=True)
     (DIST / "catalogue.html").write_text(html)
     print(f"built {DIST / 'catalogue.html'} ({len(html) // 1024} KB)")

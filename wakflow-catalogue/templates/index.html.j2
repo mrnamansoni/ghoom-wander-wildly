@@ -1,0 +1,31 @@
+<section class="page index index-{{ index_page }}" data-page="index-{{ index_page }}">
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="page-inner">
+    {{ m.rail("// The products · " ~ index_page ~ " of 2", 2 + index_page) }}
+    {% if index_page == 1 %}
+    <h2 class="idx-title">{{ total }} products. <span class="grad">One system.</span></h2>
+    <p class="idx-lead">Start with one product and add the rest later — everything connects without starting over. Most businesses begin with WhatsApp Connect plus the AI WhatsApp Agent, or the Inbox.</p>
+    {% else %}
+    <h2 class="idx-title idx-title-2">Capture, grow, <span class="grad">and keep it all running.</span></h2>
+    {% endif %}
+    {% for fid in fam_order %}
+    {% set f = families[fid] %}
+    <div class="idx-fam fam-{{ fid }}">
+      <div class="idx-fam-head"><h3>{{ f.name }}</h3><p>{{ f.line }}</p></div>
+      {% for p in products if p.family == fid %}
+      <div class="idx-row fam-{{ fid }}{% if p.get("flagship") %} is-flagship{% endif %}" data-code="{{ p.code }}" data-page="{{ 4 + p.code|int }}">
+        <span class="idx-code">{{ p.code }}</span>
+        <span class="idx-icon">{{ svg("icons/" ~ p.slug) }}</span>
+        <div class="idx-text">
+          <b>{{ p.name }}{% if p.get("flagship") %} <span class="flag">{{ m.star() }} Flagship</span>{% endif %}</b>
+          <span>{{ p.list_desc }}</span>
+        </div>
+        <span class="idx-page"><i>page</i>{{ "%02d" % (4 + p.code|int) }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+    {{ m.foot(2 + index_page) }}
+  </div>
+</section>

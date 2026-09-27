@@ -1,0 +1,35 @@
+{% set fam = families[p.family] %}
+{% set page_no = 4 + p.code|int %}
+<section id="p{{ p.code }}" class="page product fam-{{ p.family }}{% if p.get("flagship") %} is-flagship{% endif %}" data-code="{{ p.code }}">
+  <div class="page-inner">
+    <div class="showcase">
+    {{ m.head(fam.name, page_no) }}
+
+    <div class="p-title">
+      <span class="p-icon">{{ svg("icons/" ~ p.slug) }}</span>
+      <h2><span class="brand-word">Wakflow</span> {{ p.name[8:] }}</h2>
+    </div>
+    <p class="p-headline">{{ p.headline }}</p>
+
+    <figure class="p-hero">{{ svg("hero/" ~ p.slug) }}</figure>
+    </div>
+
+    <div class="gap"></div>
+    <h3 class="sec">What you get</h3>
+    <ul class="benefits">
+      {% for b in p.benefits %}
+      <li>{{ m.tick() }}<div><b>{{ b.t }}</b><span>{{ b.d }}</span></div></li>
+      {% endfor %}
+    </ul>
+
+    <div class="gap"></div>
+    <h3 class="sec">Key features</h3>
+    <ul class="features">
+      {% for k in p.key_features[:6] %}
+      <li{% if k.get("owner") %} class="is-new"{% endif %}>{{ k.t }}</li>
+      {% endfor %}
+    </ul>
+
+    {{ m.foot() }}
+  </div>
+</section>

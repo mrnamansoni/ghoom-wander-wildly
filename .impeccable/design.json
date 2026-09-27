@@ -1,0 +1,634 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-27T00:00:00+00:00",
+  "title": "Design System: Wakflow Catalogue",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "lavender-wash": {
+        "role": "neutral",
+        "displayName": "Lavender Wash",
+        "canonical": "#F4F0FC",
+        "tonalRamp": [
+          "#0C0A11",
+          "#26232C",
+          "#43404A",
+          "#635F69",
+          "#84808B",
+          "#A7A3AE",
+          "#CBC7D2",
+          "#F0ECF8"
+        ]
+      },
+      "lavender-rule": {
+        "role": "neutral",
+        "displayName": "Lavender Rule",
+        "canonical": "#EBE4F8",
+        "tonalRamp": [
+          "#0D0815",
+          "#272230",
+          "#443F4F",
+          "#645E6F",
+          "#857F91",
+          "#A8A1B4",
+          "#CCC5D9",
+          "#F2EBFF"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#E2DAF2",
+        "tonalRamp": [
+          "#0E0817",
+          "#282133",
+          "#453E51",
+          "#645D72",
+          "#857E94",
+          "#A8A1B7",
+          "#CCC5DC",
+          "#F1EBFE"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1C1836",
+        "tonalRamp": [
+          "#0B0621",
+          "#24203F",
+          "#403D5F",
+          "#5F5C80",
+          "#807EA3",
+          "#A2A0C7",
+          "#C6C4ED",
+          "#EDECFF"
+        ]
+      },
+      "body-ink": {
+        "role": "neutral",
+        "displayName": "Body Ink",
+        "canonical": "#45415F",
+        "tonalRamp": [
+          "#0C061E",
+          "#25203C",
+          "#413D5B",
+          "#605D7C",
+          "#817E9F",
+          "#A4A0C3",
+          "#C8C4E8",
+          "#EEECFE"
+        ]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#736E90",
+        "tonalRamp": [
+          "#0C061F",
+          "#25203C",
+          "#423D5C",
+          "#615C7D",
+          "#827DA0",
+          "#A5A0C4",
+          "#C9C4E9",
+          "#EEECFF"
+        ]
+      },
+      "brand-purple": {
+        "role": "primary",
+        "displayName": "Wakflow Purple",
+        "canonical": "#7B35C1",
+        "tonalRamp": [
+          "#130029",
+          "#330359",
+          "#571191",
+          "#7933BF",
+          "#9B59E6",
+          "#B988FB",
+          "#D5BAFF",
+          "#F2EAFF"
+        ]
+      },
+      "purple-tint": {
+        "role": "primary",
+        "displayName": "Purple Tint",
+        "canonical": "#F1E9FB",
+        "tonalRamp": [
+          "#0E0814",
+          "#28222F",
+          "#453F4D",
+          "#655E6D",
+          "#867F8F",
+          "#A9A1B2",
+          "#CDC5D7",
+          "#F2EAFC"
+        ]
+      },
+      "demo-orange": {
+        "role": "secondary",
+        "displayName": "Demo Orange",
+        "canonical": "#FF8A00",
+        "tonalRamp": [
+          "#1A0400",
+          "#3B1C01",
+          "#633407",
+          "#924C01",
+          "#C16701",
+          "#EF8724",
+          "#FEB883",
+          "#FFEADB"
+        ]
+      },
+      "button-ink": {
+        "role": "secondary",
+        "displayName": "Button Ink",
+        "canonical": "#1C1300",
+        "tonalRamp": [
+          "#120900",
+          "#2D240D",
+          "#4B4129",
+          "#6B6047",
+          "#8C8168",
+          "#B0A489",
+          "#D4C8AD",
+          "#FAEDD1"
+        ]
+      },
+      "flagship-amber": {
+        "role": "secondary",
+        "displayName": "Flagship Amber",
+        "canonical": "#C26A00",
+        "tonalRamp": [
+          "#1A0500",
+          "#3B1C00",
+          "#633506",
+          "#914D00",
+          "#BB6C20",
+          "#E78C39",
+          "#FDB882",
+          "#FFEADB"
+        ]
+      },
+      "flagship-amber-tint": {
+        "role": "secondary",
+        "displayName": "Flagship Amber Tint",
+        "canonical": "#FFF1DF",
+        "tonalRamp": [
+          "#120901",
+          "#2D2315",
+          "#4B4031",
+          "#6B5F50",
+          "#8D8070",
+          "#B0A392",
+          "#D4C7B6",
+          "#FAECDA"
+        ]
+      },
+      "flag-pill-orange": {
+        "role": "secondary",
+        "displayName": "Flag Pill Orange",
+        "canonical": "#E27A00",
+        "tonalRamp": [
+          "#1A0400",
+          "#3B1B00",
+          "#643405",
+          "#924C00",
+          "#BC6B20",
+          "#EF8620",
+          "#FFB782",
+          "#FFEADB"
+        ]
+      },
+      "talk-teal": {
+        "role": "tertiary",
+        "displayName": "Talk Teal",
+        "canonical": "#0784AD",
+        "tonalRamp": [
+          "#000E18",
+          "#00293A",
+          "#034961",
+          "#156A8A",
+          "#1F8EB8",
+          "#4DB2DD",
+          "#7FD6FE",
+          "#DCF3FE"
+        ]
+      },
+      "talk-tint": {
+        "role": "tertiary",
+        "displayName": "Talk Tint",
+        "canonical": "#E2F6FD",
+        "tonalRamp": [
+          "#020D12",
+          "#18282D",
+          "#35454B",
+          "#53656A",
+          "#74868C",
+          "#96A9AF",
+          "#BACDD4",
+          "#DFF2F9"
+        ]
+      },
+      "sell-blue": {
+        "role": "tertiary",
+        "displayName": "Sell Blue",
+        "canonical": "#2A6CC2",
+        "tonalRamp": [
+          "#00072B",
+          "#002253",
+          "#003F87",
+          "#1C5FB4",
+          "#4082DA",
+          "#6BA7F8",
+          "#A8CCFD",
+          "#E5EFFE"
+        ]
+      },
+      "sell-tint": {
+        "role": "tertiary",
+        "displayName": "Sell Tint",
+        "canonical": "#E7F0FC",
+        "tonalRamp": [
+          "#060B13",
+          "#1F262E",
+          "#3B434C",
+          "#5A626C",
+          "#7B838E",
+          "#9DA6B1",
+          "#C1CAD6",
+          "#E6EFFB"
+        ]
+      },
+      "grow-green": {
+        "role": "tertiary",
+        "displayName": "Grow Green",
+        "canonical": "#0B8A5E",
+        "tonalRamp": [
+          "#001006",
+          "#002D1C",
+          "#084F34",
+          "#00744D",
+          "#27986B",
+          "#53BC8D",
+          "#79E2B1",
+          "#C4FEE0"
+        ]
+      },
+      "grow-tint": {
+        "role": "tertiary",
+        "displayName": "Grow Tint",
+        "canonical": "#E3F7EF",
+        "tonalRamp": [
+          "#020E0A",
+          "#192923",
+          "#364640",
+          "#54665F",
+          "#758780",
+          "#97AAA3",
+          "#BBCEC7",
+          "#E0F4EC"
+        ]
+      },
+      "run-slate": {
+        "role": "tertiary",
+        "displayName": "Run Slate",
+        "canonical": "#3D3A58",
+        "tonalRamp": [
+          "#0B061F",
+          "#24213C",
+          "#413E5C",
+          "#5F5D7D",
+          "#807EA0",
+          "#A3A0C4",
+          "#C7C5E9",
+          "#EDECFF"
+        ]
+      },
+      "run-tint": {
+        "role": "tertiary",
+        "displayName": "Run Tint",
+        "canonical": "#ECEAF3",
+        "tonalRamp": [
+          "#0C0A10",
+          "#25242A",
+          "#424148",
+          "#626068",
+          "#838189",
+          "#A5A4AC",
+          "#CAC8D0",
+          "#EFEDF6"
+        ]
+      },
+      "stroke-cyan": {
+        "role": "tertiary",
+        "displayName": "Signal Cyan (drawing stroke)",
+        "canonical": "#00C8FF",
+        "tonalRamp": [
+          "#000E17",
+          "#002A38",
+          "#03495F",
+          "#156B88",
+          "#1F8FB4",
+          "#1BB5E5",
+          "#7FD6FA",
+          "#DAF3FF"
+        ]
+      },
+      "stroke-blue": {
+        "role": "tertiary",
+        "displayName": "Circuit Blue (drawing stroke)",
+        "canonical": "#4A90E2",
+        "tonalRamp": [
+          "#000926",
+          "#00244C",
+          "#06417D",
+          "#1761AF",
+          "#3E84D5",
+          "#61A8FC",
+          "#A7CCFA",
+          "#E4F0FF"
+        ]
+      },
+      "stroke-green": {
+        "role": "tertiary",
+        "displayName": "Tick Green (drawing stroke)",
+        "canonical": "#10B981",
+        "tonalRamp": [
+          "#001006",
+          "#002D1C",
+          "#074F35",
+          "#1A7250",
+          "#25986C",
+          "#25C189",
+          "#59E7AC",
+          "#C4FEE0"
+        ]
+      },
+      "stroke-red": {
+        "role": "tertiary",
+        "displayName": "Problem Red (drawing stroke)",
+        "canonical": "#F87171",
+        "tonalRamp": [
+          "#210001",
+          "#4D0009",
+          "#7F0419",
+          "#AC2933",
+          "#D35053",
+          "#FC7474",
+          "#FEB3AF",
+          "#FFE8E7"
+        ]
+      },
+      "drawing-line": {
+        "role": "neutral",
+        "displayName": "Drawing Line",
+        "canonical": "#E6E0F3",
+        "tonalRamp": [
+          "#0D0815",
+          "#272230",
+          "#443F4E",
+          "#635E6E",
+          "#857F90",
+          "#A7A2B3",
+          "#CBC6D8",
+          "#F1EBFE"
+        ]
+      },
+      "drawing-line-strong": {
+        "role": "neutral",
+        "displayName": "Drawing Line Strong",
+        "canonical": "#CEC5E4",
+        "tonalRamp": [
+          "#0E061B",
+          "#282037",
+          "#453D56",
+          "#645C77",
+          "#857D9A",
+          "#A8A0BD",
+          "#CCC3E2",
+          "#F0EBFE"
+        ]
+      },
+      "drawing-grey": {
+        "role": "neutral",
+        "displayName": "Drawing Grey",
+        "canonical": "#6E6A8A",
+        "tonalRamp": [
+          "#0C061E",
+          "#25203B",
+          "#423D5B",
+          "#615D7C",
+          "#827E9F",
+          "#A4A0C3",
+          "#C8C4E8",
+          "#EEECFE"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Cover headline and cover product count."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Intro, index and back page titles with one purple accent phrase."
+      },
+      "product-title": {
+        "displayName": "Product Title",
+        "purpose": "\"Wakflow\" in purple plus product name on each product page."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Intro statistics, back-page step numbers, cover family counts."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product headline under the product title."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Section headings such as What you get and Key features; index product names."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Page intro paragraphs."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default reading text, 12px with tabular figures."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Feature descriptions and footers; the 11px print floor."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Page-head labels, captions, contact line."
+      },
+      "drawing-mono": {
+        "displayName": "Drawing Mono",
+        "purpose": "Uppercase labels inside drawings only (chips, window titles, Example tags); 9px x SIZE 1.08, never below 7pt."
+      }
+    },
+    "shadows": [],
+    "motion": [],
+    "breakpoints": [],
+    "print": {
+      "page": "A4 210x297mm, @page margin 0, 22 pages",
+      "bodyFloor": "11px (8.25pt)",
+      "drawingLabelFloor": "7pt after SIZE 1.08",
+      "pdfSafety": "Solid colours only; enforced by tests/test_catalogue.py test_css_has_no_pdf_unsafe_effects, test_pdf_has_no_transparency, test_svgs_valid",
+      "review": "python3 wakflow-catalogue/review.py renders PDF pages with MuPDF into .impeccable/review/; never review browser screenshots",
+      "textPartners": {
+        "#00C8FF": "#0784AD",
+        "#4A90E2": "#2A6CC2",
+        "#7B35C1": "#7B35C1",
+        "#FF8A00": "#B85E00",
+        "#FFB347": "#B85E00",
+        "#10B981": "#0B8A5E",
+        "#34D399": "#0B8A5E",
+        "#F87171": "#C93A3A"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Demo Button",
+      "kind": "button",
+      "refersTo": "button-demo",
+      "description": "Orange pill linking to WhatsApp; cover and back page only.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Book a free demo<svg class=\"ds-arrow\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h9M8.5 4l4 4-4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ":host{--paper:#FFFFFF;--wash:#F4F0FC;--wash-2:#EBE4F8;--line:#E2DAF2;--ink:#1C1836;--body:#45415F;--muted:#736E90;--purple:#7B35C1;--orange:#FF8A00;--accent:#0784AD;--accent-tint:#E2F6FD;} .ds-btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#1C1300;font:700 13px/1 Oxanium,'DM Sans',sans-serif;padding:12px 18px 12px 20px;border-radius:999px;text-decoration:none;} .ds-btn .ds-arrow{width:14px;height:14px;} .ds-btn:hover{background:#FF9A24;} .ds-btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px;}"
+    },
+    {
+      "name": "Demo Button Large",
+      "kind": "button",
+      "refersTo": "button-demo-large",
+      "description": "Larger demo pill inside the back-page contact panel.",
+      "html": "<a class=\"ds-btn-lg\" href=\"#\">Book a free demo on WhatsApp<svg class=\"ds-arrow\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h9M8.5 4l4 4-4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ":host{--paper:#FFFFFF;--wash:#F4F0FC;--wash-2:#EBE4F8;--line:#E2DAF2;--ink:#1C1836;--body:#45415F;--muted:#736E90;--purple:#7B35C1;--orange:#FF8A00;--accent:#0784AD;--accent-tint:#E2F6FD;} .ds-btn-lg{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#1C1300;font:700 15px/1 Oxanium,'DM Sans',sans-serif;padding:14px 22px 14px 24px;border-radius:999px;text-decoration:none;} .ds-btn-lg .ds-arrow{width:14px;height:14px;} .ds-btn-lg:hover{background:#FF9A24;} .ds-btn-lg:focus-visible{outline:2px solid var(--ink);outline-offset:3px;}"
+    },
+    {
+      "name": "Page Head",
+      "kind": "nav",
+      "description": "Logo and wordmark, family label in accent, page number, over a hairline.",
+      "html": "<header class=\"ds-head\"><span class=\"ds-logo\"><span class=\"ds-mark\">WF</span><b>Wakflow</b></span><span class=\"ds-head-label\">Talk to customers</span><span class=\"ds-head-page\">07</span></header>",
+      "css": ":host{--paper:#FFFFFF;--wash:#F4F0FC;--wash-2:#EBE4F8;--line:#E2DAF2;--ink:#1C1836;--body:#45415F;--muted:#736E90;--purple:#7B35C1;--orange:#FF8A00;--accent:#0784AD;--accent-tint:#E2F6FD;} .ds-head{display:flex;align-items:center;gap:14px;padding-bottom:12px;border-bottom:1px solid var(--line);background:var(--wash);padding-top:12px;} .ds-logo{display:inline-flex;align-items:center;gap:9px;} .ds-mark{font:800 15px/1 Oxanium,sans-serif;color:var(--purple);} .ds-logo b{font:800 15px/1 Oxanium,sans-serif;letter-spacing:.06em;color:var(--ink);text-transform:uppercase;} .ds-head-label{margin-left:auto;font:600 11px/1 'DM Sans',sans-serif;color:var(--accent);} .ds-head-page{font:700 12px/1 Oxanium,sans-serif;color:var(--muted);} .ds-head a:focus-visible{outline:2px solid var(--purple);}"
+    },
+    {
+      "name": "Product Title",
+      "kind": "custom",
+      "refersTo": "product-icon",
+      "description": "54px outlined icon plate beside the product name with Wakflow in purple.",
+      "html": "<div class=\"ds-ptitle\"><span class=\"ds-picon\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 13h5l1.5 2.5h5L16 13h5M5 5h14l2 8v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/></svg></span><h2><span class=\"ds-brand\">Wakflow</span> Inbox</h2></div>",
+      "css": ":host{--paper:#FFFFFF;--wash:#F4F0FC;--wash-2:#EBE4F8;--line:#E2DAF2;--ink:#1C1836;--body:#45415F;--muted:#736E90;--purple:#7B35C1;--orange:#FF8A00;--accent:#0784AD;--accent-tint:#E2F6FD;} .ds-ptitle{display:flex;align-items:center;gap:16px;} .ds-picon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:var(--paper);border:1.5px solid var(--accent);color:var(--accent);} .ds-picon svg{width:28px;height:28px;} .ds-ptitle h2{font:800 31px/1.08 Oxanium,sans-serif;color:var(--ink);letter-spacing:-.01em;margin:0;} .ds-brand{color:var(--purple);}"
+    },
+    {
+      "name": "Benefit Row",
+      "kind": "custom",
+      "description": "Open benefit item hung on a family-accent tick; no box.",
+      "html": "<ul class=\"ds-benefits\"><li><svg class=\"ds-tick\" viewBox=\"0 0 18 18\" aria-hidden=\"true\"><circle cx=\"9\" cy=\"9\" r=\"8\" fill=\"currentColor\"/><path d=\"M5.5 9.2l2.3 2.3 4.7-5\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><div><b>No missed messages.</b><span>Every chat from every channel in one list with a clear status.</span></div></li></ul>",
+      "css": ":host{--paper:#FFFFFF;--wash:#F4F0FC;--wash-2:#EBE4F8;--line:#E2DAF2;--ink:#1C1836;--body:#45415F;--muted:#736E90;--purple:#7B35C1;--orange:#FF8A00;--accent:#0784AD;--accent-tint:#E2F6FD;} .ds-benefits{list-style:none;margin:0;padding:0;} .ds-benefits li{display:flex;gap:11px;} .ds-tick{width:18px;height:18px;flex:none;color:var(--accent);margin-top:1px;} .ds-benefits b{display:block;font:700 13px/1.3 'DM Sans',sans-serif;color:var(--ink);} .ds-benefits span{display:block;font:400 11.5px/1.45 'DM Sans',sans-serif;color:var(--body);margin-top:3px;}"
+    },
+    {
+      "name": "Feature Row",
+      "kind": "custom",
+      "refersTo": "new-pill",
+      "description": "Hairline-separated feature with a 7px accent square and optional New pill.",
+      "html": "<ul class=\"ds-features\"><li class=\"is-new\"><b>Unlimited WhatsApp numbers</b><span>Connect all your numbers in one inbox.</span></li><li><b>WhatsApp by QR code</b><span>Keep the number your customers already know.</span></li></ul>",
+      "css": ":host{--paper:#FFFFFF;--wash:#F4F0FC;--wash-2:#EBE4F8;--line:#E2DAF2;--ink:#1C1836;--body:#45415F;--muted:#736E90;--purple:#7B35C1;--orange:#FF8A00;--accent:#0784AD;--accent-tint:#E2F6FD;} .ds-features{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);} .ds-features li{padding:9px 0 9px 16px;border-bottom:1px solid var(--line);position:relative;} .ds-features li::before{content:'';position:absolute;left:0;top:14px;width:7px;height:7px;border-radius:2px;background:var(--accent);} .ds-features b{display:block;font:700 12px/1.3 'DM Sans',sans-serif;color:var(--ink);} .ds-features span{display:block;font:400 11px/1.4 'DM Sans',sans-serif;color:var(--body);margin-top:1px;} .ds-features li.is-new b::after{content:'New';margin-left:7px;font:700 9.5px/1 'DM Sans',sans-serif;color:#FFFFFF;background:var(--purple);padding:2px 6px 3px;border-radius:999px;vertical-align:1px;}"
+    },
+    {
+      "name": "Index Row",
+      "kind": "custom",
+      "refersTo": "index-icon",
+      "description": "Index entry: tinted icon plate, name and one-line description, page number in family accent.",
+      "html": "<a class=\"ds-idx\" href=\"#\"><span class=\"ds-idx-icon\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 13h5l1.5 2.5h5L16 13h5M5 5h14l2 8v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/></svg></span><span class=\"ds-idx-text\"><b>Wakflow Inbox</b><span>Every conversation in one shared inbox your whole team can answer.</span></span><span class=\"ds-idx-page\">07</span></a>",
+      "css": ":host{--paper:#FFFFFF;--wash:#F4F0FC;--wash-2:#EBE4F8;--line:#E2DAF2;--ink:#1C1836;--body:#45415F;--muted:#736E90;--purple:#7B35C1;--orange:#FF8A00;--accent:#0784AD;--accent-tint:#E2F6FD;} .ds-idx{display:grid;grid-template-columns:42px 1fr 34px;gap:16px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line);text-decoration:none;} .ds-idx-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:var(--accent);background:var(--accent-tint);} .ds-idx-icon svg{width:22px;height:22px;} .ds-idx-text b{display:block;font:700 15px/1.25 Oxanium,sans-serif;color:var(--ink);} .ds-idx-text span{display:block;font:400 11.5px/1.45 'DM Sans',sans-serif;color:var(--body);margin-top:3px;} .ds-idx-page{text-align:right;font:700 15px/1 Oxanium,sans-serif;color:var(--accent);} .ds-idx:hover .ds-idx-text b{color:var(--purple);} .ds-idx:focus-visible{outline:2px solid var(--purple);outline-offset:2px;}"
+    },
+    {
+      "name": "Statistic",
+      "kind": "custom",
+      "description": "Measured proof figure in purple Oxanium over a short DM Sans caption.",
+      "html": "<div class=\"ds-stat\"><b>91,907</b><span>WhatsApp messages held across our brands’ numbers</span></div>",
+      "css": ":host{--paper:#FFFFFF;--wash:#F4F0FC;--wash-2:#EBE4F8;--line:#E2DAF2;--ink:#1C1836;--body:#45415F;--muted:#736E90;--purple:#7B35C1;--orange:#FF8A00;--accent:#0784AD;--accent-tint:#E2F6FD;} .ds-stat b{display:block;font:800 26px/1.05 Oxanium,sans-serif;color:var(--purple);white-space:nowrap;font-variant-numeric:tabular-nums;} .ds-stat span{display:block;font:400 11.5px/1.4 'DM Sans',sans-serif;color:var(--body);margin-top:4px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Lavender Datasheet",
+    "overview": "**Creative North Star: \"The Lavender Datasheet\"**\n\nThe Wakflow catalogue is a 22-page A4 PDF (cover, platform intro, two index pages, seventeen product pages, back page) that a business owner is sent on WhatsApp and reads on a phone or prints. The light edition replaced the earlier black-and-neon catalogue at the owner's direction (27 Sep 2026): white with a shade of purple, far less content, no boxes, the demo button only on the first and last pages, and the owner's own WF logo. The website keeps its black world; the catalogue does not inherit it.\n\nEach page is white paper with a lavender wash across its top: the wash carries the page head, the title and the product drawing, and the white below carries the reading content in open, unboxed lists separated by hairlines. Brand colours from the website survive only as solid strokes and small accents on light ground, each paired with a darker text partner so type in a brand colour stays readable on white. Purple is the house voice; orange appears only as the demo button and the flagship marker.\n\nThe world is built for PDF readers first. Every colour is solid, every drawing is flat vector, and nothing relies on transparency, shadow, blur or gradient to read. Depth is carried by the lavender wash against white, by hairline rules, and by colour-tinted icon plates.",
+    "keyCharacteristics": [
+      "White paper, lavender wash band on top, open unboxed content below",
+      "Purple as the single house accent; six family accents with pale tints",
+      "Oxanium for display and numerals, DM Sans for reading, JetBrains Mono only inside drawings",
+      "Flat vector datasheet drawings with pin-label callouts",
+      "Solid colours only: PDF-safe by rule and by test",
+      "Orange demo pill on the cover and back page only"
+    ],
+    "rules": [
+      {
+        "name": "The Solid Colour Rule",
+        "body": "Every colour in the PDF is a solid value. No rgba, opacity, color-mix, gradient text, box-shadow, text-shadow, blur, filter, mask or backdrop-filter in CSS; no opacity, radialGradient, filter or mask in SVG. PDF readers render transparency as boxes. When a softened colour is needed, pre-blend it over white with kit.py `mix()` and write the resulting hex. Enforced by `test_css_has_no_pdf_unsafe_effects`, `test_pdf_has_no_transparency` and `test_svgs_valid`.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dark Partner Rule",
+        "body": "Brand neons are strokes and fills, never text on white. Any text drawn in a brand colour uses its darker partner from kit.py `TEXT`.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Orange Rule",
+        "body": "Orange means \"book a demo\" or \"flagship\". The demo button appears only on the cover and the back page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Print Floor Rule",
+        "body": "Page body text never goes below 11px (8.25pt); drawing labels never below 7pt, after the kit's SIZE factor of 1.08. `test_min_font_size` checks the rendered PDF.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Stays Drawn Rule",
+        "body": "JetBrains Mono uppercase is the voice of the illustrated product screens, not of the page. Page headings and labels are Oxanium or DM Sans in sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Box Rule",
+        "body": "Page content is not boxed. Lists are open rows separated by hairlines; benefits hang on a tick, features on a 7px square dot. The only framed shapes on the page are icon plates, QR codes, the contact panel on the back page, and the product screens drawn inside illustrations.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** use solid colours only; pre-blend softened colours over white with `mix()` and write the hex.",
+      "**Do** keep the lavender wash on the top band (or the whole page on cover and back) and white for the reading zone.",
+      "**Do** swap brand-colour text for its darker partner from kit.py `TEXT`.",
+      "**Do** keep page body text at 11px or larger and drawing labels at 7pt or larger.",
+      "**Do** review pages rendered from the PDF by MuPDF (`python3 wakflow-catalogue/review.py`, output in .impeccable/review/), never browser screenshots.",
+      "**Do** use the owner's WF logo beside the WAKFLOW wordmark on every page head.",
+      "**Do** set one accent phrase per title in Wakflow Purple."
+    ],
+    "donts": [
+      "**Don't** use rgba, opacity, color-mix, gradients on text, box-shadow, text-shadow, blur, filters or masks; PDF readers render them as boxes.",
+      "**Don't** put content in boxes or cards; use open rows and hairlines.",
+      "**Don't** place the demo button anywhere but the cover and the back page.",
+      "**Don't** bring back the website's black background or neon glows into the catalogue.",
+      "**Don't** set text in raw cyan, blue, orange, green or red on white.",
+      "**Don't** add content back to product pages beyond title, headline, sub, drawing, benefits and key features."
+    ]
+  }
+}

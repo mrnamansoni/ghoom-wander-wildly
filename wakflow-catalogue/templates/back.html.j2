@@ -1,0 +1,43 @@
+<section class="page back" data-page="back">
+  <div class="band band-cover"></div>
+  <div class="page-inner">
+    {{ m.head("Get started", 22) }}
+    <h2 class="page-title back-title">{{ site.back.title }}</h2>
+    <p class="lead">{{ site.back.sub }}</p>
+
+    <div class="gap"></div>
+    <ol class="steps">
+      {% for s in site.back.steps %}
+      <li><i>{{ loop.index }}</i><b>{{ s.t }}</b><span>{{ s.d }}</span></li>
+      {% endfor %}
+    </ol>
+
+    <div class="gap"></div>
+    <div class="contact-panel">
+      <div class="cp-main">
+        <p class="cp-phone"><a href="tel:+919625330270">+91 96253 30270</a></p>
+        <p class="cp-web"><a href="{{ site.contact.web_url }}">wakflow.com</a></p>
+        <a class="btn btn-lg" href="{{ site.contact.wa_url }}">Book a free demo on WhatsApp{{ m.arrow() }}</a>
+      </div>
+      <div class="cp-qrs">
+        <figure><a href="{{ site.contact.wa_url }}">{{ qr(site.contact.wa_url) }}</a><figcaption>Chat on WhatsApp</figcaption></figure>
+        <figure><a href="{{ site.contact.web_url }}">{{ qr(site.contact.web_url) }}</a><figcaption>Visit wakflow.com</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="gap"></div>
+    <h3 class="sec">Start with a package <em>best for</em></h3>
+    <div class="packages">
+      {% for k in site.packages %}
+      <div class="pk{% if k.get("star") %} is-flagship{% endif %}"><b>{{ k.t }}</b><span>{{ k.d }}</span></div>
+      {% endfor %}
+    </div>
+
+    <div class="gap"></div>
+    <p class="pricing"><b>How pricing works.</b> {{ site.back.pricing }}</p>
+
+    <footer class="back-foot">
+      <p>All figures are measured, as of 27 Sep 2026, on our own brands Ghoomo Saste Me and Tripwaley and on anonymised client work — clients are never named. Screens in this catalogue are example illustrations.</p>
+    </footer>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<section class="page index index-{{ index_page }}" data-page="index-{{ index_page }}">
+  <div class="page-inner">
+    <div class="showcase">
+    {{ m.head("All products · " ~ index_page ~ " of 2", 2 + index_page) }}
+    {% if index_page == 1 %}
+    <h2 class="page-title">{{ total }} products. <span class="accent">One system.</span></h2>
+    <p class="lead">Start with one product and add the rest later — everything connects without starting over. Tap any product to jump to its page.</p>
+    {% else %}
+    <h2 class="page-title">Capture, grow <span class="accent">and keep it all running.</span></h2>
+    {% endif %}
+    </div>
+    {% for fid in fam_order %}
+    {% set f = families[fid] %}
+    <div class="idx-fam fam-{{ fid }}">
+      <h3 class="idx-fam-name">{{ f.name }}</h3>
+      {% for p in products if p.family == fid %}
+      <a href="#p{{ p.code }}" class="idx-row fam-{{ fid }}{% if p.get("flagship") %} is-flagship{% endif %}" data-code="{{ p.code }}" data-page="{{ 4 + p.code|int }}">
+        <span class="idx-icon">{{ svg("icons/" ~ p.slug) }}</span>
+        <div class="idx-text">
+          <b>{{ p.name }}</b>
+          <span>{{ p.list_desc }}</span>
+        </div>
+        <span class="idx-page">{{ "%02d" % (4 + p.code|int) }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% endfor %}
+    {{ m.foot() }}
+  </div>
+</section>

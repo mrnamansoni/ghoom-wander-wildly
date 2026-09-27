@@ -1,0 +1,24 @@
+<section class="page intro" data-page="intro">
+  <div class="page-inner">
+    <div class="showcase">
+    {{ m.head("The platform", 2) }}
+    <h2 class="page-title">Everything a growing business needs to <span class="accent">answer, sell, book and follow up</span> — working as one.</h2>
+    <p class="lead">{{ site.intro.lead }}</p>
+    </div>
+
+    <div class="gap"></div>
+    <h3 class="sec">How it works</h3>
+    <ol class="journey">
+      {% for s in site.intro.steps %}
+      <li><i>{{ loop.index }}</i><b>{{ s.t }}</b><span>{{ s.d }}</span></li>
+      {% endfor %}
+    </ol>
+
+    <div class="gap"></div>
+    <h3 class="sec">Built for Indian businesses</h3>
+    <ul class="industries">
+      {% for x in site.industries %}<li><b>{{ x.t }}</b><span>{{ x.d }}</span></li>{% endfor %}
+    </ul>
+    {{ m.foot() }}
+  </div>
+</section>

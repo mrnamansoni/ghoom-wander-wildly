@@ -1,0 +1,11 @@
+{
+  "name": "wakflow-catalogue",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 build.py && node render.mjs",
+    "shots": "python3 build.py && node render.mjs --shots",
+    "test": "python3 tests/test_catalogue.py"
+  },
+  "devDependencies": { "playwright": "1.56.1" }
+}

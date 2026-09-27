@@ -457,9 +457,8 @@ def bookings_payment_followups(d):
     wx, wy = 370, 104
     d.add(bubble(wx, wy, 300, 92, "out"),
           mono(wx + 12, wy + 18, "WhatsApp reminder", 9, C["cyan"]),
-          t(wx + 12, wy + 38, "Hi! Your balance of", 10, C["ink"]),
-          t(wx + 106, wy + 38, "₹34,000", 10.5, C["ink"], DISPLAY, 700),
-          t(wx + 151, wy + 38, "is due on 20 Oct.", 10, C["ink"]),
+          f'<text x="{wx + 12}" y="{wy + 38}" font-family="{BODY}" font-size="10" fill="{C["ink"]}">Hi! Your balance of '
+          f'<tspan font-family="{DISPLAY}" font-weight="600">₹34,000</tspan> is due on 20 Oct.</text>',
           t(wx + 12, wy + 50.5, "Pay safely by UPI or card:", 10, C["ink"]),
           button(wx + 12, wy + 64, 100, 20, "Pay now", "orange", size=10))
     d.add(rect(wx, wy + 104, 190, 36, 8, C["bg1"], C["line2"], 1),

@@ -157,6 +157,8 @@ svg { display: block; }
 .spec-grid.cols-5 { grid-template-columns: repeat(5, 1fr); gap: 8px 12px; }
 .flex-gap { flex: 1 1 0; min-height: 0; max-height: 26px; }
 .flex-gap-lg { max-height: 64px; }
+.intro .flex-gap-lg { max-height: 30px; }
+.industries { margin-bottom: auto; }
 .spec h4 {
   font: 600 10.5px/1.25 var(--f-display); color: var(--ink); letter-spacing: .01em;
   padding-bottom: 3px; margin-bottom: 3px; border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
